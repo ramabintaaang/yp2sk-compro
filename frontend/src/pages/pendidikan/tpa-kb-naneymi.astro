@@ -1,0 +1,389 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const tpaKbNaneymiSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-naneymi#webpage",
+      "url": "https://yp2sk.or.id/pendidikan/tpa-kb-naneymi",
+      "name": "TPA KB Naneymi | Penitipan Anak & Kelompok Bermain YP2SK",
+      "description": "Program Tempat Penitipan Anak (TPA) & Kelompok Bermain (KB) Naneymi - pengenalan dini nilai keislaman, hafalan surat pendek, adab sehari-hari, dan stimulasi motorik terpadu.",
+      "breadcrumb": {
+        "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-naneymi#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-naneymi#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pendidikan",
+          "item": "https://yp2sk.or.id/pendidikan/tpa-kb-naneymi"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TPA KB Naneymi",
+          "item": "https://yp2sk.or.id/pendidikan/tpa-kb-naneymi"
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-naneymi#school",
+      "name": "TPA KB Naneymi (Tempat Penitipan Anak & Kelompok Bermain Naneymi)",
+      "description": "Lembaga pendidikan anak usia dini berbasis nilai keagamaan Islam (pesantren anak) di bawah Yayasan Pendidikan Pesantren Sunan Kudus.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDovWRtuCp7DdGZnwXOeITKhBqhnaEKXESNfzh1W5uBBVVMwo152wgyFHmKKtzBvzhvf8sTrBXUOaqslDeaLL_i03eWfrR2-0fyNtfQdbSJeZq5fAPVmmTvQBLIENn3N1N7DNCmDBbTHPe2rPJ9FezGWloSBfdFRb6-adcHKvrY3VgEvHJ6eUdDkUqs21Pr_ynCs6QzFm9z2h1J0BLH3rHAgAgWBm2xvKyfQA_BXBRtOkFTrYYoXWEKkg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Pendidikan No. 123",
+        "addressLocality": "Kota Dinado",
+        "addressCountry": "ID"
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="TPA KB Naneymi | Penitipan Anak & KB Karakter Islami - YP2SK" 
+  description="TPA KB Naneymi mendidik putra-putri Anda menjadi pribadi mandiri yang berakhlak mulia melalui pembiasaan adab-adab islami, doa harian, dan stimulasi tumbuh kembang anak sejak dini."
+  schema={tpaKbNaneymiSchema}
+>
+  <div class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div 
+          class="w-full h-full bg-cover bg-center" 
+          style="background-image: linear-gradient(rgba(0, 32, 69, 0.8), rgba(0, 32, 69, 0.65)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDovWRtuCp7DdGZnwXOeITKhBqhnaEKXESNfzh1W5uBBVVMwo152wgyFHmKKtzBvzhvf8sTrBXUOaqslDeaLL_i03eWfrR2-0fyNtfQdbSJeZq5fAPVmmTvQBLIENn3N1N7DNCmDBbTHPe2rPJ9FezGWloSBfdFRb6-adcHKvrY3VgEvHJ6eUdDkUqs21Pr_ynCs6QzFm9z2h1J0BLH3rHAgAgWBm2xvKyfQA_BXBRtOkFTrYYoXWEKkg');"
+          role="img"
+          aria-label="Kindergarten students learning together at TPA KB Naneymi"
+        ></div>
+      </div>
+      <div class="relative z-10 text-center text-on-primary px-margin-mobile md:px-margin-desktop">
+        <span class="inline-block px-4 py-1.5 bg-secondary text-on-secondary rounded-full font-label-lg text-label-lg mb-sm uppercase tracking-widest shadow-sm">Penitipan Anak & Kelompok Bermain (Usia 1-3 Tahun)</span>
+        <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl max-w-[56rem] mx-auto mb-md text-white leading-tight">TPA KB Naneymi</h1>
+        <p class="font-body-lg text-body-lg max-w-[42rem] mx-auto text-on-primary/90 leading-relaxed mb-lg">
+          Membentuk generasi berakhlakul karimah, mandiri, dan cinta nilai-nilai keislaman sejak masa keemasan tumbuh kembang anak.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/kontak" class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-110 active:scale-95 transition-all shadow-md">
+            Daftar Sekarang
+          </a>
+          <a href="#kurikulum" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 transition-all">
+            Pelajari Kurikulum
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section & Stats -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1140px] mx-auto reveal-element">
+      <div class="grid md:grid-cols-2 gap-xl items-center">
+        <div class="space-y-md">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold">Tentang TPA KB Naneymi</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Adab Mendahului Ilmu, Kasih Sayang Terpadu</h2>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            TPA KB Naneymi didirikan dengan visi menghadirkan pengasuhan dan pendidikan prasekolah berlandaskan akhlak mulia serta kecintaan pada nilai keagamaan Islam sejak usia dini. Kami meyakini bahwa membiasakan adab-adab islami sejak usia 1 hingga 3 tahun akan meletakkan pondasi spiritual yang kuat bagi anak.
+          </p>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Metode kami menggabungkan Tempat Penitipan Anak yang nyaman dan aman dengan stimulasi Kelompok Bermain (KB) yang berfokus pada kecakapan berbahasa, kemandirian bersosialisasi, pembiasaan hafalan doa sehari-hari, serta pengenalan huruf hijaiyah dasar secara menyenangkan.
+          </p>
+          
+          <!-- Key Specs Grid -->
+          <div class="grid grid-cols-2 gap-sm pt-4 border-t border-outline-variant/30">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">groups</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Rasio Pengasuh &amp; Anak</p>
+                <p class="font-headline-md text-primary m-0">1 : 4</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">escalator_warning</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Usia Pendaftaran</p>
+                <p class="font-headline-md text-primary m-0">1 - 3 Tahun</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <div class="absolute -top-4 -right-4 w-full h-full border-2 border-secondary rounded-xl z-0"></div>
+          <div class="relative z-10 overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-surface-container-low">
+            <img 
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+              alt="Students participating in creative and independent play at TPA KB Naneymi" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDovWRtuCp7DdGZnwXOeITKhBqhnaEKXESNfzh1W5uBBVVMwo152wgyFHmKKtzBvzhvf8sTrBXUOaqslDeaLL_i03eWfrR2-0fyNtfQdbSJeZq5fAPVmmTvQBLIENn3N1N7DNCmDBbTHPe2rPJ9FezGWloSBfdFRb6-adcHKvrY3VgEvHJ6eUdDkUqs21Pr_ynCs6QzFm9z2h1J0BLH3rHAgAgWBm2xvKyfQA_BXBRtOkFTrYYoXWEKkg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curriculum Section (Pillars) -->
+    <section id="kurikulum" class="py-xl bg-surface-container-low scroll-mt-24">
+      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-xl reveal-element">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Kurikulum Kami</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Pilar Pembelajaran Islami Sejak Dini</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+          <!-- Adab & Akhlak -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Pembiasaan Adab</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Penanaman adab makan, adab berbicara sopan, menghormati orang tua dan teman, serta senyum, sapa, salam dalam keseharian.
+            </p>
+          </div>
+
+          <!-- Doa & Tahfidz Dini -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">menu_book</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Tahfidz &amp; Doa</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Mengenalkan bacaan Al Qur'an juz 30, surat-surat pendek, doa harian sederhana, dan pengenalan huruf hijaiyah lewat lagu interaktif.
+            </p>
+          </div>
+
+          <!-- Kemandirian Awal -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">accessibility_new</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Kemandirian Anak</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Melatih anak melakukan toilet training, mengenakan sepatu sendiri, merapikan mainan, dan melatih kemandirian makan tanpa disuapi.
+            </p>
+          </div>
+
+          <!-- Stimulasi Motorik Interaktif -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">child_care</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Motorik Kasar &amp; Halus</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Merangsang kekuatan otot melalui permainan keseimbangan, merayap, melompat, memindahkan benda kecil, menggambar coretan awal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Routine Section -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto reveal-element">
+      <div class="text-center mb-xl">
+        <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Keseharian</span>
+        <h2 class="font-headline-lg text-headline-lg text-primary">Rutinitas Harian TPA KB Naneymi</h2>
+        <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+      </div>
+
+      <div class="relative border-l-2 border-outline-variant/50 pl-6 ml-4 space-y-lg">
+        <!-- Rutinitas 1 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">07.30 - 08.15</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Morning Circle &amp; Jurnal Pagi</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Siswa berkumpul melingkar untuk membaca doa belajar, hafalan surat pendek, dan asmaul husna dasar.</p>
+          </div>
+        </div>
+
+        <!-- Rutinitas 2 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">08.15 - 09.30</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Sentra Bermain Perilaku &amp; Stimulasi</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Belajar tematik melalui bermain peran makro/mikro, melatih empati, berbagi, dan kepemimpinan dalam kelompok kecil.</p>
+          </div>
+        </div>
+
+        <!-- Rutinitas 3 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">09.30 - 10.15</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Makan Sehat &amp; Toilet Training</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Membiasakan adab makan islami (duduk, tangan kanan, berdoa), menikmati menu sehat harian, dilanjutkan toilet training.</p>
+          </div>
+        </div>
+
+        <!-- Rutinitas 4 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">10.15 - 11.30</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Eksplorasi Kreatif &amp; Seni Hijaiyah</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Mewarnai huruf hijaiyah dengan jari (finger painting), menempel kolase Islami, dan melatih fokus kognitif awal.</p>
+          </div>
+        </div>
+
+        <!-- Rutinitas 5 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">11.30 - 15.00</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Makan Siang &amp; Istirahat Siang (Nap Time)</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Makan siang bergizi seimbang, membersihkan diri, mengganti pakaian tidur, mendengarkan lantunan murottal Al-Qur'an menjelang tidur siang.</p>
+          </div>
+        </div>
+
+        <!-- Rutinitas 6 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">15.00 - 16.00</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Mandi Sore &amp; Kepulangan</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Mandi sore agar kembali segar, snack sore, mengulang hafalan satu doa pendek bersama, lalu bersantai menunggu jemputan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-xl bg-surface-container-low reveal-element">
+      <div class="max-w-[800px] mx-auto px-margin-mobile">
+        <div class="text-center mb-xl">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Tanya Jawab</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Pertanyaan Umum</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Berapa target hafalan Al-Qur'an untuk anak di TPA KB Naneymi?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Untuk anak usia 1-3 tahun, target kami adalah pengenalan auditori yang akrab dengan surat-surat pendek (Surat Al-Fatihah, An-Nas, Al-Falaq, Al-Ikhlas) serta pembiasaan doa makan, doa tidur, dan doa untuk kedua orang tua.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Apa perbedaan mendasar antara TPA KB Naneymi dengan TPA KB Dinado?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              TPA KB Dinado menitikberatkan pada stimulasi kognitif umum dan eksplorasi motorik/sensorik yang sangat luas. Sedangkan TPA KB Naneymi memiliki porsi integrasi islami yang lebih pekat sejak awal, seperti pengenalan adab-adab harian pesantren anak, pengenalan hijaiyah, dan pemutaran murottal rutin. Kedua unit berada di bawah naungan yayasan YP2SK.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Bagaimana prosedur pendaftaran murid baru?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Pendaftaran dapat dilakukan secara langsung di kantor sekretariat yayasan atau secara online melalui kontak PMB kami. Proses pendaftaran meliputi pengisian formulir, penyerahan berkas (KIA/Akte Kelahiran, KK), asesmen awal tumbuh kembang anak oleh tim terapis, dan masa trial pengasuhan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-xl bg-primary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary-fixed via-transparent to-transparent animate-pulse"></div>
+      </div>
+      <div class="relative z-10 max-w-[800px] mx-auto text-center px-margin-mobile text-on-primary">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-md text-white">Masa Depan Berkarakter Islami Dimulai Sejak Dini</h2>
+        <p class="font-body-md mb-xl opacity-90 leading-relaxed max-w-[36rem] mx-auto">
+          Masa pendaftaran TPA KB Naneymi tahun ajaran baru telah dibuka. Hubungi kami untuk info ketersediaan slot rasio pengasuh dan biaya operasional.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-md">
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-115 hover:scale-105 active:scale-95 transition-all shadow-lg"
+          >
+            Hubungi Panitia PMB
+          </a>
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center border border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 hover:scale-105 active:scale-95 transition-all"
+          >
+            Konsultasi Program &amp; Biaya
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  function setupPage() {
+    // FAQ Toggle
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const answer = item?.querySelector('.faq-answer');
+        const icon = toggle.querySelector('.faq-icon');
+        
+        const isHidden = answer?.classList.contains('hidden');
+        
+        // Close other items
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(ic => ic.classList.remove('rotate-180'));
+        document.querySelectorAll('.faq-item').forEach(it => it.classList.remove('border-secondary'));
+
+        if (isHidden) {
+          answer?.classList.remove('hidden');
+          icon?.classList.add('rotate-180');
+          item?.classList.add('border-secondary');
+        }
+      });
+    });
+
+    // Reveal animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.reveal-element');
+    elements.forEach(el => {
+      el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  }
+
+  // Setup on load and page transition
+  setupPage();
+  document.addEventListener('astro:after-swap', setupPage);
+</script>

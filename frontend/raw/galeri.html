@@ -1,0 +1,521 @@
+<!doctype html>
+<html class="light" lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Galeri &amp; Kontak - YP2SK</title>
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            outline: "#74777f",
+                            "on-error": "#ffffff",
+                            primary: "#002045",
+                            "on-background": "#191c1e",
+                            "tertiary-fixed-dim": "#ffb77d",
+                            "surface-variant": "#e0e3e5",
+                            "primary-container": "#1a365d",
+                            "on-surface-variant": "#43474e",
+                            "on-surface": "#191c1e",
+                            "outline-variant": "#c4c6cf",
+                            "on-tertiary-fixed": "#2f1500",
+                            "on-primary-fixed-variant": "#2d476f",
+                            "secondary-fixed": "#85f8c4",
+                            "surface-bright": "#f7f9fb",
+                            "inverse-surface": "#2d3133",
+                            surface: "#f7f9fb",
+                            "on-secondary": "#ffffff",
+                            "on-primary-container": "#86a0cd",
+                            "tertiary-container": "#552b00",
+                            "on-secondary-fixed-variant": "#005137",
+                            "surface-container-high": "#e6e8ea",
+                            "surface-container-highest": "#e0e3e5",
+                            "error-container": "#ffdad6",
+                            error: "#ba1a1a",
+                            background: "#f7f9fb",
+                            "inverse-on-surface": "#eff1f3",
+                            "secondary-fixed-dim": "#68dba9",
+                            "on-tertiary": "#ffffff",
+                            "primary-fixed": "#d6e3ff",
+                            "tertiary-fixed": "#ffdcc3",
+                            "surface-container-low": "#f2f4f6",
+                            tertiary: "#361900",
+                            "surface-dim": "#d8dadc",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-container": "#eceef0",
+                            "on-secondary-fixed": "#002114",
+                            secondary: "#006c4a",
+                            "on-tertiary-fixed-variant": "#6e3900",
+                            "on-tertiary-container": "#eb851c",
+                            "inverse-primary": "#adc7f7",
+                            "surface-tint": "#455f88",
+                            "secondary-container": "#82f5c1",
+                            "primary-fixed-dim": "#adc7f7",
+                            "on-secondary-container": "#00714e",
+                            "on-primary-fixed": "#001b3c",
+                            "on-primary": "#ffffff",
+                            "on-error-container": "#93000a",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        spacing: {
+                            "margin-mobile": "16px",
+                            xs: "0.5rem",
+                            unit: "4px",
+                            md: "1.5rem",
+                            xl: "4rem",
+                            gutter: "24px",
+                            "margin-desktop": "64px",
+                            sm: "1rem",
+                            lg: "2.5rem",
+                        },
+                        fontFamily: {
+                            "body-sm": ["Inter"],
+                            "headline-xl-mobile": ["Playfair Display"],
+                            "headline-lg-mobile": ["Playfair Display"],
+                            "headline-lg": ["Playfair Display"],
+                            "body-lg": ["Inter"],
+                            "headline-md": ["Playfair Display"],
+                            "body-md": ["Inter"],
+                            "label-md": ["Inter"],
+                            "label-lg": ["Inter"],
+                            "headline-xl": ["Playfair Display"],
+                        },
+                        fontSize: {
+                            "body-sm": [
+                                "14px",
+                                { lineHeight: "1.5", fontWeight: "400" },
+                            ],
+                            "headline-xl-mobile": [
+                                "32px",
+                                { lineHeight: "1.2", fontWeight: "700" },
+                            ],
+                            "headline-lg-mobile": [
+                                "28px",
+                                { lineHeight: "1.3", fontWeight: "600" },
+                            ],
+                            "headline-lg": [
+                                "36px",
+                                { lineHeight: "1.3", fontWeight: "600" },
+                            ],
+                            "body-lg": [
+                                "18px",
+                                { lineHeight: "1.6", fontWeight: "400" },
+                            ],
+                            "headline-md": [
+                                "24px",
+                                { lineHeight: "1.4", fontWeight: "600" },
+                            ],
+                            "body-md": [
+                                "16px",
+                                { lineHeight: "1.6", fontWeight: "400" },
+                            ],
+                            "label-md": [
+                                "12px",
+                                { lineHeight: "1.0", fontWeight: "500" },
+                            ],
+                            "label-lg": [
+                                "14px",
+                                {
+                                    lineHeight: "1.0",
+                                    letterSpacing: "0.05em",
+                                    fontWeight: "600",
+                                },
+                            ],
+                            "headline-xl": [
+                                "48px",
+                                { lineHeight: "1.2", fontWeight: "700" },
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .masonry-grid {
+                columns: 1;
+                column-gap: 1.5rem;
+            }
+            @media (min-width: 768px) {
+                .masonry-grid {
+                    columns: 2;
+                }
+            }
+            @media (min-width: 1024px) {
+                .masonry-grid {
+                    columns: 3;
+                }
+            }
+            .masonry-item {
+                break-inside: avoid;
+                margin-bottom: 1.5rem;
+            }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container"
+    >
+        <!-- TopNavBar -->
+        <header
+            class="fixed top-0 left-0 w-full z-50 bg-surface shadow-sm h-20"
+        >
+            <nav
+                class="max-w-[1440px] mx-auto px-margin-desktop h-full flex justify-between items-center"
+            >
+                <div
+                    class="text-headline-md font-headline-md font-bold text-primary"
+                >
+                    YP2SK
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a
+                        class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                        href="#">Beranda</a
+                    >
+                    <a
+                        class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                        href="#">Profil</a
+                    >
+                    <a
+                        class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                        href="#">Pendidikan</a
+                    >
+                    <a
+                        class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                        href="#">Agenda</a
+                    >
+                    <a
+                        class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                        href="#">Berita</a
+                    >
+                    <a
+                        class="text-primary border-b-2 border-primary pb-1 font-bold hover:text-secondary transition-colors duration-200"
+                        href="#">Galeri</a
+                    >
+                    <a
+                        class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                        href="#">Kontak</a
+                    >
+                    <button
+                        class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-lg hover:bg-primary-container transition-all scale-95 active:scale-100"
+                        >PMB</button
+                    >
+                </div>
+                <!-- Mobile Toggle -->
+                <button class="md:hidden p-2 text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </nav>
+        </header>
+        <main class="pt-24 pb-xl">
+            <!-- Hero Section -->
+            <section class="px-margin-desktop mb-xl">
+                <div class="max-w-[1140px] mx-auto text-center">
+                    <h1
+                        class="text-headline-xl font-headline-xl text-primary mb-md"
+                    >
+                        Galeri &amp; Jejak Langkah
+                    </h1>
+                    <p
+                        class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto italic"
+                    >
+                        "Mengabadikan setiap momen pertumbuhan, keceriaan, dan
+                        pencapaian siswa kami dalam perjalanan menuju
+                        keunggulan."
+                    </p>
+                    <div
+                        class="w-24 h-1 bg-on-tertiary-container mx-auto mt-6 rounded-full"
+                    >
+                    </div>
+                </div>
+            </section>
+            <!-- Gallery Masonry Section -->
+            <section class="px-margin-desktop mb-xl">
+                <div class="max-w-[1140px] mx-auto">
+                    <div class="masonry-grid">
+                        <!-- Masonry Item 1 -->
+                        <div
+                            class="masonry-item group relative overflow-hidden rounded-xl shadow-md transition-all hover:shadow-xl hover:-translate-y-1"
+                        >
+                            <img
+                                class="w-full object-cover"
+                                data-alt="Indonesian students in uniforms laughing and learning together in a bright, modern classroom filled with educational posters and soft natural sunlight. The atmosphere is warm and nurturing, emphasizing growth and community, with high-quality photography style and vivid primary colors of Navy and Emerald accents."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0eo_hIz5m6CQljyilwXPKjXTW0Ek6uQ5vHz9VH_QFYcmKf1Z7GNNCwGU7qoeEbAlQC4d2DzFh-4sSXioWUxwra2CSd6XdGuiSd-xbkz5qEQvW06LWi0O0KE85_b5ULyOfYq3HiuXdWpgrZmECcPuujr1NzALHrx5BeOrvvgLc2j2fMtJmYhHZmFNbiWfdpNE0jRzeCYtTXDDlEpYDhvfcLSn-BLkPdS94Tk0OBc9aQxycbYd2Xco-vA"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md"
+                            >
+                                <span
+                                    class="text-secondary-fixed text-label-md font-label-md mb-1"
+                                    >Kegiatan Siswa</span
+                                >
+                                <h3
+                                    class="text-on-primary font-headline-md text-headline-md"
+                                >
+                                    Belajar Kelompok Kreatif
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- Masonry Item 2 -->
+                        <div
+                            class="masonry-item group relative overflow-hidden rounded-xl shadow-md transition-all hover:shadow-xl hover:-translate-y-1"
+                        >
+                            <img
+                                class="w-full object-cover"
+                                data-alt="A wide shot of a prestigious school building during an outdoor ceremony, featuring neat architecture and green landscaped gardens. The lighting is golden hour, creating long shadows and a prestigious institutional feel. Navy blue banners with the YP2SK logo are visible, set against a pristine blue sky."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4W_Y9A8_NGqUnGf9_RomxiSKVa0Rpk63Vs05C-PJULiy53_3NzzssUXKR-7U5vWV0mES3EgLbAQtbwnUXy8PYKvbj-Ig724hA8b4CaX705HXkgJ09asxMb6ZFH5MDWOLwzFc_qWC-cZOd5mqmLiX8JdOfx5XFQl7kxdlRulenJ103DiB2ZQKS_lbY_YPw-ExGtz_lVAh0dfLq_aoYFtgXtZqfBiWQJ-rOesaZQ5IO7nApoRLe26JLcw"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md"
+                            >
+                                <span
+                                    class="text-secondary-fixed text-label-md font-label-md mb-1"
+                                    >Fasilitas</span
+                                >
+                                <h3
+                                    class="text-on-primary font-headline-md text-headline-md"
+                                >
+                                    Upacara Bendera Senin
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- Masonry Item 3 -->
+                        <div
+                            class="masonry-item group relative overflow-hidden rounded-xl shadow-md transition-all hover:shadow-xl hover:-translate-y-1"
+                        >
+                            <img
+                                class="w-full object-cover"
+                                data-alt="A close-up artistic shot of a student's hands carefully planting a small sapling in a school garden, with rich brown soil and vibrant emerald green leaves. The focus is sharp on the plant, with a soft bokeh background of other children. The mood is hopeful, symbolizing the 'Tumbuh' brand value."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuaBChlfgILPEa3b-x3RZkuvQIDTrBcOnV9eyv8YOsrUk7d8fpIHlNEhScrku8Vl-tQrA1fneD0VZEjL36NGbnyz9EUvEK0qN8D5RsL6rENcfNEeJqeGl-W2pHd6FcAyR8L3s7_l4Deqdbnei_rMlDMcZ1TgxljSzBDXlxjCqeuTbENdHVj0n8T-HoH-qeKlW1HnrxZwWwKKsVqVwh1ooREwvLTpYxUz-S3Cr-jP8mABataK6ALsWCuQ"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md"
+                            >
+                                <span
+                                    class="text-secondary-fixed text-label-md font-label-md mb-1"
+                                    >Lingkungan</span
+                                >
+                                <h3
+                                    class="text-on-primary font-headline-md text-headline-md"
+                                >
+                                    Program Sekolah Hijau
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- Masonry Item 4 -->
+                        <div
+                            class="masonry-item group relative overflow-hidden rounded-xl shadow-md transition-all hover:shadow-xl hover:-translate-y-1"
+                        >
+                            <img
+                                class="w-full object-cover"
+                                data-alt="A dynamic action shot of children playing sports on a professional blue-surfaced court. The sun is shining brightly, highlighting their energetic movements. The color palette is dominated by Navy and Slate with pops of Emerald. High-speed photography captures clear expressions of joy and determination."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXO_BaFBVv8OOXA8ga4DfSzvFIjz-HU6KBTvF3VIExRDfJVc-ZZTRnV6GFHir50LdbLrJb7Z4oZjw0Lo_gIjl8t_-WpAbn7T2m4SfQV-ud1urVPB634H_yZuhj-oaOEtt-SnwhgOBZhtrZyXw9Vue1-2aqfzNDJkdF_6v_JoKgRWcSRvdAYWWg81Sc0i9zVUS2q5jHOwsHs0z79wOgtn3oOF-_eRfSJatjYni9kiFYgPepQV4g7vToug"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md"
+                            >
+                                <span
+                                    class="text-secondary-fixed text-label-md font-label-md mb-1"
+                                    >Olahraga</span
+                                >
+                                <h3
+                                    class="text-on-primary font-headline-md text-headline-md"
+                                >
+                                    Kompetisi Tahunan
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- Masonry Item 5 -->
+                        <div
+                            class="masonry-item group relative overflow-hidden rounded-xl shadow-md transition-all hover:shadow-xl hover:-translate-y-1"
+                        >
+                            <img
+                                class="w-full object-cover"
+                                data-alt="Students performing a traditional Indonesian dance on a wooden stage, wearing colorful costumes with gold embroidery. The lighting is dramatic and focused, highlighting the cultural heritage and excellence. The image is sophisticated, editorial in quality, reflecting the 'Unggul' and 'Amanah' spirit."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK_RQTMHdjuU9dhsVTmHOXbO1IT6Ms3MRJP2-beNXY9pOuQCbve3uqEiJMEYTIB2xXapzrHEZB5lVqnMQxgaLGHQr9g6Y44I15JVHFcIB594VC_HupuKiXAmpPC_wKCnp3qz2gok-wG05kEfgUMEDwVixYqtS79qQ6f7rxMHV7mBVGxDTusfffgQ46k9GtsAEbZgoC7ehuMn2m3clbhOqRwU0N9Q4tOou6B_GVLsxV8PjHavBURWscKg"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md"
+                            >
+                                <span
+                                    class="text-secondary-fixed text-label-md font-label-md mb-1"
+                                    >Seni &amp; Budaya</span
+                                >
+                                <h3
+                                    class="text-on-primary font-headline-md text-headline-md"
+                                >
+                                    Pentas Seni Akhir Tahun
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- Masonry Item 6 -->
+                        <div
+                            class="masonry-item group relative overflow-hidden rounded-xl shadow-md transition-all hover:shadow-xl hover:-translate-y-1"
+                        >
+                            <img
+                                class="w-full object-cover"
+                                data-alt="A clean, minimalist laboratory setting where a teacher is demonstrating a science experiment to curious students. Modern equipment, white lab coats, and focused expressions. The lighting is sterile yet inviting, with a palette of clean whites and Navy blue accents, conveying institutional professionalism."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKDwIlt5yVG6F3r_zIVdJIb84IeyFZ-8bWf5QHFu9wRljUbvDAheu0RFR8xm-teWi6Xu6kYP66umCyfSEUTSQJGRKJGxXl6q0oAQZIFBF30ZNG6ZlOWuVlOxkX1JWqa3d9LCj_a8lZ0CA2hD4t-ED42NFlqU8fvAqyHmzYRiRyjbrX56jMgmMNLYLl6KIt6pSAURQeR-4bO6FyUq748JRu-heBfN1Opkiy9Nhnut1oOt7iCevMoTP-eA"
+                            />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-md"
+                            >
+                                <span
+                                    class="text-secondary-fixed text-label-md font-label-md mb-1"
+                                    >Akademik</span
+                                >
+                                <h3
+                                    class="text-on-primary font-headline-md text-headline-md"
+                                >
+                                    Eksperimen Laboratorium
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="bg-primary text-on-primary w-full py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter"
+        >
+            <div class="flex flex-col gap-md">
+                <div
+                    class="text-headline-md font-headline-md font-bold text-on-primary"
+                >
+                    YP2SK
+                </div>
+                <p class="text-body-sm font-body-sm opacity-80 leading-relaxed">
+                    Yayasan Pendidikan Pembangunan Sosial Keagamaan berkomitmen
+                    melahirkan generasi yang Amanah, Tumbuh, dan Unggul.
+                </p>
+            </div>
+            <div class="flex flex-col gap-md">
+                <h4 class="text-headline-sm font-headline-sm">Yayasan</h4>
+                <ul class="space-y-xs">
+                    <li>
+                        <a
+                            class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-sm"
+                            href="#">Profil Yayasan</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-sm"
+                            href="#">Visi &amp; Misi</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-sm"
+                            href="#">Sejarah</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-md">
+                <h4 class="text-headline-sm font-headline-sm">
+                    Unit Pendidikan
+                </h4>
+                <ul class="space-y-xs">
+                    <li>
+                        <a
+                            class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-sm"
+                            href="#">KB Dinado</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-sm"
+                            href="#">TK Dinado</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-sm"
+                            href="#">TK Naneymi</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-md">
+                <h4 class="text-headline-sm font-headline-sm">Informasi</h4>
+                <ul class="space-y-xs">
+                    <li>
+                        <a
+                            class="text-secondary-fixed font-bold hover:opacity-100 transition-all font-body-sm"
+                            href="#">Pendaftaran Siswa Baru</a>
+                    </li>
+                    <li>
+                        <div class="text-on-primary opacity-80 text-body-sm">
+                            © 2024 Yayasan Pendidikan Pembangunan Sosial
+                            Keagamaan (YP2SK). Amanah, Tumbuh, Unggul.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            // Simple micro-interaction for active scroll state or interactive elements
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document
+                        .querySelector(this.getAttribute("href"))
+                        .scrollIntoView({
+                            behavior: "smooth",
+                        });
+                });
+            });
+
+            // Form submission feedback simulation
+            const form = document.querySelector("form");
+            if (form) {
+                form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const btn = form.querySelector("button");
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML =
+                        'Mengirim... <span class="material-symbols-outlined animate-spin">refresh</span>';
+                    btn.classList.add("opacity-70");
+
+                    setTimeout(() => {
+                        btn.innerHTML =
+                            'Terkirim! <span class="material-symbols-outlined">check_circle</span>';
+                        btn.classList.replace("bg-secondary", "bg-green-600");
+                        form.reset();
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.classList.replace(
+                                "bg-green-600",
+                                "bg-secondary",
+                            );
+                            btn.classList.remove("opacity-70");
+                        }, 3000);
+                    }, 1500);
+                });
+            }
+        </script>
+    </body>
+</html>

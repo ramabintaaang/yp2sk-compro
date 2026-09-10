@@ -1,0 +1,656 @@
+<!doctype html>
+<html class="light" lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Profil Yayasan - YP2SK</title>
+        <script
+            src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            outline: "#74777f",
+                            "on-error": "#ffffff",
+                            primary: "#002045",
+                            "on-background": "#191c1e",
+                            "tertiary-fixed-dim": "#ffb77d",
+                            "surface-variant": "#e0e3e5",
+                            "primary-container": "#1a365d",
+                            "on-surface-variant": "#43474e",
+                            "on-surface": "#191c1e",
+                            "outline-variant": "#c4c6cf",
+                            "on-tertiary-fixed": "#2f1500",
+                            "on-primary-fixed-variant": "#2d476f",
+                            "secondary-fixed": "#85f8c4",
+                            "surface-bright": "#f7f9fb",
+                            "inverse-surface": "#2d3133",
+                            surface: "#f7f9fb",
+                            "on-secondary": "#ffffff",
+                            "on-primary-container": "#86a0cd",
+                            "tertiary-container": "#552b00",
+                            "on-secondary-fixed-variant": "#005137",
+                            "surface-container-high": "#e6e8ea",
+                            "surface-container-highest": "#e0e3e5",
+                            "error-container": "#ffdad6",
+                            error: "#ba1a1a",
+                            background: "#f7f9fb",
+                            "inverse-on-surface": "#eff1f3",
+                            "secondary-fixed-dim": "#68dba9",
+                            "on-tertiary": "#ffffff",
+                            "primary-fixed": "#d6e3ff",
+                            "tertiary-fixed": "#ffdcc3",
+                            "surface-container-low": "#f2f4f6",
+                            tertiary: "#361900",
+                            "surface-dim": "#d8dadc",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-container": "#eceef0",
+                            "on-secondary-fixed": "#002114",
+                            secondary: "#006c4a",
+                            "on-tertiary-fixed-variant": "#6e3900",
+                            "on-tertiary-container": "#eb851c",
+                            "inverse-primary": "#adc7f7",
+                            "surface-tint": "#455f88",
+                            "secondary-container": "#82f5c1",
+                            "primary-fixed-dim": "#adc7f7",
+                            "on-secondary-container": "#00714e",
+                            "on-primary-fixed": "#001b3c",
+                            "on-primary": "#ffffff",
+                            "on-error-container": "#93000a",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        spacing: {
+                            "margin-mobile": "16px",
+                            xs: "0.5rem",
+                            unit: "4px",
+                            md: "1.5rem",
+                            xl: "4rem",
+                            gutter: "24px",
+                            "margin-desktop": "64px",
+                            sm: "1rem",
+                            lg: "2.5rem",
+                        },
+                        fontFamily: {
+                            "body-sm": ["Inter"],
+                            "headline-xl-mobile": ["Playfair Display"],
+                            "headline-lg-mobile": ["Playfair Display"],
+                            "headline-lg": ["Playfair Display"],
+                            "body-lg": ["Inter"],
+                            "headline-md": ["Playfair Display"],
+                            "body-md": ["Inter"],
+                            "label-md": ["Inter"],
+                            "label-lg": ["Inter"],
+                            "headline-xl": ["Playfair Display"],
+                        },
+                        fontSize: {
+                            "body-sm": [
+                                "14px",
+                                { lineHeight: "1.5", fontWeight: "400" },
+                            ],
+                            "headline-xl-mobile": [
+                                "32px",
+                                { lineHeight: "1.2", fontWeight: "700" },
+                            ],
+                            "headline-lg-mobile": [
+                                "28px",
+                                { lineHeight: "1.3", fontWeight: "600" },
+                            ],
+                            "headline-lg": [
+                                "36px",
+                                { lineHeight: "1.3", fontWeight: "600" },
+                            ],
+                            "body-lg": [
+                                "18px",
+                                { lineHeight: "1.6", fontWeight: "400" },
+                            ],
+                            "headline-md": [
+                                "24px",
+                                { lineHeight: "1.4", fontWeight: "600" },
+                            ],
+                            "body-md": [
+                                "16px",
+                                { lineHeight: "1.6", fontWeight: "400" },
+                            ],
+                            "label-md": [
+                                "12px",
+                                { lineHeight: "1.0", fontWeight: "500" },
+                            ],
+                            "label-lg": [
+                                "14px",
+                                {
+                                    lineHeight: "1.0",
+                                    letterSpacing: "0.05em",
+                                    fontWeight: "600",
+                                },
+                            ],
+                            "headline-xl": [
+                                "48px",
+                                { lineHeight: "1.2", fontWeight: "700" },
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            .bento-grid {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                gap: 1.5rem;
+            }
+            .mission-card {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .mission-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 24px -10px rgba(0, 32, 69, 0.15);
+            }
+            .nav-link-underline {
+                position: relative;
+            }
+            .nav-link-underline::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background-color: currentColor;
+                transition: width 0.3s ease;
+            }
+            .nav-link-underline:hover::after {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container"
+    >
+        <!-- TopNavBar -->
+        <nav
+            class="fixed top-0 left-0 w-full z-50 bg-surface dark:bg-surface-container-highest shadow-sm dark:shadow-none flex justify-between items-center px-margin-desktop h-20 max-w-[1440px] left-1/2 -translate-x-1/2"
+        >
+            <div class="flex items-center gap-2">
+                <span
+                    class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed"
+                    >YP2SK</span
+                >
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a
+                    class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 nav-link-underline"
+                    href="#">Beranda</a
+                >
+                <a
+                    class="text-primary dark:text-secondary-fixed border-b-2 border-primary dark:border-secondary-fixed pb-1 font-bold"
+                    href="#">Profil</a
+                >
+                <a
+                    class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 nav-link-underline"
+                    href="#">Pendidikan</a
+                >
+                <a
+                    class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 nav-link-underline"
+                    href="#">Agenda</a
+                >
+                <a
+                    class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 nav-link-underline"
+                    href="#">Berita</a
+                >
+                <a
+                    class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 nav-link-underline"
+                    href="#">Galeri</a
+                >
+                <a
+                    class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 nav-link-underline"
+                    href="#">Kontak</a
+                >
+            </div>
+            <button
+                class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-lg font-bold scale-95 active:scale-100 transition-transform shadow-md hover:bg-primary-container"
+            >
+                PMB
+            </button>
+        </nav>
+        <main class="mt-20">
+            <!-- Hero Section -->
+            <section class="relative py-xl overflow-hidden">
+                <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
+                    <div class="flex flex-col md:flex-row items-center gap-lg">
+                        <div class="w-full md:w-1/2 space-y-md">
+                            <span
+                                class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-label-lg font-bold uppercase tracking-wider"
+                                >Tentang Kami</span
+                            >
+                            <h1
+                                class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary leading-tight"
+                            >
+                                Membangun Generasi <br />
+                                <span class="italic text-secondary font-normal"
+                                    >Berkarakter &amp; Unggul</span
+                                >
+                            </h1>
+                            <p
+                                class="text-body-lg text-on-surface-variant max-w-lg"
+                            >
+                                Yayasan Pendidikan Pesantren Sunan Kudus
+                                (YP2SK) berkomitmen penuh dalam mencetak insan
+                                yang berakhlak mulia, cerdas, dan mandiri
+                                melalui pendekatan pendidikan yang holistik dan
+                                modern.
+                            </p>
+                            <div class="flex gap-4 pt-4">
+                                <button
+                                    class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-lg font-bold shadow-lg hover:shadow-xl transition-all"
+                                    >Lihat Visi &amp; Misi</button
+                                >
+                                <button
+                                    class="border border-primary text-primary px-8 py-3 rounded-lg font-label-lg font-bold hover:bg-primary/5 transition-all"
+                                    >Hubungi Kami</button
+                                >
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 relative group">
+                            <div
+                                class="absolute -inset-4 bg-secondary/10 rounded-2xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"
+                            >
+                            </div>
+                            <div
+                                class="relative overflow-hidden rounded-xl shadow-2xl"
+                            >
+                                <img
+                                    alt="Kepemimpinan YP2SK"
+                                    class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida/AP1WRLtKguq-lVg29XpyYUCfoGUvUFD0Qvg21QJNhKm81wzQNis3v8Bb3yMYb8QUcA72HgPCLuVuuGMezJCsg7LRhzZ-BFdEb50M93q4tudu63A8k0I6pCXQAFaHP5RIwX6BkhPm_cRZA3Z78yNImrYHRQ6Fhr0nzDtMlws047IW_6c6xYRF00KfofRC13ZBsDGT0Zf9gqXWzHByEytsKDvfNc-lq_7g160SGmanluP49aAjihBc-2MX1aP3aoQb"
+                                />
+                            </div>
+                            <div
+                                class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden lg:block"
+                            >
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-secondary flex items-center justify-center rounded-full text-on-primary"
+                                    >
+                                        <span class="material-symbols-outlined"
+                                            >verified</span
+                                        >
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-headline-md font-headline-md text-primary m-0 leading-none"
+                                        >
+                                            25+
+                                        </p>
+                                        <p
+                                            class="text-label-md text-on-surface-variant font-medium"
+                                        >
+                                            Tahun Pengabdian
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Visi Section (Bento Inspired) -->
+            <section class="py-xl bg-surface-container-low">
+                <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
+                    <div class="text-center mb-lg space-y-2">
+                        <h2
+                            class="text-headline-lg font-headline-lg text-primary"
+                        >
+                            Visi Utama Kami
+                        </h2>
+                        <div class="w-20 h-1 bg-secondary mx-auto rounded-full">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant relative overflow-hidden"
+                    >
+                        <div class="absolute top-0 right-0 p-8 text-primary/5">
+                            <span class="material-symbols-outlined !text-9xl"
+                                >format_quote</span
+                            >
+                        </div>
+                        <div
+                            class="relative z-10 max-w-3xl mx-auto text-center italic"
+                        >
+                            <h3
+                                class="text-headline-md md:text-headline-lg font-headline-md text-primary leading-relaxed"
+                            >
+                                "Menjadi lembaga pendidikan terdepan yang
+                                Amanah, Tumbuh, dan Unggul dalam membentuk
+                                karakter anak didik yang Islami, Cerdas, dan
+                                Berjiwa Mandiri."
+                            </h3>
+                            <p
+                                class="mt-8 text-label-lg font-bold text-secondary uppercase tracking-[0.2em]"
+                            >
+                                — Dewan Pembina YP2SK
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Misi Section (Card Layout) -->
+            <section class="py-xl">
+                <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-end mb-lg gap-4"
+                    >
+                        <div class="max-w-xl">
+                            <h2
+                                class="text-headline-lg font-headline-lg text-primary"
+                            >
+                                Misi Strategis
+                            </h2>
+                            <p
+                                class="text-body-md text-on-surface-variant mt-2"
+                            >
+                                Langkah nyata yang kami tempuh setiap hari untuk
+                                mewujudkan cita-cita luhur yayasan bagi masa
+                                depan putra-putri bangsa.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                        <!-- Misi 1 -->
+                        <div
+                            class="mission-card bg-white p-8 rounded-2xl border border-outline-variant flex flex-col items-start h-full"
+                        >
+                            <div
+                                class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center text-secondary-fixed mb-6"
+                            >
+                                <span
+                                    class="material-symbols-outlined !text-3xl"
+                                    style="font-variation-settings: 'FILL' 1;"
+                                    >school</span
+                                >
+                            </div>
+                            <h4
+                                class="text-headline-md font-headline-md text-primary mb-4"
+                            >
+                                Kualitas Pengajaran
+                            </h4>
+                            <p class="text-body-md text-on-surface-variant">
+                                Menyelenggarakan pendidikan berkualitas dengan
+                                kurikulum yang relevan dan metode pembelajaran
+                                yang inovatif untuk memacu kecerdasan
+                                intelektual.
+                            </p>
+                        </div>
+                        <!-- Misi 2 -->
+                        <div
+                            class="mission-card bg-white p-8 rounded-2xl border border-outline-variant flex flex-col items-start h-full"
+                        >
+                            <div
+                                class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center text-on-primary mb-6"
+                            >
+                                <span
+                                    class="material-symbols-outlined !text-3xl"
+                                    style="font-variation-settings: 'FILL' 1;"
+                                    >mosque</span
+                                >
+                            </div>
+                            <h4
+                                class="text-headline-md font-headline-md text-primary mb-4"
+                            >
+                                Lingkungan Islami
+                            </h4>
+                            <p class="text-body-md text-on-surface-variant">
+                                Membangun ekosistem pendidikan yang kental
+                                dengan nilai-nilai islami guna membentuk
+                                akhlakul karimah dan karakter religius sejak
+                                dini.
+                            </p>
+                        </div>
+                        <!-- Misi 3 -->
+                        <div
+                            class="mission-card bg-white p-8 rounded-2xl border border-outline-variant flex flex-col items-start h-full"
+                        >
+                            <div
+                                class="w-14 h-14 bg-tertiary-container rounded-xl flex items-center justify-center text-tertiary-fixed mb-6"
+                            >
+                                <span
+                                    class="material-symbols-outlined !text-3xl"
+                                    style="font-variation-settings: 'FILL' 1;"
+                                    >self_improvement</span
+                                >
+                            </div>
+                            <h4
+                                class="text-headline-md font-headline-md text-primary mb-4"
+                            >
+                                Kemandirian
+                            </h4>
+                            <p class="text-body-md text-on-surface-variant">
+                                Menanamkan jiwa kemandirian dan rasa percaya
+                                diri kepada anak didik agar mampu menjadi
+                                individu yang tangguh dan adaptif di masa depan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Stats Counter Section -->
+            <section class="py-lg bg-primary text-on-primary">
+                <div
+                    class="max-w-[1140px] mx-auto px-margin-mobile md:px-0 grid grid-cols-2 md:grid-cols-4 gap-gutter text-center"
+                >
+                    <div class="space-y-1">
+                        <p
+                            class="text-headline-xl font-headline-xl text-secondary-fixed"
+                        >
+                            5000+
+                        </p>
+                        <p class="text-label-lg opacity-80">Siswa Terbantu</p>
+                    </div>
+                    <div class="space-y-1">
+                        <p
+                            class="text-headline-xl font-headline-xl text-secondary-fixed"
+                        >
+                            150+
+                        </p>
+                        <p class="text-label-lg opacity-80">Tenaga Pendidik</p>
+                    </div>
+                    <div class="space-y-1">
+                        <p
+                            class="text-headline-xl font-headline-xl text-secondary-fixed"
+                        >
+                            12
+                        </p>
+                        <p class="text-label-lg opacity-80">Unit Pendidikan</p>
+                    </div>
+                    <div class="space-y-1">
+                        <p
+                            class="text-headline-xl font-headline-xl text-secondary-fixed"
+                        >
+                            24+
+                        </p>
+                        <p class="text-label-lg opacity-80">Mitra Strategis</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Call to Action -->
+            <section class="py-xl">
+                <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
+                    <div
+                        class="bg-secondary-container rounded-3xl p-lg md:p-xl flex flex-col md:flex-row items-center justify-between gap-md relative overflow-hidden"
+                    >
+                        <div
+                            class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary opacity-10 rounded-full blur-3xl"
+                        >
+                        </div>
+                        <div class="relative z-10 space-y-4">
+                            <h2
+                                class="text-headline-lg font-headline-lg text-on-secondary-container"
+                            >
+                                Bergabung Bersama Kami
+                            </h2>
+                            <p
+                                class="text-body-lg text-on-secondary-container/80 max-w-lg"
+                            >
+                                Berikan pendidikan terbaik yang membentuk
+                                karakter dan masa depan putra-putri Anda bersama
+                                YP2SK.
+                            </p>
+                        </div>
+                        <div class="relative z-10">
+                            <button
+                                class="bg-primary text-on-primary px-10 py-4 rounded-xl font-headline-md shadow-lg hover:scale-105 active:scale-95 transition-all"
+                            >
+                                Daftar Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="w-full py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface"
+        >
+            <div class="space-y-md">
+                <h5
+                    class="text-headline-md font-headline-md text-on-primary dark:text-primary"
+                >
+                    YP2SK
+                </h5>
+                <p class="text-body-sm font-body-sm opacity-80">
+                    Yayasan Pendidikan Pesantren Sunan Kudus berkomitmen
+                    pada keunggulan pendidikan berlandaskan nilai-nilai luhur.
+                </p>
+                <div class="flex gap-4">
+                    <a
+                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined text-body-sm"
+                            >share</span
+                        >
+                    </a>
+                    <a
+                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined text-body-sm"
+                            >mail</span
+                        >
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-md">
+                <h6 class="text-headline-sm font-headline-sm">Yayasan</h6>
+                <ul class="space-y-2">
+                    <li>
+                        <a
+                            class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed dark:hover:text-secondary transition-all text-body-sm font-body-sm"
+                            href="#">Profil Yayasan</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-secondary-fixed dark:text-secondary font-bold text-body-sm font-body-sm"
+                            href="#">Visi &amp; Misi</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed dark:hover:text-secondary transition-all text-body-sm font-body-sm"
+                            href="#">Sejarah</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-md">
+                <h6 class="text-headline-sm font-headline-sm">
+                    Unit Pendidikan
+                </h6>
+                <ul class="space-y-2">
+                    <li>
+                        <a
+                            class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed dark:hover:text-secondary transition-all text-body-sm font-body-sm"
+                            href="#">KB Dinado</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed dark:hover:text-secondary transition-all text-body-sm font-body-sm"
+                            href="#">TK Dinado</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed dark:hover:text-secondary transition-all text-body-sm font-body-sm"
+                            href="#">TK Naneymi</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-md">
+                <h6 class="text-headline-sm font-headline-sm">Informasi</h6>
+                <ul class="space-y-2">
+                    <li>
+                        <a
+                            class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed dark:hover:text-secondary transition-all text-body-sm font-body-sm"
+                            href="#">Pendaftaran Siswa Baru</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed dark:hover:text-secondary transition-all text-body-sm font-body-sm"
+                            href="#">Kontak Kami</a>
+                    </li>
+                </ul>
+                <div class="mt-8 pt-8 border-t border-white/10 md:col-span-4">
+                    <p class="text-body-sm font-body-sm opacity-60">
+                        © 2024 Yayasan Pendidikan Pesantren Sunan Kudus
+                        (YP2SK). Amanah, Tumbuh, Unggul.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            // Simple Scroll Animation for Cards
+            const observerOptions = {
+                threshold: 0.1,
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll(".mission-card").forEach((card) => {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                card.style.transition = "all 0.6s ease-out";
+                observer.observe(card);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NewsCard from '../components/agenda/NewsCard.astro';
+
+const fallbackNews = [
+  {
+    category: "Prestasi",
+    imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuADxdlSdcfLIou-9D78BYDeD88uxsQ9Df27LClBOHKIAoi5qV_4sVRDlZTJsWvY7VPsr1orKxPumxPhnpsUQs-bSIKCB5i0KHYCexI4UlOFdpYT__C9AZm6__YF5WX-leT-KIl5t17srwCdPDEPpW9_VReiQ8euar40HWpGZu0AfOdELVrkvbWpACcVtWPFfpHrPaIosSu3ZwWBos21uWAN9ktqtu9uORZzo0rxNzg2fMD2NQxBuAnTWQ",
+    imageAlt: "Siswa YP2SK Sabet Medali Emas Olimpiade Sains Nasional",
+    date: "15 Oktober 2024",
+    title: "Siswa YP2SK Sabet Medali Emas Olimpiade Sains Nasional",
+    description: "Dedikasi dan kerja keras membuahkan hasil membanggakan. Siswa kami berhasil mengungguli ratusan peserta dari seluruh Indonesia dalam ajang bergengsi..."
+  },
+  {
+    category: "Kegiatan",
+    imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuD_xtHH56s78e6Y8t0-koeWsGULhzb0sEn3C-SnY2ED2MQEo8yZYeKOxO5GXzs0RWaSjk1Y9-1TlSh-4VeOK8Qy3_cqqnf8VKDxqgGe_nsIYTra84SrLmucv8K8iHabP2fLE7OVjm4a1GOxzPt_EUkIkRzMmQmvc0abTL1aQMAihpgB9SQuvMuLizH6dnRkhvYLyrq12VGCS85uSfx6hGxfO4NPphfySwRCh7IGuYJlmR0La73Mf4v_xw",
+    imageAlt: "Transformasi Digital: Pelatihan Guru Berbasis Teknologi",
+    date: "10 Oktober 2024",
+    title: "Transformasi Digital: Pelatihan Guru Berbasis Teknologi",
+    description: "YP2SK terus berinovasi dalam metode pembelajaran. Pelatihan intensif dilakukan untuk memastikan seluruh tenaga pendidik siap menghadapi tantangan..."
+  },
+  {
+    category: "Opini",
+    imageSrc: "https://lh3.googleusercontent.com/aida-public/AB6AXuBGdRFbGkU6JIUKAuPEVvW-OjcNy60t7j-61g9Qi7fnhPKV_IMxGr84lbz-1FuEeNKDzUGXdDAJiYsLZ9TW286dib8VY0aaCbdGuDg8qQ5H23mhtB1LnOcJJUuiTDEtdp8zK6eXotIuFXtttmEm3r4wS7VfURgeOCMUl1yXx_goEKFRcc1U_0ExOweKqzN5FsdWdPiuMZ1T09k9kqIHlfo13DW-p45rFFT3iPm1SzNjKBTAY_aX0FCOpw",
+    imageAlt: "Pentingnya Pendidikan Lingkungan Sejak Dini",
+    date: "05 Oktober 2024",
+    title: "Pentingnya Pendidikan Lingkungan Sejak Dini",
+    description: "Membentuk generasi yang peduli lingkungan bukan sekadar tren, melainkan kebutuhan mendesak. Melalui kurikulum berbasis alam, YP2SK mencoba..."
+  }
+];
+
+const newsArticles = fallbackNews;
+
+const beritaSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Beranda",
+      "item": "https://yp2sk.or.id"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Berita & Kabar",
+      "item": "https://yp2sk.or.id/berita"
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Berita & Wawasan Pendidikan Terbaru | YP2SK - Yayasan Pendidikan Pesantren Sunan Kudus" 
+  description="Dapatkan kabar terkini mengenai prestasi siswa, inovasi program pembelajaran, serta tulisan opini dan wawasan pendidikan dari YP2SK."
+  schema={beritaSchema}
+>
+  <div class="pt-20">
+    <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0 py-xl">
+      <!-- Header Section -->
+      <header class="mb-lg space-y-md">
+        <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-label-md font-label-md font-bold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-[18px]">newspaper</span>
+          <span>Kabar &amp; Wawasan Terkini</span>
+        </div>
+        <h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary max-w-[42rem] leading-tight">
+          Berita &amp; Artikel Pendidikan
+        </h1>
+        <p class="text-body-lg font-body-lg text-on-surface-variant max-w-[36rem]">
+          Ikuti perkembangan prestasi, info kegiatan, dan artikel opini terbaru dari seluruh lingkungan lembaga YP2SK.
+        </p>
+      </header>
+
+      <!-- News & Articles Section -->
+      <section>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-md gap-4">
+          <div>
+            <h2 class="text-headline-md font-headline-md text-primary">Kumpulan Artikel &amp; Berita</h2>
+            <p class="text-body-md text-on-surface-variant">Filter berdasarkan topik yang ingin Anda baca di bawah ini.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 bg-surface-container-low p-1.5 rounded-full border border-outline-variant/30">
+            <button data-filter="semua" class="px-5 py-2 bg-primary text-on-primary rounded-full text-label-md cursor-pointer transition-colors font-bold">Semua</button>
+            <button data-filter="kegiatan" class="px-5 py-2 text-on-surface-variant hover:text-primary rounded-full text-label-md cursor-pointer transition-colors font-bold">Kegiatan</button>
+            <button data-filter="prestasi" class="px-5 py-2 text-on-surface-variant hover:text-primary rounded-full text-label-md cursor-pointer transition-colors font-bold">Prestasi</button>
+            <button data-filter="opini" class="px-5 py-2 text-on-surface-variant hover:text-primary rounded-full text-label-md cursor-pointer transition-colors font-bold">Opini</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          {newsArticles.map(article => (
+            <NewsCard {...article} />
+          ))}
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-lg flex justify-center items-center gap-2">
+          <button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-primary hover:bg-surface-container transition-colors cursor-pointer">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold cursor-pointer">1</button>
+          <button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-primary hover:bg-surface-container transition-colors cursor-pointer">2</button>
+          <button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-primary hover:bg-surface-container transition-colors cursor-pointer">3</button>
+          <span class="text-on-surface-variant px-2">...</span>
+          <button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-primary hover:bg-surface-container transition-colors cursor-pointer">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  function setupFilters() {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const newsCards = document.querySelectorAll('[data-category]');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filterValue = btn.getAttribute('data-filter');
+
+        // Toggle active button style
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('text-on-surface-variant', 'hover:text-primary');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('text-on-surface-variant', 'hover:text-primary');
+
+        // Filter cards
+        newsCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filterValue === 'semua' || category === filterValue) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // Setup immediately
+  setupFilters();
+  // Re-run on View Transitions
+  document.addEventListener('astro:after-swap', setupFilters);
+</script>

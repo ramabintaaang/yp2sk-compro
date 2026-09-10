@@ -1,0 +1,425 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const tkDinadoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yp2sk.or.id/pendidikan/tk-dinado#webpage",
+      "url": "https://yp2sk.or.id/pendidikan/tk-dinado",
+      "name": "TK Dinado | Taman Kanak-Kanak YP2SK",
+      "description": "Program Taman Kanak-Kanak (TK) Dinado - mempersiapkan kesiapan anak memasuki jenjang sekolah dasar dengan kurikulum holistik, kreatif, dan menanamkan karakter mulia.",
+      "breadcrumb": {
+        "@id": "https://yp2sk.or.id/pendidikan/tk-dinado#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yp2sk.or.id/pendidikan/tk-dinado#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pendidikan",
+          "item": "https://yp2sk.or.id/pendidikan/tk-dinado"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TK Dinado",
+          "item": "https://yp2sk.or.id/pendidikan/tk-dinado"
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://yp2sk.or.id/pendidikan/tk-dinado#school",
+      "name": "TK Dinado (Taman Kanak-Kanak Dinado)",
+      "description": "Lembaga pendidikan anak usia 4-6 tahun yang berfokus pada persiapan kognitif, motorik halus, dan kemandirian bersosialisasi secara islami.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDjjqCDj50W9Nm_j9mZ3dbwO7p0tiCxXGN2LDix6lm4nyWW-Kyhj2q-aUpK1TyC5zHGiQbCU5iq66hGG6KGshnaJNEHiqpM3QQ0w_99085gHMyzES5vDwnoqeYuSMMdt8PBGYkA22h1G-N_j-MpHqGBlYvBcNmv5Ci5nsoezgUlD3ATXjCmf8IGMV4B_15pgNV0Uv15_4JtR78CrK9gWraee8vNF9u4k6OBvkIEVpOfLxMloRwDn1zA0g",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Pendidikan No. 123",
+        "addressLocality": "Kota Dinado",
+        "addressCountry": "ID"
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="TK Dinado | Persiapan Sekolah Dasar & Tumbuh Kreatif - YP2SK" 
+  description="TK Dinado mempersiapkan masa depan gemilang anak Anda melalui metode belajar aktif, kolaboratif, serta penanaman karakter unggul sejak usia dini."
+  schema={tkDinadoSchema}
+>
+  <div class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div 
+          class="w-full h-full bg-cover bg-center" 
+          style="background-image: linear-gradient(rgba(0, 32, 69, 0.8), rgba(0, 32, 69, 0.65)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjjqCDj50W9Nm_j9mZ3dbwO7p0tiCxXGN2LDix6lm4nyWW-Kyhj2q-aUpK1TyC5zHGiQbCU5iq66hGG6KGshnaJNEHiqpM3QQ0w_99085gHMyzES5vDwnoqeYuSMMdt8PBGYkA22h1G-N_j-MpHqGBlYvBcNmv5Ci5nsoezgUlD3ATXjCmf8IGMV4B_15pgNV0Uv15_4JtR78CrK9gWraee8vNF9u4k6OBvkIEVpOfLxMloRwDn1zA0g');"
+          role="img"
+          aria-label="Kindergarten students working together in a classroom wearing traditional batik"
+        ></div>
+      </div>
+      <div class="relative z-10 text-center text-on-primary px-margin-mobile md:px-margin-desktop">
+        <span class="inline-block px-4 py-1.5 bg-secondary text-on-secondary rounded-full font-label-lg text-label-lg mb-sm uppercase tracking-widest shadow-sm">Taman Kanak-Kanak (Usia 4-6 Tahun)</span>
+        <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl max-w-[56rem] mx-auto mb-md text-white leading-tight">TK Dinado</h1>
+        <p class="font-body-lg text-body-lg max-w-[42rem] mx-auto text-on-primary/90 leading-relaxed mb-lg">
+          Mempersiapkan kesiapan anak memasuki jenjang sekolah dasar secara akademis, sosial-emosional, dan spiritual dengan metode menyenangkan.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/kontak" class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-110 active:scale-95 transition-all shadow-md">
+            Daftar Sekarang
+          </a>
+          <a href="#kurikulum" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 transition-all">
+            Pelajari Kurikulum
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section & Stats -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1140px] mx-auto reveal-element">
+      <div class="grid md:grid-cols-2 gap-xl items-center">
+        <div class="space-y-md">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold">Tentang TK Dinado</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Keseimbangan Kognitif, Karakter, dan Sosial</h2>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Di TK Dinado, kami memahami bahwa masa prasekolah merupakan pondasi penting untuk keberhasilan akademis anak di masa depan. Pendekatan kami mengintegrasikan stimulasi kognitif awal, seperti pengenalan literasi dan logika matematika, dengan pembelajaran kolaboratif berbasis proyek.
+          </p>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Siswa didorong untuk berani berekspresi, memecahkan masalah sederhana secara mandiri, dan berkolaborasi dalam tim. Hal ini selaras dengan pilar "Growth" dari yayasan kami untuk membangun anak yang tangguh dan selalu ingin tahu.
+          </p>
+          
+          <!-- Key Specs Grid -->
+          <div class="grid grid-cols-2 gap-sm pt-4 border-t border-outline-variant/30">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">groups</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Rasio Guru &amp; Anak</p>
+                <p class="font-headline-md text-primary m-0">1 : 12</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">escalator_warning</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Usia Pendaftaran</p>
+                <p class="font-headline-md text-primary m-0">4 - 6 Tahun</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <div class="absolute -top-4 -right-4 w-full h-full border-2 border-secondary rounded-xl z-0"></div>
+          <div class="relative z-10 overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-surface-container-low">
+            <img 
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+              alt="Students of TK Dinado collaborating on a class building project" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjjqCDj50W9Nm_j9mZ3dbwO7p0tiCxXGN2LDix6lm4nyWW-Kyhj2q-aUpK1TyC5zHGiQbCU5iq66hGG6KGshnaJNEHiqpM3QQ0w_99085gHMyzES5vDwnoqeYuSMMdt8PBGYkA22h1G-N_j-MpHqGBlYvBcNmv5Ci5nsoezgUlD3ATXjCmf8IGMV4B_15pgNV0Uv15_4JtR78CrK9gWraee8vNF9u4k6OBvkIEVpOfLxMloRwDn1zA0g"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curriculum Section (Pillars) -->
+    <section id="kurikulum" class="py-xl bg-surface-container-low scroll-mt-24">
+      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-xl reveal-element">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Kurikulum Holistik</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Pilar Pembelajaran Unggul</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+          <!-- Kesiapan Calistung -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">calculate</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Kognitif &amp; Logika</h3>
+            <p class="text-on-surface-variant text-sm font-body-md">Pengenalan membaca, menulis, dan berhitung dasar melalui permainan visual dan interaktif yang tanpa paksaan.</p>
+          </div>
+
+          <!-- Seni & Kreativitas -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">brush</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Seni &amp; Kreativitas</h3>
+            <p class="text-on-surface-variant text-sm font-body-md">Eksplorasi seni lukis, prakarya tangan (crafting), serta pertunjukan musik guna merangsang daya imajinasi anak.</p>
+          </div>
+
+          <!-- Proyek Kelompok -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Eksplorasi Sains</h3>
+            <p class="text-on-surface-variant text-sm font-body-md">Mengenalkan sains sederhana lewat eksperimen aman seperti siklus air dan pencampuran warna alami.</p>
+          </div>
+
+          <!-- Karakter Keagamaan -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">menu_book</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Karakter &amp; Ibadah</h3>
+            <p class="text-on-surface-variant text-sm font-body-md">Melatih kemandirian perilaku, sopan santun kepada sesama, praktek wudhu, sholat, dan hafalan surah pendek.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Schedule Section -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1140px] mx-auto reveal-element">
+      <div class="text-center mb-xl">
+        <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Jadwal Sekolah</span>
+        <h2 class="font-headline-lg text-headline-lg text-primary">Rutinitas Belajar &amp; Bermain</h2>
+        <p class="text-on-surface-variant max-w-[36rem] mx-auto font-body-md mt-2">Pola jadwal seimbang yang mempersiapkan daya tahan konsentrasi anak menyambut jenjang sekolah dasar.</p>
+      </div>
+
+      <div class="max-w-[750px] mx-auto bg-white rounded-2xl shadow-sm border border-outline-variant/35 overflow-hidden">
+        <div class="divide-y divide-outline-variant/30">
+          <div class="p-md md:p-lg flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between hover:bg-surface transition-colors">
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm font-bold rounded-full">07:30 - 08:00</span>
+              <h4 class="font-bold text-primary text-md">Ikrar Pagi &amp; Ibadah Dhuha</h4>
+            </div>
+            <p class="text-on-surface-variant text-sm sm:max-w-[24rem] w-full text-left">Berbaris rapi di halaman, melafalkan ikrar belajar, dan sholat Dhuha berjamaah.</p>
+          </div>
+
+          <div class="p-md md:p-lg flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between hover:bg-surface transition-colors">
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm font-bold rounded-full">08:00 - 09:30</span>
+              <h4 class="font-bold text-primary text-md">Pembelajaran Inti (Kognitif/Sains)</h4>
+            </div>
+            <p class="text-on-surface-variant text-sm sm:max-w-[24rem] w-full text-left">Fokus materi literasi, numerasi, menulis, atau eksperimen tematik secara kelompok.</p>
+          </div>
+
+          <div class="p-md md:p-lg flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between hover:bg-surface transition-colors">
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm font-bold rounded-full">09:30 - 10:15</span>
+              <h4 class="font-bold text-primary text-md">Makan Sehat &amp; Istirahat Bermain</h4>
+            </div>
+            <p class="text-on-surface-variant text-sm sm:max-w-[24rem] w-full text-left">Makan bersama bekal bernutrisi, dilanjutkan bermain bebas di area luar ruangan.</p>
+          </div>
+
+          <div class="p-md md:p-lg flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between hover:bg-surface transition-colors">
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm font-bold rounded-full">10:15 - 11:00</span>
+              <h4 class="font-bold text-primary text-md">Ekspresi Seni &amp; Doa Kepulangan</h4>
+            </div>
+            <p class="text-on-surface-variant text-sm sm:max-w-[24rem] w-full text-left">Bercerita, bernyanyi bersama, refleksi harian, merapikan kelas, lalu berdoa pulang.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="py-xl bg-surface-container-low reveal-element">
+      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-xl">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Lingkungan Belajar</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Fasilitas Penunjang Keunggulan</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-gutter">
+          <div class="flex items-start gap-4 bg-white p-md rounded-xl shadow-sm border border-outline-variant/10">
+            <span class="material-symbols-outlined text-secondary text-3xl">computer</span>
+            <div>
+              <h4 class="font-bold text-primary text-md mb-xs">Lab Mini Komputer</h4>
+              <p class="text-on-surface-variant text-sm">Pengenalan perangkat teknologi dasar secara sehat dengan konten edukasi pilihan.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 bg-white p-md rounded-xl shadow-sm border border-outline-variant/10">
+            <span class="material-symbols-outlined text-secondary text-3xl">yard</span>
+            <div>
+              <h4 class="font-bold text-primary text-md mb-xs">Kebun Edukasi</h4>
+              <p class="text-on-surface-variant text-sm">Area terbuka hijau untuk siswa menanam, merawat, dan mengamati pertumbuhan tanaman.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 bg-white p-md rounded-xl shadow-sm border border-outline-variant/10">
+            <span class="material-symbols-outlined text-secondary text-3xl">mosque</span>
+            <div>
+              <h4 class="font-bold text-primary text-md mb-xs">Musholla Anak</h4>
+              <p class="text-on-surface-variant text-sm">Sarana ibadah khusus yang nyaman untuk melatih praktik sholat berjamaah harian.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 bg-white p-md rounded-xl shadow-sm border border-outline-variant/10">
+            <span class="material-symbols-outlined text-secondary text-3xl">sports_gymnastics</span>
+            <div>
+              <h4 class="font-bold text-primary text-md mb-xs">Playground &amp; Alat Olahraga</h4>
+              <p class="text-on-surface-variant text-sm">Wahana ketangkasan fisik yang luas, lengkap dengan pengawasan ketat guru pendamping.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 bg-white p-md rounded-xl shadow-sm border border-outline-variant/10">
+            <span class="material-symbols-outlined text-secondary text-3xl">library_books</span>
+            <div>
+              <h4 class="font-bold text-primary text-md mb-xs">Perpustakaan Mini</h4>
+              <p class="text-on-surface-variant text-sm">Koleksi buku dongeng, cerita bergambar, dan buku pengetahuan dasar anak yang lengkap.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 bg-white p-md rounded-xl shadow-sm border border-outline-variant/10">
+            <span class="material-symbols-outlined text-secondary text-3xl">safety_check</span>
+            <div>
+              <h4 class="font-bold text-primary text-md mb-xs">Keamanan &amp; Protokol Kesehatan</h4>
+              <p class="text-on-surface-variant text-sm">Pemeriksaan suhu, kebersihan tangan, pos satpam 24 jam, dan lingkungan bebas rokok.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[850px] mx-auto reveal-element">
+      <div class="text-center mb-xl">
+        <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Informasi Sekolah</span>
+        <h2 class="font-headline-lg text-headline-lg text-primary">Pertanyaan yang Sering Diajukan</h2>
+        <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+      </div>
+
+      <div class="space-y-sm">
+        <!-- FAQ 1 -->
+        <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+          <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+            <span>Apakah anak diajarkan membaca dan menulis (calistung) secara intensif?</span>
+            <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+            Kami mengenalkan calistung dengan pendekatan yang berpusat pada minat anak (fun learning) menggunakan flashcard, permainan kata, dan balok angka. Fokus utama kami adalah membangun kesiapan dan kecintaan membaca tanpa menimbulkan beban mental bagi anak.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+          <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+            <span>Bagaimana kesiapan lulusan TK Dinado masuk ke jenjang SD?</span>
+            <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+            Hampir 100% lulusan kami sukses lolos ke sekolah dasar unggulan pilihan orang tua mereka. Kurikulum kami telah dipadukan dengan modul kesiapan masuk SD yang mencakup kemandirian sosial, kefasihan berpendapat, fokus menyimak, serta literasi dasar.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+          <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+            <span>Apa saja jenis seragam sekolah yang digunakan di TK Dinado?</span>
+            <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+            Siswa memiliki 3 seragam wajib: Seragam batik khas YP2SK (digunakan hari Senin-Selasa), Seragam olahraga (hari Rabu-Kamis), dan Seragam muslim/koko (hari Jumat).
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+          <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+            <span>Bagaimana metode penanganan anak yang mengalami kesulitan fokus atau lambat belajar?</span>
+            <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+            Setiap anak berkembang dengan ritme masing-masing. Guru kami dilatih mendampingi secara individual (differentiated learning) serta secara rutin bekerja sama dengan psikolog tumbuh kembang anak yayasan kami untuk memberikan asesmen dan solusi bimbingan yang tepat.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-xl bg-primary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary-fixed via-transparent to-transparent animate-pulse"></div>
+      </div>
+      <div class="relative z-10 max-w-[800px] mx-auto text-center px-margin-mobile text-on-primary">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-md text-white">Mulai Langkah Pendidikan Terbaik untuk Putra-Putri Anda</h2>
+        <p class="font-body-md mb-xl opacity-90 leading-relaxed max-w-[36rem] mx-auto">
+          Pendaftaran Peserta Didik Baru (PPDB) TK Dinado tahun ajaran ini sedang berlangsung. Hubungi kami untuk jadwal visitasi sekolah atau berkonsultasi langsung.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-md">
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-115 hover:scale-105 active:scale-95 transition-all shadow-lg"
+          >
+            Hubungi Panitia PMB
+          </a>
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center border border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 hover:scale-105 active:scale-95 transition-all"
+          >
+            Unduh Brosur &amp; Rincian Biaya
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  function setupPage() {
+    // FAQ Toggle
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const answer = item?.querySelector('.faq-answer');
+        const icon = toggle.querySelector('.faq-icon');
+        
+        const isHidden = answer?.classList.contains('hidden');
+        
+        // Close other items
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(ic => ic.classList.remove('rotate-180'));
+        document.querySelectorAll('.faq-item').forEach(it => it.classList.remove('border-secondary'));
+
+        if (isHidden) {
+          answer?.classList.remove('hidden');
+          icon?.classList.add('rotate-180');
+          item?.classList.add('border-secondary');
+        }
+      });
+    });
+
+    // Reveal animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.reveal-element');
+    elements.forEach(el => {
+      el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  }
+
+  // Setup on load and page transition
+  setupPage();
+  document.addEventListener('astro:after-swap', setupPage);
+</script>

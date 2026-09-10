@@ -1,0 +1,207 @@
+---
+const { pathname } = Astro.url;
+// Normalize pathname by removing trailing slash if present, unless it is root
+const activePath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+---
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop shadow-sm transition-all duration-200 ease-in-out h-20 bg-surface-container-lowest">
+  <div class="flex items-center gap-4">
+    <img alt="Logo Yayasan Dinado" class="h-12 w-12 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJgETTAVj05shytEmoGHc7cg9gus6ZIq8sN7zyGnBpdiN_XF72wwtR_JeMuRv6TrHEYKxW9fhGM_SRFkm9ExIvkr7thZfm_7ONTHvfNxRlY3LCrDWL0Fy4FKj5Rem5UIZlcb26krT8QPv1iYPGWVbsABIKbmtDZLfAFO_3wJdOE-QMHKtXkiQqzFTXk1nkL3l2ku_RF8kwpomk_fJwuWr1DZ76c4jn-lij8io6aoySSqKCtvOVePqgfA">
+    <span class="text-headline-md font-headline-md font-bold text-primary">YP2SK</span>
+  </div>
+  
+  <!-- Desktop Navigation -->
+  <div class="hidden md:flex items-center gap-gutter">
+    <a class={`font-label-lg text-label-lg ${activePath === '/' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/">Beranda</a>
+    
+    <div class="relative nav-dropdown">
+      <button class={`dropdown-trigger flex items-center gap-1 font-label-lg text-label-lg ${activePath.startsWith('/profil') ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary'} transition-colors cursor-pointer`} aria-expanded="false">
+        Profil <span class="material-symbols-outlined dropdown-icon text-[18px] transition-transform duration-200">expand_more</span>
+      </button>
+      <div class="dropdown-menu absolute top-full left-0 mt-2 w-52 bg-surface-container-lowest/95 backdrop-blur-md shadow-xl rounded-xl py-2 border border-surface-variant/50 z-50 opacity-0 pointer-events-none scale-95 -translate-y-2 transition-all duration-200 ease-out origin-top-left">
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/profil/yayasan' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/profil/yayasan">Profil Yayasan</a>
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/profil/visi-misi' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/profil/visi-misi">Visi dan Misi</a>
+      </div>
+    </div>
+    
+    <div class="relative nav-dropdown">
+      <button class={`dropdown-trigger flex items-center gap-1 font-label-lg text-label-lg ${activePath.startsWith('/pendidikan') ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary'} transition-colors cursor-pointer`} aria-expanded="false">
+        Pendidikan <span class="material-symbols-outlined dropdown-icon text-[18px] transition-transform duration-200">expand_more</span>
+      </button>
+      <div class="dropdown-menu absolute top-full left-0 mt-2 w-80 bg-surface-container-lowest/95 backdrop-blur-md shadow-xl rounded-xl py-2 border border-surface-variant/50 z-50 opacity-0 pointer-events-none scale-95 -translate-y-2 transition-all duration-200 ease-out origin-top-left">
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/tpa-kb-dinado' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/tpa-kb-dinado">TPA - KB DINADO</a>
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/tk-dinado' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/tk-dinado">TK DINADO</a>
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/tpa-kb-naneymi' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/tpa-kb-naneymi">TPA KB Naneymi</a>
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/graha-autis' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/graha-autis">Graha Autis (Therapy ABK)</a>
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/kb-naneymi-autis' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/kb-naneymi-autis">KB Naneymi AUTIS</a>
+        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/ponpes-tahfidz-autis' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/ponpes-tahfidz-autis">Ponpes Tahfidz Al Qur'an AUTIS</a>
+      </div>
+    </div>
+    
+    <a class={`font-label-lg text-label-lg ${activePath === '/agenda' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/agenda">Agenda</a>
+    <a class={`font-label-lg text-label-lg ${activePath === '/berita' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/berita">Berita</a>
+    <a class={`font-label-lg text-label-lg ${activePath === '/galeri' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/galeri">Galeri</a>
+    <a class={`font-label-lg text-label-lg ${activePath === '/kontak' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/kontak">Kontak</a>
+  </div>
+  
+  <div class="flex items-center gap-4">
+    <button class="px-6 py-2 bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg hover:brightness-110 transition-all shadow-md cursor-pointer">PMB</button>
+    <button id="open-mobile-menu" class="md:!hidden material-symbols-outlined text-primary text-[32px] cursor-pointer" aria-label="Open Mobile Menu">menu</button>
+  </div>
+</nav>
+
+<!-- Mobile Drawer Overlay -->
+<div id="mobile-menu-drawer" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+  <!-- Backdrop -->
+  <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+  <!-- Content -->
+  <div class="absolute right-0 top-0 h-full w-64 bg-surface-container-lowest p-6 shadow-2xl flex flex-col justify-between border-l border-surface-variant z-50">
+    <div>
+      <div class="flex items-center justify-between mb-8">
+        <span class="text-headline-md font-headline-md font-bold text-primary">YP2SK</span>
+        <button id="close-mobile-menu" class="material-symbols-outlined text-primary text-[28px] cursor-pointer" aria-label="Close Mobile Menu">close</button>
+      </div>
+      <nav class="flex flex-col gap-4">
+        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/">Beranda</a>
+        
+        <div class="flex flex-col">
+          <span class="font-label-lg text-on-surface-variant text-[14px] uppercase tracking-wider mb-2 font-bold">Profil</span>
+          <div class="flex flex-col pl-4 gap-2 border-l border-surface-variant">
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/profil/yayasan' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/profil/yayasan">Profil Yayasan</a>
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/profil/visi-misi' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/profil/visi-misi">Visi dan Misi</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <span class="font-label-lg text-on-surface-variant text-[14px] uppercase tracking-wider mb-2 font-bold">Pendidikan</span>
+          <div class="flex flex-col pl-4 gap-2 border-l border-surface-variant">
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/tpa-kb-dinado' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/tpa-kb-dinado">TPA - KB DINADO</a>
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/tk-dinado' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/tk-dinado">TK DINADO</a>
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/tpa-kb-naneymi' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/tpa-kb-naneymi">TPA KB Naneymi</a>
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/graha-autis' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/graha-autis">Graha Autis</a>
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/kb-naneymi-autis' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/kb-naneymi-autis">KB Naneymi AUTIS</a>
+            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/ponpes-tahfidz-autis' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/ponpes-tahfidz-autis">Ponpes Tahfidz Al Qur'an AUTIS</a>
+          </div>
+        </div>
+        
+        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/agenda' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/agenda">Agenda</a>
+        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/berita' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/berita">Berita</a>
+        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/galeri' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/galeri">Galeri</a>
+        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/kontak' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/kontak">Kontak</a>
+      </nav>
+    </div>
+    <div>
+      <button class="w-full py-3 bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg hover:brightness-110 transition-all shadow-md cursor-pointer">PMB</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function setupNavbar() {
+    const openBtn = document.getElementById('open-mobile-menu');
+    const closeBtn = document.getElementById('close-mobile-menu');
+    const drawer = document.getElementById('mobile-menu-drawer');
+    const backdrop = document.getElementById('mobile-menu-backdrop');
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+    function openMenu() {
+      drawer?.classList.remove('translate-x-full');
+    }
+
+    function closeMenu() {
+      drawer?.classList.add('translate-x-full');
+    }
+
+    function closeAllDropdowns() {
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('is-open');
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        const icon = dropdown.querySelector('.dropdown-icon');
+        
+        menu?.classList.remove('opacity-100', 'scale-100', 'translate-y-0', 'pointer-events-auto');
+        menu?.classList.add('opacity-0', 'scale-95', '-translate-y-2', 'pointer-events-none');
+        icon?.classList.remove('rotate-180');
+        trigger?.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    openBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    backdrop?.addEventListener('click', closeMenu);
+
+    // Scroll transparency effect & close dropdowns on scroll
+    const handleScroll = () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav?.classList.add('h-16', 'bg-white/95', 'backdrop-blur-md');
+        nav?.classList.remove('h-20', 'bg-surface-container-lowest');
+      } else {
+        nav?.classList.remove('h-16', 'bg-white/95', 'backdrop-blur-md');
+        nav?.classList.add('h-20', 'bg-surface-container-lowest');
+      }
+      closeAllDropdowns();
+    };
+
+    if (window.__navbarScrollHandler) {
+      window.removeEventListener('scroll', window.__navbarScrollHandler);
+    }
+    window.__navbarScrollHandler = handleScroll;
+    window.addEventListener('scroll', handleScroll);
+
+    // Dropdown toggle functionality
+    dropdowns.forEach(dropdown => {
+      const trigger = dropdown.querySelector('.dropdown-trigger');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const icon = dropdown.querySelector('.dropdown-icon');
+
+      trigger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        const isOpen = dropdown.classList.contains('is-open');
+
+        // Close all other dropdowns first
+        dropdowns.forEach(otherDropdown => {
+          if (otherDropdown !== dropdown) {
+            otherDropdown.classList.remove('is-open');
+            const otherTrigger = otherDropdown.querySelector('.dropdown-trigger');
+            const otherMenu = otherDropdown.querySelector('.dropdown-menu');
+            const otherIcon = otherDropdown.querySelector('.dropdown-icon');
+            
+            otherMenu?.classList.remove('opacity-100', 'scale-100', 'translate-y-0', 'pointer-events-auto');
+            otherMenu?.classList.add('opacity-0', 'scale-95', '-translate-y-2', 'pointer-events-none');
+            otherIcon?.classList.remove('rotate-180');
+            otherTrigger?.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle current dropdown
+        if (isOpen) {
+          dropdown.classList.remove('is-open');
+          menu?.classList.remove('opacity-100', 'scale-100', 'translate-y-0', 'pointer-events-auto');
+          menu?.classList.add('opacity-0', 'scale-95', '-translate-y-2', 'pointer-events-none');
+          icon?.classList.remove('rotate-180');
+          trigger?.setAttribute('aria-expanded', 'false');
+        } else {
+          dropdown.classList.add('is-open');
+          menu?.classList.remove('opacity-0', 'scale-95', '-translate-y-2', 'pointer-events-none');
+          menu?.classList.add('opacity-100', 'scale-100', 'translate-y-0', 'pointer-events-auto');
+          icon?.classList.add('rotate-180');
+          trigger?.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    if (window.__navbarClickOutsideHandler) {
+      document.removeEventListener('click', window.__navbarClickOutsideHandler);
+    }
+    window.__navbarClickOutsideHandler = closeAllDropdowns;
+    document.addEventListener('click', closeAllDropdowns);
+    
+    // run once on startup in case page is already scrolled
+    handleScroll();
+  }
+
+  // Support view transitions and normal loads
+  setupNavbar();
+  document.addEventListener('astro:after-swap', setupNavbar);
+</script>

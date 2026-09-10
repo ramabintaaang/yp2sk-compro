@@ -1,0 +1,410 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const tpaKbDinadoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-dinado#webpage",
+      "url": "https://yp2sk.or.id/pendidikan/tpa-kb-dinado",
+      "name": "TPA - KB Dinado | Penitipan Anak & Kelompok Bermain YP2SK",
+      "description": "Program Tempat Penitipan Anak (TPA) & Kelompok Bermain (KB) Dinado - stimulasi tumbuh kembang anak secara holistik dan islami, dengan fasilitas penitipan harian yang aman dan edukatif untuk anak usia 1-3 tahun.",
+      "breadcrumb": {
+        "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-dinado#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-dinado#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pendidikan",
+          "item": "https://yp2sk.or.id/pendidikan/tpa-kb-dinado"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TPA - KB Dinado",
+          "item": "https://yp2sk.or.id/pendidikan/tpa-kb-dinado"
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://yp2sk.or.id/pendidikan/tpa-kb-dinado#school",
+      "name": "TPA - KB Dinado (Tempat Penitipan Anak & Kelompok Bermain Dinado)",
+      "description": "Lembaga penitipan anak harian terpadu dengan stimulasi kognitif awal dan bermain sambil belajar secara islami di bawah naungan Yayasan Pendidikan Pesantren Sunan Kudus.",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAe0E3TYsYVpnX7IFU3IfExVzE4xHXdhNdvptwd0R8hObwuRDZQvAMUGtEUgdxAJ0Ukz0dtXRSubtQ_jC0OyOs5goPXPudRTBSbhFm0JxpirJAdoNSRmoc7HzJoDZjfOBjgSvovfDbfIP-b9CIoOe61Dw3xWtvzef511O1xo1iY4EtsjSyRolGu-oUSKrJPvk3e0FlxKrN3Bn70KpH8ggmfR464jLgfrWDihqzTpzbVamV-o8P72UWjdg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Pendidikan No. 123",
+        "addressLocality": "Kota Dinado",
+        "addressCountry": "ID"
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="TPA - KB Dinado | Penitipan Anak & Kelompok Bermain Terpercaya - YP2SK" 
+  description="TPA - KB Dinado menghadirkan penitipan anak yang aman dengan stimulasi motorik, sensorik, kemandirian bersosialisasi, serta pembiasaan nilai Islami harian sejak usia dini."
+  schema={tpaKbDinadoSchema}
+>
+  <div class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div 
+          class="w-full h-full bg-cover bg-center" 
+          style="background-image: linear-gradient(rgba(0, 32, 69, 0.8), rgba(0, 32, 69, 0.65)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAe0E3TYsYVpnX7IFU3IfExVzE4xHXdhNdvptwd0R8hObwuRDZQvAMUGtEUgdxAJ0Ukz0dtXRSubtQ_jC0OyOs5goPXPudRTBSbhFm0JxpirJAdoNSRmoc7HzJoDZjfOBjgSvovfDbfIP-b9CIoOe61Dw3xWtvzef511O1xo1iY4EtsjSyRolGu-oUSKrJPvk3e0FlxKrN3Bn70KpH8ggmfR464jLgfrWDihqzTpzbVamV-o8P72UWjdg');"
+          role="img"
+          aria-label="A joyful scene at TPA - KB Dinado with toddlers engaged in sensory play"
+        ></div>
+      </div>
+      <div class="relative z-10 text-center text-on-primary px-margin-mobile md:px-margin-desktop">
+        <span class="inline-block px-4 py-1.5 bg-secondary text-on-secondary rounded-full font-label-lg text-label-lg mb-sm uppercase tracking-widest shadow-sm">Penitipan Anak & Kelompok Bermain (Usia 1-3 Tahun)</span>
+        <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl max-w-[56rem] mx-auto mb-md text-white leading-tight">TPA - KB Dinado</h1>
+        <p class="font-body-lg text-body-lg max-w-[42rem] mx-auto text-on-primary/90 leading-relaxed mb-lg">
+          Layanan penitipan harian yang aman dan stimulasi tumbuh kembang usia emas melalui pendekatan bermain menyenangkan dalam lingkungan Islami yang penuh kasih sayang.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/kontak" class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-110 active:scale-95 transition-all shadow-md">
+            Daftar Sekarang
+          </a>
+          <a href="#kurikulum" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 transition-all">
+            Pelajari Program
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section & Stats -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1140px] mx-auto reveal-element">
+      <div class="grid md:grid-cols-2 gap-xl items-center">
+        <div class="space-y-md">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold">Tentang TPA - KB Dinado</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Solusi Pengasuhan Edukatif dan Tumbuh Kembang Optimal</h2>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            TPA - KB Dinado hadir sebagai jawaban bagi orang tua bekerja yang mendambakan tempat pengasuhan harian yang aman, bersih, sekaligus edukatif. Di sini, buah hati Anda tidak hanya dititipkan, tetapi juga dibimbing secara terstruktur dalam kelompok bermain untuk menstimulasi motorik, emosi, dan sosialisasi mereka.
+          </p>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Kami mengintegrasikan pola asuh penuh kasih dengan dasar-dasar adab Islami seperti membiasakan mengucap salam, berdoa sebelum berkegiatan, serta pengenalan awal kalimat tayyibah melalui lagu dan permainan kelompok.
+          </p>
+          
+          <!-- Key Specs Grid -->
+          <div class="grid grid-cols-2 gap-sm pt-4 border-t border-outline-variant/30">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">groups</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Rasio Pengasuh &amp; Anak</p>
+                <p class="font-headline-md text-primary m-0">1 : 4</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">escalator_warning</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Usia Pendaftaran</p>
+                <p class="font-headline-md text-primary m-0">1 - 3 Tahun</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <div class="absolute -top-4 -right-4 w-full h-full border-2 border-secondary rounded-xl z-0"></div>
+          <div class="relative z-10 overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-surface-container-low">
+            <img 
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+              alt="Toddlers playing safely at TPA - KB Dinado group activity" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe0E3TYsYVpnX7IFU3IfExVzE4xHXdhNdvptwd0R8hObwuRDZQvAMUGtEUgdxAJ0Ukz0dtXRSubtQ_jC0OyOs5goPXPudRTBSbhFm0JxpirJAdoNSRmoc7HzJoDZjfOBjgSvovfDbfIP-b9CIoOe61Dw3xWtvzef511O1xo1iY4EtsjSyRolGu-oUSKrJPvk3e0FlxKrN3Bn70KpH8ggmfR464jLgfrWDihqzTpzbVamV-o8P72UWjdg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Pillars Section -->
+    <section id="kurikulum" class="py-xl bg-surface-container-low scroll-mt-24">
+      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-xl reveal-element">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Program Utama Kami</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Aspek Stimulasi Tumbuh Kembang</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+          <!-- Stimulasi Motorik -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">sports_gymnastics</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Motorik &amp; Sensorik</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Melatih keterampilan fisik motorik kasar dan halus melalui permainan balok, meronce besar, playdough, serta stimulasi sensori terstruktur.
+            </p>
+          </div>
+
+          <!-- Pembiasaan Karakter Islami -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">sentiment_satisfied</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Adab &amp; Karakter</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Menanamkan kebiasaan mengucap salam, membiasakan adab makan yang baik, kerapihan setelah bermain, dan pengenalan doa-doa pendek secara natural.
+            </p>
+          </div>
+
+          <!-- Sosialisasi Awal -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">diversity_1</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Sosialisasi Terbimbing</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Membangun keberanian berbagi, mengantre giliran bermain, mengenal empati, serta melatih kecakapan komunikasi ekspresif anak dengan temannya.
+            </p>
+          </div>
+
+          <!-- Sanitasi & Gizi Seimbang -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">restaurant</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Nutrisi &amp; Higienitas</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Menyediakan makanan pendamping sehat (snack pagi/siang dan makan siang seimbang), toilet training intensif, serta pemantauan kebersihan harian.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day-to-Day Schedule -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto reveal-element">
+      <div class="text-center mb-xl">
+        <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Aktivitas</span>
+        <h2 class="font-headline-lg text-headline-lg text-primary">Jadwal Harian Pengasuhan</h2>
+        <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+      </div>
+
+      <div class="relative border-l-2 border-outline-variant/50 pl-6 ml-4 space-y-lg">
+        <!-- Aktivitas 1 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">07.30 - 08.30</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Penyambutan &amp; Free Play</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Penyambutan hangat, pemeriksaan kebersihan/suhu anak, dan bermain bebas terpantau.</p>
+          </div>
+        </div>
+
+        <!-- Aktivitas 2 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">08.30 - 09.30</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Circle Time &amp; Stimulasi Motorik</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Membaca doa harian, menyanyikan lagu edukatif, dilanjutkan aktivitas gerak motorik kasar/halus harian.</p>
+          </div>
+        </div>
+
+        <!-- Aktivitas 3 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">09.30 - 10.30</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Snack Time &amp; Sanitasi</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Mencuci tangan mandiri, menikmati snack sehat bersama, dan bimbingan toilet training.</p>
+          </div>
+        </div>
+
+        <!-- Aktivitas 4 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">10.30 - 11.30</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Sensory Play &amp; Kognitif Awal</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Eksplorasi sensorik (bermain pasir kinetik/air warna), pengenalan warna/bentuk dasar menggunakan flashcard.</p>
+          </div>
+        </div>
+
+        <!-- Aktivitas 5 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">11.30 - 12.30</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Makan Siang &amp; Persiapan Tidur Siang</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Makan siang bernutrisi seimbang, membersihkan diri, mengganti pakaian, mendengarkan cerita nabi sebelum tidur.</p>
+          </div>
+        </div>
+
+        <!-- Aktivitas 6 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">12.30 - 15.00</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Tidur Siang (Nap Time)</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Tidur siang di kamar tidur ber-AC yang tenang dan bersih dengan pengawasan terapis/pengasuh.</p>
+          </div>
+        </div>
+
+        <!-- Aktivitas 7 -->
+        <div class="relative">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-sm"></div>
+          <div>
+            <span class="text-secondary font-bold text-sm block mb-1">15.00 - 16.00</span>
+            <h4 class="font-headline-md text-primary text-base font-bold mb-1">Mandi Sore &amp; Persiapan Penjemputan</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Mandi sore, menikmati snack sore, dan bersantai bermain sembari menunggu dijemput orang tua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-xl bg-surface-container-low reveal-element">
+      <div class="max-w-[800px] mx-auto px-margin-mobile">
+        <div class="text-center mb-xl">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Tanya Jawab</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Pertanyaan yang Sering Diajukan</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Berapa usia minimal anak untuk masuk TPA - KB Dinado?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Kami menerima pendaftaran anak mulai dari usia 12 bulan (1 tahun) yang sudah mampu berdiri tegak/berjalan, hingga maksimal 3 tahun sebelum melangkah ke jenjang TK.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Bagaimana dengan penyediaan makanan harian anak?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Biaya bulanan sudah mencakup makan siang sehat dan snack 2x sehari (snack pagi dan sore). Menu disusun secara bervariasi dengan konsultasi ahli gizi untuk menjamin asupan nutrisi yang cukup dan higienis.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Bagaimana jika anak rewel atau belum terbiasa berpisah dengan orang tua?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Kami memfasilitasi masa adaptasi (trial) selama 3 hari di mana orang tua dapat mendampingi di kelas. Pengasuh kami terlatih memberikan pelukan hangat, distraksi edukatif berupa mainan/musik, untuk membangun rasa nyaman bagi anak baru.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Apakah ada CCTV yang dapat dipantau orang tua?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Ya, seluruh area bermain, ruang tidur, dan ruang makan dilengkapi dengan CCTV. Akses tautan pemantauan langsung diberikan secara terbatas kepada orang tua murid yang terdaftar demi alasan privasi anak-anak.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-xl bg-primary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary-fixed via-transparent to-transparent animate-pulse"></div>
+      </div>
+      <div class="relative z-10 max-w-[800px] mx-auto text-center px-margin-mobile text-on-primary">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-md text-white">Beri Kenyamanan dan Stimulasi Terbaik Sejak Dini</h2>
+        <p class="font-body-md mb-xl opacity-90 leading-relaxed max-w-[36rem] mx-auto">
+          Penerimaan siswa baru TPA - KB Dinado dibuka sepanjang tahun selama kuota rasio pengasuh masih tersedia. Daftarkan putra-putri Anda sekarang.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-md">
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-115 hover:scale-105 active:scale-95 transition-all shadow-lg"
+          >
+            Hubungi Panitia PMB
+          </a>
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center border border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 hover:scale-105 active:scale-95 transition-all"
+          >
+            Visitasi Tempat &amp; Konsultasi
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  function setupPage() {
+    // FAQ Toggle
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const answer = item?.querySelector('.faq-answer');
+        const icon = toggle.querySelector('.faq-icon');
+        
+        const isHidden = answer?.classList.contains('hidden');
+        
+        // Close other items
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(ic => ic.classList.remove('rotate-180'));
+        document.querySelectorAll('.faq-item').forEach(it => it.classList.remove('border-secondary'));
+
+        if (isHidden) {
+          answer?.classList.remove('hidden');
+          icon?.classList.add('rotate-180');
+          item?.classList.add('border-secondary');
+        }
+      });
+    });
+
+    // Reveal animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.reveal-element');
+    elements.forEach(el => {
+      el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  }
+
+  // Setup on load and page transition
+  setupPage();
+  document.addEventListener('astro:after-swap', setupPage);
+</script>

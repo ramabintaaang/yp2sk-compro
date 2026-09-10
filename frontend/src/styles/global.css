@@ -1,0 +1,90 @@
+/* Import Google Fonts and Material Icons */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-surface-container: #eceef0;
+  --color-secondary: #006c4a;
+  --color-error: #ba1a1a;
+  --color-inverse-surface: #2d3133;
+  --color-on-tertiary-fixed: #2f1500;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-low: #f2f4f6;
+  --color-primary-container: #1a365d;
+  --color-on-secondary-fixed-variant: #005137;
+  --color-tertiary-fixed-dim: #ffb77d;
+  --color-outline-variant: #c4c6cf;
+  --color-on-secondary-fixed: #002114;
+  --color-on-primary-container: #86a0cd;
+  --color-background: #f7f9fb;
+  --color-error-container: #ffdad6;
+  --color-on-secondary: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-surface-tint: #455f88;
+  --color-secondary-container: #82f5c1;
+  --color-surface-dim: #d8dadc;
+  --color-on-secondary-container: #00714e;
+  --color-on-surface-variant: #43474e;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary: #002045;
+  --color-tertiary-fixed: #ffdcc3;
+  --color-primary-fixed: #d6e3ff;
+  --color-on-tertiary-fixed-variant: #6e3900;
+  --color-on-primary-fixed: #001b3c;
+  --color-primary-fixed-dim: #adc7f7;
+  --color-surface-container-highest: #e0e3e5;
+  --color-tertiary: #361900;
+  --color-tertiary-container: #552b00;
+  --color-surface: #f7f9fb;
+  --color-outline: #74777f;
+  --color-surface-bright: #f7f9fb;
+  --color-on-background: #191c1e;
+  --color-inverse-primary: #adc7f7;
+  --color-inverse-on-surface: #eff1f3;
+  --color-on-error: #ffffff;
+  --color-secondary-fixed: #85f8c4;
+  --color-on-primary: #ffffff;
+  --color-on-tertiary-container: #eb851c;
+  --color-on-primary-fixed-variant: #2d476f;
+  --color-surface-variant: #e0e3e5;
+  --color-secondary-fixed-dim: #68dba9;
+  --color-surface-container-high: #e6e8ea;
+  --color-on-surface: #191c1e;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-xl: 4rem;
+  --spacing-margin-mobile: 16px;
+  --spacing-lg: 2.5rem;
+  --spacing-margin-desktop: 64px;
+  --spacing-md: 1.5rem;
+  --spacing-gutter: 24px;
+  --spacing-unit: 4px;
+  --spacing-sm: 1rem;
+
+  /* Font Families */
+  --font-label-lg: "Inter", sans-serif;
+  --font-headline-xl: "Playfair Display", serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-label-md: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-headline-md: "Playfair Display", serif;
+  --font-headline-lg: "Playfair Display", serif;
+
+  /* Border Radii */
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+/* Custom Base / Utility Styles */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Dropdown is now controlled via JavaScript click toggle for better UX */

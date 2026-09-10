@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SideEventCard from '../components/agenda/SideEventCard.astro';
+
+const sideEvents = [
+  {
+    day: "12",
+    month: "Nov",
+    tag: "Open Day",
+    title: "Hari Terbuka KB & TK Dinado",
+    description: "Tur sekolah dan konsultasi kurikulum gratis."
+  },
+  {
+    day: "01",
+    month: "Des",
+    tag: "Pendaftaran",
+    title: "Pembukaan PMB Gelombang I",
+    description: "Pendaftaran siswa baru tahun ajaran 2025/2026."
+  }
+];
+const agendaSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Beranda",
+      "item": "https://yp2sk.or.id"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Agenda & Kabar",
+      "item": "https://yp2sk.or.id/agenda"
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Agenda Kegiatan & Kabar Terbaru | YP2SK - Yayasan Pendidikan Pesantren Sunan Kudus" 
+  description="Ikuti kalender agenda kegiatan pendidikan, sosial keagamaan, dan berita prestasi terbaru dari YP2SK (Yayasan Pendidikan Pesantren Sunan Kudus)."
+  schema={agendaSchema}
+>
+  <div class="pt-20">
+    <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0 py-xl">
+      <!-- Header Section -->
+      <header class="mb-lg space-y-md">
+        <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-label-md font-label-md font-bold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+          <span>Pusat Informasi Terpadu</span>
+        </div>
+        <h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary max-w-[42rem] leading-tight">
+          Agenda Kegiatan &amp; <br class="hidden md:block"/> Kabar Yayasan
+        </h1>
+        <p class="text-body-lg font-body-lg text-on-surface-variant max-w-[36rem]">
+          Ikuti perkembangan terbaru dan jadwalkan partisipasi Anda dalam berbagai kegiatan edukasi dan sosial kami.
+        </p>
+      </header>
+
+      <!-- Agenda Highlights (Bento Grid) -->
+      <section class="mb-xl">
+        <div class="flex justify-between items-end mb-md">
+          <h2 class="text-headline-md font-headline-md text-primary">Agenda Mendatang</h2>
+          <button class="text-secondary font-label-lg flex items-center gap-1 hover:underline cursor-pointer">
+            Lihat Kalender Lengkap <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Large Event Card -->
+          <div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-primary text-on-primary h-[400px]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-40" 
+              role="img"
+              aria-label="A warm and inviting interior of a modern school hall during a parenting seminar. Soft natural light streams through large windows, illuminating a professional stage setup with navy blue banners. The audience consists of diverse Indonesian parents engaged in a discussion." 
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYfTLePOkcB-8eEDqM5C1fmxLd8oivn775jr4JItpRozPBM92Q-KejUEHjdO4jbv1mgxNR9ou9mSq1i5GSs4VXb0TqxcR9SkH-ON020ZOpk8POUzMzjZV0HBZM37JwvnuIZyPjL9FQaXF3_6Jt6MpfQ1diIEuv-MF0eV7Bt97KVmO2nA4DKt4QVCLfgFEOBrd55jNJca66wtEb_LlxJXZeEDFJc5pBTOrN6Z99mi6yB0168jB_mi948g')"
+            ></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-lg w-full">
+              <div class="flex gap-4 mb-md">
+                <div class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-lg text-center shrink-0">
+                  <span class="block text-headline-md font-bold leading-none mb-1">24</span>
+                  <span class="block text-label-md uppercase font-bold">Okt</span>
+                </div>
+                <div class="space-y-1">
+                  <span class="bg-secondary text-on-secondary px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Seminar Parenting</span>
+                  <h3 class="text-headline-md font-headline-md text-white">Membangun Karakter Anak di Era Digital</h3>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-md text-body-sm opacity-90">
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[18px]">location_on</span>
+                  Aula Utama Gedung Pusat YP2SK
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[18px]">schedule</span>
+                  08:30 - 12:00 WIB
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Event Cards -->
+          <div class="flex flex-col gap-6 justify-between">
+            {sideEvents.map(event => (
+              <SideEventCard {...event} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Counter -->
+      <section class="mb-xl bg-primary-container rounded-2xl p-lg flex flex-col md:flex-row justify-around items-center gap-8 text-center">
+        <div class="space-y-1">
+          <div class="text-headline-xl font-bold text-secondary-fixed">5000+</div>
+          <div class="text-label-lg font-label-lg text-on-primary-container uppercase tracking-widest font-bold">Siswa Terbantu</div>
+        </div>
+        <div class="w-px h-16 bg-on-primary-container/20 hidden md:block"></div>
+        <div class="space-y-1">
+          <div class="text-headline-xl font-bold text-secondary-fixed">12</div>
+          <div class="text-label-lg font-label-lg text-on-primary-container uppercase tracking-widest font-bold">Program Aktif</div>
+        </div>
+        <div class="w-px h-16 bg-on-primary-container/20 hidden md:block"></div>
+        <div class="space-y-1">
+          <div class="text-headline-xl font-bold text-secondary-fixed">300+</div>
+          <div class="text-label-lg font-label-lg text-on-primary-container uppercase tracking-widest font-bold">Kegiatan Tahunan</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>

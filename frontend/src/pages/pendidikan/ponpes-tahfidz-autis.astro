@@ -1,0 +1,307 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const ponpesTahfidzAutisSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz-autis#webpage",
+      "url": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz-autis",
+      "name": "Ponpes Tahfidz Al Qur'an AUTIS Putra | Pondok Pesantren Khusus YP2SK",
+      "description": "Pondok Pesantren Tahfidz Al Qur'an khusus anak-anak putra dengan spektrum autisme. Program pengasuhan terstruktur, bimbingan hafalan Al-Qur'an ramah autis, dan pembinaan kemandirian perilaku.",
+      "breadcrumb": {
+        "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz-autis#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz-autis#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pendidikan",
+          "item": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz-autis"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ponpes Tahfidz Al Qur'an AUTIS Putra",
+          "item": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz-autis"
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz-autis#school",
+      "name": "Ponpes Tahfidz Al Qur'an AUTIS anak-anak Putra",
+      "description": "Lembaga pesantren tahfidz inklusif terpadu khusus santri putra penyandang autisme di bawah naungan YP2SK.",
+      "image": "https://yp2sk.or.id/images/ponpes_tahfidz_autis.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Pendidikan No. 123",
+        "addressLocality": "Kota Dinado",
+        "addressCountry": "ID"
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Ponpes Tahfidz Al Qur'an AUTIS Putra | Pesantren Khusus - YP2SK" 
+  description="Pondok Pesantren Tahfidz Al Qur'an khusus anak laki-laki autis. Mengintegrasikan terapi perilaku, asrama islami terstruktur, hafalan Al-Qur'an, dan pembiasaan kemandirian."
+  schema={ponpesTahfidzAutisSchema}
+>
+  <div class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div 
+          class="w-full h-full bg-cover bg-center" 
+          style="background-image: linear-gradient(rgba(0, 32, 69, 0.8), rgba(0, 32, 69, 0.65)), url('/images/ponpes_tahfidz_autis.png');"
+          role="img"
+          aria-label="Peaceful study hall at Ponpes Tahfidz Al Qur'an AUTIS"
+        ></div>
+      </div>
+      <div class="relative z-10 text-center text-on-primary px-margin-mobile md:px-margin-desktop">
+        <span class="inline-block px-4 py-1.5 bg-secondary text-on-secondary rounded-full font-label-lg text-label-lg mb-sm uppercase tracking-widest shadow-sm">Pondok Pesantren Tahfidz Khusus Autis Putra</span>
+        <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl max-w-[56rem] mx-auto mb-md text-white leading-tight">Ponpes Tahfidz Al Qur'an AUTIS</h1>
+        <p class="font-body-lg text-body-lg max-w-[42rem] mx-auto text-on-primary/90 leading-relaxed mb-lg">
+          Menuntun santri putra berkebutuhan khusus berinteraksi dengan Kalamullah, melatih kemandirian ibadah, dan membina akhlak mulia dalam asrama terstruktur yang kondusif.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/kontak" class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-110 active:scale-95 transition-all shadow-md">
+            Daftar Santri Baru
+          </a>
+          <a href="#program-pesantren" class="w-full sm:w-auto text-center border-2 border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 transition-all">
+            Pelajari Program
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section & Stats -->
+    <section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1140px] mx-auto reveal-element">
+      <div class="grid md:grid-cols-2 gap-xl items-center">
+        <div class="space-y-md">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold">Tentang Pesantren Kami</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Tempat Tumbuh Spiritual &amp; Karakter Mandiri Santri Autis</h2>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Ponpes Tahfidz Al Qur'an AUTIS khusus anak-anak Putra merupakan unit pendidikan lanjutan unik yang didirikan atas kepedulian mendalam yayasan terhadap masa depan keagamaan anak-anak berkebutuhan khusus. Kami meyakini bahwa keterbatasan berkomunikasi dan bersosialisasi tidak membatasi jiwa anak untuk dekat dan menghafal bait suci Al-Qur'an.
+          </p>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Di pesantren ini, santri putra tinggal di asrama khusus yang terstruktur. Pengasuh asrama terdiri dari ustadz pembimbing hafalan yang telah dibekali ilmu penanganan autisme, berkolaborasi dengan terapis perilaku profesional. Kami melatih kemandirian dasar santri (activity of daily living) beriringan dengan bimbingan rohani harian yang tenang.
+          </p>
+          
+          <!-- Key Specs Grid -->
+          <div class="grid grid-cols-2 gap-sm pt-4 border-t border-outline-variant/30">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">hotel</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Sistem Belajar</p>
+                <p class="font-headline-md text-primary m-0">Boarding (Asrama)</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-3xl shrink-0">support_agent</span>
+              <div>
+                <p class="text-[12px] text-on-surface-variant font-bold uppercase m-0 leading-none">Pendampingan</p>
+                <p class="font-headline-md text-primary m-0">Intensif 24 Jam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <div class="absolute -top-4 -right-4 w-full h-full border-2 border-secondary rounded-xl z-0"></div>
+          <div class="relative z-10 overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-surface-container-low">
+            <img 
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+              alt="Santri studying Quran at Ponpes Tahfidz Al Qur'an AUTIS" 
+              src="/images/ponpes_tahfidz_autis.png"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Pillars Section -->
+    <section id="program-pesantren" class="py-xl bg-surface-container-low scroll-mt-24">
+      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-xl reveal-element">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">Program Utama</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Kurikulum Terintegrasi Pesantren Autis</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+          <!-- Bimbingan Al-Qur'an (Tahfidz Adaptif) -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">menu_book</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Tahfidz Qur'an Adaptif</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Metode hafalan Al-Qur'an yang disesuaikan dengan tipe belajar anak (visual, auditori, repetisi verbal) dengan target juz 30 dan surat pilihan.
+            </p>
+          </div>
+
+          <!-- Pembiasaan Ibadah Mandiri -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">mosque</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Kemandirian Ibadah</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Melatih tata cara wudhu mandiri, gerakan shalat yang benar, dan adab berjamaah di masjid melalui petunjuk visual dan repetisi konsisten.
+            </p>
+          </div>
+
+          <!-- Terapi Perilaku & Sosial Asrama -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">edit_attributes</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Bimbingan Perilaku</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Manajemen emosi, sosialisasi sesama santri di asrama, melatih kepatuhan instruksi ustadz, dan menekan kecemasan/tantrum.
+            </p>
+          </div>
+
+          <!-- Kemandirian Hidup (ADL) -->
+          <div class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-all duration-300 reveal-element">
+            <div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-lg mb-md text-secondary">
+              <span class="material-symbols-outlined text-3xl">home</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Kemandirian Asrama</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Santri diajarkan melipat pakaian sendiri, merapikan tempat tidur, membersihkan area makan, serta menjaga kebersihan diri secara disiplin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-xl bg-white reveal-element">
+      <div class="max-w-[800px] mx-auto px-margin-mobile">
+        <div class="text-center mb-xl">
+          <span class="text-secondary font-label-lg uppercase tracking-wider block font-bold mb-xs">FAQ</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Tanya Jawab Seputar Ponpes</h2>
+          <div class="w-16 h-1 bg-secondary mx-auto rounded-full mt-sm"></div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Berapa usia santri yang diterima di Ponpes ini?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Kami menerima santri putra mulai usia sekolah dasar (7 tahun) hingga remaja (15 tahun). Santri harus telah melewati asesmen kesiapan tinggal di asrama (boarding readiness) oleh tim psikolog kami.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item border border-outline-variant/35 rounded-xl bg-white overflow-hidden transition-all duration-300">
+            <button class="faq-toggle w-full p-md md:p-lg flex items-center justify-between text-left font-bold text-primary hover:bg-surface transition-colors cursor-pointer">
+              <span>Apakah ada program kunjungan orang tua?</span>
+              <span class="material-symbols-outlined transition-transform duration-300 faq-icon">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-md md:px-lg pb-md md:pb-lg text-on-surface-variant text-sm leading-relaxed border-t border-outline-variant/20 pt-sm">
+              Tentu. Untuk menjaga stabilitas emosi santri di asrama, kunjungan orang tua diatur secara berkala setiap 2 minggu sekali pada hari Ahad. Kami juga menyediakan komunikasi via panggilan video (video call) teratur seminggu sekali dengan didampingi ustadz pengasuh.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-xl bg-primary relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary-fixed via-transparent to-transparent animate-pulse"></div>
+      </div>
+      <div class="relative z-10 max-w-[800px] mx-auto text-center px-margin-mobile text-on-primary">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-md text-white">Membimbing Ruhani Menuju Generasi Qur'ani yang Mandiri</h2>
+        <p class="font-body-md mb-xl opacity-90 leading-relaxed max-w-[36rem] mx-auto">
+          Pendaftaran Santri Baru Pondok Pesantren Tahfidz Al Qur'an AUTIS Putra dibuka berkala. Hubungi kami untuk jadwal wawancara santri dan kunjungan pesantren.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-md">
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-label-lg font-bold hover:brightness-115 hover:scale-105 active:scale-95 transition-all shadow-lg"
+          >
+            Hubungi Panitia PMB
+          </a>
+          <a 
+            href="/kontak" 
+            class="w-full sm:w-auto text-center border border-white/30 text-white px-8 py-3.5 rounded-lg font-label-lg font-bold hover:bg-white/10 hover:scale-105 active:scale-95 transition-all"
+          >
+            Visitasi Asrama &amp; Konsultasi
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  function setupPage() {
+    // FAQ Toggle
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const answer = item?.querySelector('.faq-answer');
+        const icon = toggle.querySelector('.faq-icon');
+        
+        const isHidden = answer?.classList.contains('hidden');
+        
+        // Close other items
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(ic => ic.classList.remove('rotate-180'));
+        document.querySelectorAll('.faq-item').forEach(it => it.classList.remove('border-secondary'));
+
+        if (isHidden) {
+          answer?.classList.remove('hidden');
+          icon?.classList.add('rotate-180');
+          item?.classList.add('border-secondary');
+        }
+      });
+    });
+
+    // Reveal animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.reveal-element');
+    elements.forEach(el => {
+      el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  }
+
+  // Setup on load and page transition
+  setupPage();
+  document.addEventListener('astro:after-swap', setupPage);
+</script>
