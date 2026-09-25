@@ -1,39 +1,73 @@
 /* Import Google Fonts and Material Icons */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 @import "tailwindcss";
 
 @theme {
+  /* Brand Colors from User Palette:
+     #092328 (rgb 9, 35, 40)   - Deepest Forest / Dark Teal
+     #12544F (rgb 18, 84, 79)  - Deep Pine / Dark Emerald
+     #2A835F (rgb 42, 131, 95) - Primary Emerald Green
+     #8BBB92 (rgb 139, 187, 146) - Sage / Soft Mint Green
+  */
+  --color-brand-emerald: #2A835F;
+  --color-brand-emeraldDark: #12544F;
+  --color-brand-emeraldDarkest: #092328;
+  --color-brand-emeraldLight: #8BBB92;
+  --color-brand-navy: #092328;
+  --color-brand-cream: #fbf9f4;
+  --color-brand-gold: #c89a3f;
+  --color-brand-mint: #eef6f0;
+  --color-brand-iceBlue: #eef5fc;
+  --color-brand-warmYellow: #fef7e6;
+  --color-brand-softLavender: #f3effc;
+
+  /* Harmonized Emerald Scale matching exact user palette */
+  --color-emerald-50: #f2f8f4;
+  --color-emerald-100: #e2f0e6;
+  --color-emerald-200: #c6e2cd;
+  --color-emerald-300: #8BBB92;
+  --color-emerald-400: #57a57a;
+  --color-emerald-500: #2A835F;
+  --color-emerald-600: #216d4e;
+  --color-emerald-700: #19563d;
+  --color-emerald-800: #12544F;
+  --color-emerald-900: #0d3835;
+  --color-emerald-950: #092328;
+
+  /* Font Families - Poppins */
+  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Poppins", serif;
   /* Colors */
   --color-surface-container: #eceef0;
-  --color-secondary: #006c4a;
+  --color-secondary: #2A835F;
   --color-error: #ba1a1a;
   --color-inverse-surface: #2d3133;
   --color-on-tertiary-fixed: #2f1500;
   --color-on-tertiary: #ffffff;
   --color-surface-container-low: #f2f4f6;
-  --color-primary-container: #1a365d;
-  --color-on-secondary-fixed-variant: #005137;
+  --color-primary-container: #092328;
+  --color-on-secondary-fixed-variant: #12544F;
   --color-tertiary-fixed-dim: #ffb77d;
   --color-outline-variant: #c4c6cf;
-  --color-on-secondary-fixed: #002114;
-  --color-on-primary-container: #86a0cd;
+  --color-on-secondary-fixed: #092328;
+  --color-on-primary-container: #8BBB92;
   --color-background: #f7f9fb;
   --color-error-container: #ffdad6;
   --color-on-secondary: #ffffff;
   --color-on-error-container: #93000a;
-  --color-surface-tint: #455f88;
-  --color-secondary-container: #82f5c1;
+  --color-surface-tint: #2A835F;
+  --color-secondary-container: #8BBB92;
   --color-surface-dim: #d8dadc;
-  --color-on-secondary-container: #00714e;
+  --color-on-secondary-container: #12544F;
   --color-on-surface-variant: #43474e;
   --color-surface-container-lowest: #ffffff;
-  --color-primary: #002045;
+  --color-primary: #092328;
   --color-tertiary-fixed: #ffdcc3;
   --color-primary-fixed: #d6e3ff;
   --color-on-tertiary-fixed-variant: #6e3900;
-  --color-on-primary-fixed: #001b3c;
+  --color-on-primary-fixed: #092328;
   --color-primary-fixed-dim: #adc7f7;
   --color-surface-container-highest: #e0e3e5;
   --color-tertiary: #361900;
@@ -42,15 +76,15 @@
   --color-outline: #74777f;
   --color-surface-bright: #f7f9fb;
   --color-on-background: #191c1e;
-  --color-inverse-primary: #adc7f7;
+  --color-inverse-primary: #8BBB92;
   --color-inverse-on-surface: #eff1f3;
   --color-on-error: #ffffff;
-  --color-secondary-fixed: #85f8c4;
+  --color-secondary-fixed: #8BBB92;
   --color-on-primary: #ffffff;
   --color-on-tertiary-container: #eb851c;
-  --color-on-primary-fixed-variant: #2d476f;
+  --color-on-primary-fixed-variant: #12544F;
   --color-surface-variant: #e0e3e5;
-  --color-secondary-fixed-dim: #68dba9;
+  --color-secondary-fixed-dim: #8BBB92;
   --color-surface-container-high: #e6e8ea;
   --color-on-surface: #191c1e;
 
@@ -65,15 +99,15 @@
   --spacing-unit: 4px;
   --spacing-sm: 1rem;
 
-  /* Font Families */
-  --font-label-lg: "Inter", sans-serif;
-  --font-headline-xl: "Playfair Display", serif;
-  --font-body-sm: "Inter", sans-serif;
-  --font-label-md: "Inter", sans-serif;
-  --font-body-md: "Inter", sans-serif;
-  --font-body-lg: "Inter", sans-serif;
-  --font-headline-md: "Playfair Display", serif;
-  --font-headline-lg: "Playfair Display", serif;
+  /* Typography Utility Scales */
+  --font-label-lg: "Poppins", sans-serif;
+  --font-headline-xl: "Poppins", sans-serif;
+  --font-body-sm: "Poppins", sans-serif;
+  --font-label-md: "Poppins", sans-serif;
+  --font-body-md: "Poppins", sans-serif;
+  --font-body-lg: "Poppins", sans-serif;
+  --font-headline-md: "Poppins", sans-serif;
+  --font-headline-lg: "Poppins", sans-serif;
 
   /* Border Radii */
   --radius-DEFAULT: 0.25rem;
@@ -83,8 +117,38 @@
 }
 
 /* Custom Base / Utility Styles */
+html, body {
+  font-family: var(--font-sans);
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.curved-line-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px -5px rgba(12, 92, 76, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
 }
 
 /* Dropdown is now controlled via JavaScript click toggle for better UX */

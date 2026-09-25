@@ -1,251 +1,298 @@
-<!-- Hero Section -->
-<header
-  class="relative pt-20 h-[90vh] flex items-center overflow-hidden bg-primary"
->
-  <!-- Slides Container -->
-  <div class="absolute inset-0 z-0">
-    <!-- Slide 1 (Active by default) -->
-    <div
-      class="absolute inset-0 opacity-100 z-0 hero-slide"
-      data-index="0"
-      data-active="true"
-    >
-      <div
-        class="slide-bg w-full h-full bg-cover bg-center scale-100"
-        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCavFC-99FADJK6mO15qdRLjoreFX-FK3DeOp-_BK11xqeikKtizE4CjRMes2HaSlT6lx-2Yl_6SF53rsp0awfSaGCJ_Yw1xg-jEwYgrEiUN4d29JRAEZ8jF2iBGfZceSjU6rQrSR-0aoc9vP060egOHlfluZTT0I1VU-IECfDv87L0YYmQ_Cv0qKeVfJSoQJYcJfve44NMj6h3ldF3T9lG1XF1vg4KBpuLs-10nqCanmN97hm9jfmyjg')"
-        role="img"
-        aria-label="Yayasan Dinado Kindergarten Building"
-      >
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div
-      class="absolute inset-0 opacity-0 -z-10 hero-slide"
-      data-index="1"
-      data-active="false"
-    >
-      <div
-        class="slide-bg w-full h-full bg-cover bg-center scale-110"
-        style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1600&auto=format&fit=crop')"
-        role="img"
-        aria-label="Kegiatan Belajar Anak-anak"
-      >
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div
-      class="absolute inset-0 opacity-0 -z-10 hero-slide"
-      data-index="2"
-      data-active="false"
-    >
-      <div
-        class="slide-bg w-full h-full bg-cover bg-center scale-110"
-        style="background-image: url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1600&auto=format&fit=crop')"
-        role="img"
-        aria-label="Aktivitas Kreatif dan Bermain"
-      >
-      </div>
-    </div>
-
-    <!-- Gradient & Dark Tint Overlay -->
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-transparent"
-    >
-    </div>
-    <div class="absolute inset-0 bg-black/15"></div>
-  </div>
-
-  <!-- Text Content Area -->
-  <div
-    class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-4xl text-on-primary"
-  >
-    <h1
-      class="font-headline-xl text-5xl sm:text-6xl md:text-7xl lg:text-6xl mb-md leading-[1.1] tracking-tight font-bold drop-shadow-lg"
-    >
-      Membangun Generasi <br />
-      <span
-        class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-fixed via-emerald-300 to-secondary-fixed"
-        >Unggul Berkarakter</span
-      >
-    </h1>
-    <p
-      class="font-body-lg text-lg sm:text-xl md:text-2xl mb-lg max-w-2xl text-on-primary/95 font-medium leading-relaxed drop-shadow-md"
-    >
-      YP2SK berkomitmen menghadirkan pendidikan anak usia dini yang berkualitas,
-      amanah, dan menumbuhkan potensi terbaik anak dalam lingkungan yang islami
-      dan menyenangkan.
-    </p>
-    <div class="flex flex-wrap gap-4">
-      <a
-        href="#"
-        class="px-8 py-3.5 bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg hover:translate-y-[-2px] hover:shadow-xl hover:bg-secondary/90 transition-all shadow-lg text-center cursor-pointer"
-      >
-        Daftar Sekarang
-      </a>
-      <a
-        href="#"
-        class="px-8 py-3.5 border border-on-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary/10 transition-all text-center cursor-pointer"
-      >
-        Jelajahi Program
-      </a>
-    </div>
-  </div>
-
-  <!-- Slide Navigation Buttons (Hidden on mobile for cleaner UI) -->
-  <button
-    id="hero-prev"
-    class="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-on-primary transition-all duration-200 backdrop-blur-sm cursor-pointer group shadow-lg"
-    aria-label="Slide Sebelumnya"
-  >
-    <span
-      class="material-symbols-outlined transition-transform group-hover:-translate-x-0.5 text-2xl"
-      >chevron_left</span
-    >
-  </button>
-  <button
-    id="hero-next"
-    class="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-on-primary transition-all duration-200 backdrop-blur-sm cursor-pointer group shadow-lg"
-    aria-label="Slide Berikutnya"
-  >
-    <span
-      class="material-symbols-outlined transition-transform group-hover:translate-x-0.5 text-2xl"
-      >chevron_right</span
-    >
-  </button>
-
-  <!-- Slide Indicator Dots -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
-    <button
-      class="hero-dot w-8 h-3 rounded-full bg-secondary-fixed transition-all duration-300 cursor-pointer shadow-md"
-      aria-label="Slide 1"></button>
-    <button
-      class="hero-dot w-3 h-3 rounded-full bg-on-primary/30 hover:bg-on-primary/50 transition-all duration-300 cursor-pointer shadow-sm"
-      aria-label="Slide 2"></button>
-    <button
-      class="hero-dot w-3 h-3 rounded-full bg-on-primary/30 hover:bg-on-primary/50 transition-all duration-300 cursor-pointer shadow-sm"
-      aria-label="Slide 3"></button>
-  </div>
-</header>
-
-<style>
-  /* Smooth Fade transitions for slides */
-  .hero-slide {
-    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+---
+// Hero Section with Automatic Slider matching modern YP2SK branding
+const slides = [
+  {
+    badge: "Pondok Pesantren & Pendidikan Terpadu",
+    title: 'Pilihan Utama Pendidikan <span class="text-[#8BBB92]">Pesantren &amp; Karakter</span> Generasi Unggul',
+    subtitle: "Memadukan sanad keilmuan Islam, Tahfidzul Qur’an muttashil, serta kurikulum sains modern guna mencetak generasi beradab, berwawasan global, dan berjiwa kepemimpinan.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBdlygJIiaF0SSUwV_KYwh2iUqCZmzvlvRGxSNCdUsJo5ZVhzocBCaOCTbym6CNhOQp2pzh2vTriVmJlErH3ov5gVa5HxdanF8EvUjLo__-ZRULnnyhdYJYNsVNDUCMX1uh5OVi68GMche_MFoVHhhxmUNlY5IdwpUFsv5g_qY-MufO5KA_iwnTieZbEudtmKSJesesVLQu5JggH4jev_RKyPw9Eu3O4O6DXs3Y1KoK0ts7OSU-HiH8vg",
+    imageAlt: "Santri dan Siswa YP2SK belajar di lingkungan modern dan asri",
+    highlights: [
+      { icon: "★", text: "Akreditasi A Unggul" },
+      { icon: "📖", text: "Tahfidz 30 Juz Bersanad" },
+      { icon: "🔬", text: "Sains & Bilingual" },
+    ],
+    primaryBtn: { text: "Daftar Santri Baru", href: "/kontak" },
+    secondaryBtn: { text: "Pelajari Profil Yayasan", href: "/profil/yayasan" }
+  },
+  {
+    badge: "Tahfidz Al-Qur'an Bersanad Muttashil",
+    title: 'Mencetak Generasi <span class="text-[#8BBB92]">Tahfidzul Qur\'an</span> Beradab &amp; Mutqin',
+    subtitle: "Metode tahfidz komprehensif dengan pendampingan intensif para penghafal Al-Qur'an bersanad, penguatan karakter adab santri, dan keilmuan dirasah islamiyyah.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuADxdlSdcfLIou-9D78BYDeD88uxsQ9Df27LClBOHKIAoi5qV_4sVRDlZTJsWvY7VPsr1orKxPumxPhnpsUQs-bSIKCB5i0KHYCexI4UlOFdpYT__C9AZm6__YF5WX-leT-KIl5t17srwCdPDEPpW9_VReiQ8euar40HWpGZu0AfOdELVrkvbWpACcVtWPFfpHrPaIosSu3ZwWBos21uWAN9ktqtu9uORZzo0rxNzg2fMD2NQxBuAnTWQ",
+    imageAlt: "Wisuda Tasmi dan Pembinaan Tahfidz Bersanad Santri YP2SK",
+    highlights: [
+      { icon: "📜", text: "Sanad Tahfidz Muttashil" },
+      { icon: "🕌", text: "Halaqah Intensif & Mutqin" },
+      { icon: "🎓", text: "Wisuda Tasmi' 30 Juz" },
+    ],
+    primaryBtn: { text: "Program Pondok Tahfidz", href: "/pendidikan/ponpes-tahfidz" },
+    secondaryBtn: { text: "Hubungi Sekretariat", href: "/kontak" }
+  },
+  {
+    badge: "Pendidikan Usia Emas & Inklusi",
+    title: 'Fondasi Kuat Mulai dari <span class="text-[#8BBB92]">Usia Emas &amp; Inklusi</span> Penuh Kasih',
+    subtitle: "Menumbuhkan fitrah tauhid dan kemandirian melalui PAUD Naneymi, Dinado, serta Graha Autis dengan program pembelajaran terpadu berbasis cinta dan keteladanan.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDYfTLePOkcB-8eEDqM5C1fmxLd8oivn775jr4JItpRozPBM92Q-KejUEHjdO4jbv1mgxNR9ou9mSq1i5GSs4VXb0TqxcR9SkH-ON020ZOpk8POUzMzjZV0HBZM37JwvnuIZyPjL9FQaXF3_6Jt6MpfQ1diIEuv-MF0eV7Bt97KVmO2nA4DKt4QVCLfgFEOBrd55jNJca66wtEb_LlxJXZeEDFJc5pBTOrN6Z99mi6yB0168jB_mi948g",
+    imageAlt: "Pembelajaran ceria dan hangat di PAUD dan Graha Autis YP2SK",
+    highlights: [
+      { icon: "🌱", text: "Fitrah Tauhid & Adab Ceria" },
+      { icon: "🧩", text: "Layanan Inklusi & Autis" },
+      { icon: "🧸", text: "Kelas Sensorik & Motorik" },
+    ],
+    primaryBtn: { text: "Jelajahi PAUD & Inklusi", href: "/pendidikan/kb-tk-inklusi-istimewa" },
+    secondaryBtn: { text: "Konsultasi Tumbuh Kembang", href: "/kontak" }
   }
+];
+---
 
-  /* Ken Burns zoom transition on background images */
-  .slide-bg {
-    transition: transform 6.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-</style>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12 sm:pb-16 font-sans">
+  <!-- Hero Slider Container -->
+  <div 
+    id="hero-slider" 
+    class="relative rounded-3xl overflow-hidden bg-[#092328] text-white min-h-[520px] md:min-h-[560px] shadow-xl border border-[#12544F] group select-none"
+    data-aos="zoom-out"
+    data-aos-duration="900"
+    aria-roledescription="carousel"
+    aria-label="Sorotan Utama YP2SK"
+  >
+    <!-- Slides Wrapper -->
+    {slides.map((slide, index) => (
+      <div 
+        class={`hero-slide absolute inset-0 transition-all duration-700 ease-in-out flex items-center p-7 sm:p-12 lg:p-16 ${
+          index === 0 ? "opacity-100 z-10 pointer-events-auto" : "opacity-0 z-0 pointer-events-none"
+        }`}
+        data-index={index}
+        role="group"
+        aria-roledescription="slide"
+        aria-label={`Slide ${index + 1} dari ${slides.length}`}
+      >
+        <!-- Background Image with Clean Tonal Gradient Overlay -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+          <img
+            alt={slide.imageAlt}
+            class="hero-slide-img w-full h-full object-cover transition-transform duration-1000 ease-out scale-100"
+            src={slide.image}
+            loading={index === 0 ? "eager" : "lazy"}
+          />
+          <div
+            class="absolute inset-0"
+            style="background: linear-gradient(to right, rgba(9,35,40,0.96) 0%, rgba(9,35,40,0.88) 50%, rgba(9,35,40,0.55) 78%, rgba(9,35,40,0.2) 100%);"
+          ></div>
+        </div>
+        
+        <!-- Slide Content -->
+        <div class="relative z-20 max-w-2xl space-y-4 sm:space-y-5">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-[#12544F] text-[#8BBB92] border border-[#2A835F]/40 backdrop-blur-sm w-fit">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#8BBB92]"></span>
+            <span>{slide.badge}</span>
+          </div>
+        
+          <!-- Title -->
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight font-sans" set:html={slide.title} />
+          
+          <!-- Subtitle -->
+          <p class="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-normal">
+            {slide.subtitle}
+          </p>
+          
+          <!-- Highlight Badges -->
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            {slide.highlights.map((h) => (
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs bg-[#12544F]/60 text-slate-200 border border-[#8BBB92]/25">
+                <span>{h.icon}</span>
+                <span>{h.text}</span>
+              </span>
+            ))}
+          </div>
+          
+          <!-- CTA Buttons -->
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a
+              class="px-6 py-3.5 rounded-xl bg-[#2A835F] hover:bg-[#12544F] text-white font-semibold text-xs sm:text-sm shadow-md transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap cursor-pointer flex items-center gap-2"
+              href={slide.primaryBtn.href}
+            >
+              <span>{slide.primaryBtn.text}</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+            <a
+              class="px-6 py-3.5 rounded-xl bg-[#12544F]/60 hover:bg-[#12544F] border border-[#8BBB92]/40 text-white font-medium text-xs sm:text-sm transition-all duration-200 whitespace-nowrap cursor-pointer"
+              href={slide.secondaryBtn.href}
+            >
+              {slide.secondaryBtn.text}
+            </a>
+          </div>
+        </div>
+      </div>
+    ))}
+
+    <!-- Bottom Controls Bar (Dots Indicators & Navigation Arrows) -->
+    <div class="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-12 sm:right-12 z-30 flex items-center justify-between pointer-events-none">
+      <!-- Dots Indicators -->
+      <div class="flex items-center gap-2 pointer-events-auto bg-[#092328]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#12544F]">
+        {slides.map((_, i) => (
+          <button
+            type="button"
+            class={`slider-dot transition-all duration-300 rounded-full h-2 cursor-pointer ${
+              i === 0 ? "w-7 bg-[#8BBB92] shadow-sm" : "w-2 bg-white/30 hover:bg-white/60"
+            }`}
+            data-target={i}
+            aria-label={`Pindah ke slide ${i + 1}`}
+          />
+        ))}
+      </div>
+
+      <!-- Arrow Controls & Counter -->
+      <div class="flex items-center gap-2 pointer-events-auto">
+        <span id="slider-counter" class="text-xs font-mono font-medium text-slate-300 bg-[#092328]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#12544F] mr-1 hidden sm:inline-block">
+          01 / {slides.length < 10 ? `0${slides.length}` : slides.length}
+        </span>
+        <button
+          type="button"
+          id="hero-slider-prev"
+          class="w-9 h-9 rounded-full bg-[#092328]/80 hover:bg-[#12544F] backdrop-blur-md border border-[#12544F] text-[#8BBB92] hover:text-white flex items-center justify-center transition active:scale-95 text-base cursor-pointer"
+          aria-label="Slide sebelumnya"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          id="hero-slider-next"
+          class="w-9 h-9 rounded-full bg-[#092328]/80 hover:bg-[#12544F] backdrop-blur-md border border-[#12544F] text-[#8BBB92] hover:text-white flex items-center justify-center transition active:scale-95 text-base cursor-pointer"
+          aria-label="Slide selanjutnya"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>
-  function initHeroSlider() {
-    const slides = document.querySelectorAll(".hero-slide");
-    const dots = document.querySelectorAll(".hero-dot");
-    const prevBtn = document.getElementById("hero-prev");
-    const nextBtn = document.getElementById("hero-next");
+  function setupHeroSlider() {
+    const sliderContainer = document.getElementById('hero-slider');
+    if (!sliderContainer) return;
 
-    if (slides.length === 0) return;
+    const slides = sliderContainer.querySelectorAll<HTMLElement>('.hero-slide');
+    const dots = sliderContainer.querySelectorAll<HTMLButtonElement>('.slider-dot');
+    const prevBtn = document.getElementById('hero-slider-prev');
+    const nextBtn = document.getElementById('hero-slider-next');
+    const counter = document.getElementById('slider-counter');
 
-    let currentSlide = 0;
-    let slideInterval: any;
-    const intervalTime = 6000; // 6 seconds
+    if (slides.length <= 1) return;
 
-    function showSlide(index: number) {
-      // Deactivate current active slide
-      slides[currentSlide].classList.remove("opacity-100", "z-0");
-      slides[currentSlide].classList.add("opacity-0", "-z-10");
-      slides[currentSlide].setAttribute("data-active", "false");
+    let currentIndex = 0;
+    let timer: number | null = null;
+    const intervalTime = 5500; // 5.5 seconds per slide
 
-      // Reset scale to zoomed-in state for inactive slide
-      const currentBg = slides[currentSlide].querySelector(".slide-bg");
-      if (currentBg) {
-        currentBg.classList.remove("scale-100");
-        currentBg.classList.add("scale-110");
+    const updateSlider = (newIndex: number) => {
+      currentIndex = (newIndex + slides.length) % slides.length;
+
+      slides.forEach((slide, idx) => {
+        const img = slide.querySelector<HTMLImageElement>('.hero-slide-img');
+        if (idx === currentIndex) {
+          slide.classList.remove('opacity-0', 'z-0', 'pointer-events-none');
+          slide.classList.add('opacity-100', 'z-10', 'pointer-events-auto');
+          if (img) {
+            img.classList.remove('scale-105');
+            img.classList.add('scale-100');
+          }
+        } else {
+          slide.classList.remove('opacity-100', 'z-10', 'pointer-events-auto');
+          slide.classList.add('opacity-0', 'z-0', 'pointer-events-none');
+          if (img) {
+            img.classList.remove('scale-100');
+            img.classList.add('scale-105');
+          }
+        }
+      });
+
+      // Update dots
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.classList.remove('w-2', 'bg-white/30');
+          dot.classList.add('w-7', 'bg-[#8BBB92]', 'shadow-sm');
+        } else {
+          dot.classList.remove('w-7', 'bg-[#8BBB92]', 'shadow-sm');
+          dot.classList.add('w-2', 'bg-white/30');
+        }
+      });
+
+      // Update counter
+      if (counter) {
+        const curNum = currentIndex + 1;
+        const totalNum = slides.length;
+        counter.textContent = `${curNum < 10 ? '0' + curNum : curNum} / ${totalNum < 10 ? '0' + totalNum : totalNum}`;
       }
+    };
 
-      // Update dot styles
-      if (dots.length > 0) {
-        dots[currentSlide].classList.remove("bg-secondary-fixed", "w-8");
-        dots[currentSlide].classList.add("bg-on-primary/30", "w-3");
+    const startAutoSlide = () => {
+      stopAutoSlide();
+      timer = window.setInterval(() => {
+        updateSlider(currentIndex + 1);
+      }, intervalTime);
+    };
+
+    const stopAutoSlide = () => {
+      if (timer !== null) {
+        clearInterval(timer);
+        timer = null;
       }
+    };
 
-      // Calculate new index
-      currentSlide = (index + slides.length) % slides.length;
+    // Controls listeners
+    prevBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateSlider(currentIndex - 1);
+      startAutoSlide();
+    });
 
-      // Activate new slide
-      slides[currentSlide].classList.remove("opacity-0", "-z-10");
-      slides[currentSlide].classList.add("opacity-100", "z-0");
-      slides[currentSlide].setAttribute("data-active", "true");
+    nextBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateSlider(currentIndex + 1);
+      startAutoSlide();
+    });
 
-      // Trigger slow zoom-in transition (to scale-100)
-      const newBg = slides[currentSlide].querySelector(".slide-bg");
-      if (newBg) {
-        newBg.classList.remove("scale-110");
-        newBg.classList.add("scale-100");
-      }
-
-      // Update active dot style
-      if (dots.length > 0) {
-        dots[currentSlide].classList.remove("bg-on-primary/30", "w-3");
-        dots[currentSlide].classList.add("bg-secondary-fixed", "w-8");
-      }
-    }
-
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-
-    function startSlideShow() {
-      clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, intervalTime);
-    }
-
-    // Set click handlers for dot indicators
-    dots.forEach((dot, idx) => {
-      dot.addEventListener("click", () => {
-        showSlide(idx);
-        startSlideShow();
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const target = parseInt(dot.getAttribute('data-target') || '0', 10);
+        updateSlider(target);
+        startAutoSlide();
       });
     });
 
-    // Set click handlers for arrow buttons
-    if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        prevSlide();
-        startSlideShow();
-      });
-    }
+    // Pause on hover
+    sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+    sliderContainer.addEventListener('mouseleave', startAutoSlide);
 
-    if (nextBtn) {
-      nextBtn.addEventListener("click", () => {
-        nextSlide();
-        startSlideShow();
-      });
-    }
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-    // Trigger initial slide zoom-in
-    const firstBg = slides[0].querySelector(".slide-bg");
-    if (firstBg) {
-      // Small timeout ensures transition engine registers the change from initial state
-      setTimeout(() => {
-        firstBg.classList.remove("scale-110");
-        firstBg.classList.add("scale-100");
-      }, 50);
-    }
+    sliderContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoSlide();
+    }, { passive: true });
 
-    startSlideShow();
+    sliderContainer.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeDistance = touchEndX - touchStartX;
+      if (Math.abs(swipeDistance) > 40) {
+        if (swipeDistance < 0) {
+          updateSlider(currentIndex + 1); // Swipe left -> next
+        } else {
+          updateSlider(currentIndex - 1); // Swipe right -> prev
+        }
+      }
+      startAutoSlide();
+    }, { passive: true });
+
+    // Initial start
+    startAutoSlide();
   }
 
-  // Support Astro View Transitions (re-run script after navigation)
-  document.addEventListener("astro:page-load", initHeroSlider);
-  // Run on initial load
-  initHeroSlider();
+  // Support both standard load and Astro page transitions
+  setupHeroSlider();
+  document.addEventListener('astro:page-load', setupHeroSlider);
 </script>

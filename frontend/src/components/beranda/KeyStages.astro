@@ -1,0 +1,181 @@
+---
+// KeyStages.astro - Tahapan Pembinaan Berkelanjutan YP2SK
+const stages = [
+  {
+    step: "01",
+    phase: "Fase Usia Emas",
+    age: "Usia 1 - 6 Tahun",
+    title: "Pembiasaan Adab & Fitrah Tauhid",
+    institution: "TPA • KB • TK Naneymi, Dinado & Inklusi Istimewa",
+    desc: "Menstimulasi sensorik-motorik, fitrah keimanan, dan pembiasaan adab islami dalam suasana bermain yang aman, hangat, dan menyenangkan.",
+    highlights: [
+      "Pengenalan hijaiyah ceria & doa harian",
+      "Stimulasi motorik & kemandirian toilet training",
+      "Intervensi dini tumbuh kembang (Sensori & Wicara)"
+    ],
+    accent: "bg-blue-50 text-blue-700 border-blue-200",
+    badgeBg: "bg-blue-100 text-blue-800",
+    link: "/pendidikan/tpa-kb-tk-naneymi",
+    linkText: "Detail PAUD & Daycare"
+  },
+  {
+    step: "02",
+    phase: "Fase Fondasi Dasar",
+    age: "Usia 7 - 12 Tahun",
+    title: "Literasi Qur'ani & Logika Sains",
+    institution: "SD Sunan Kudus (SKISS)",
+    desc: "Membangun ketertiban ibadah yaumiyyah, kelancaran membaca Al-Qur'an bertajwid, serta menumbuhkan rasa ingin tahu ilmiah melalui sains inquiry.",
+    highlights: [
+      "Tartil Al-Qur'an & target tahfidz Juz 30-29",
+      "Matematika & sains dasar berbasis eksperimen",
+      "Pembiasaan shalat berjamaah & adab pergaulan"
+    ],
+    accent: "bg-amber-50 text-amber-900 border-amber-200",
+    badgeBg: "bg-amber-100 text-amber-800",
+    link: "/pendidikan/skiis",
+    linkText: "Detail SD Islam Terpadu"
+  },
+  {
+    step: "03",
+    phase: "Fase Kedisiplinan & Bahasa",
+    age: "Usia 12 - 15 Tahun",
+    title: "Tahfidz Intensif & Karakter Mandiri",
+    institution: "SMP - SMA - SMK (SKISS)",
+    desc: "Penguatan akidah aqidah ahlussunnah, percepatan hafalan Al-Qur'an, pondasi nahwu shorof, dan penguasaan aktif dwi-bahasa (Arab - Inggris).",
+    highlights: [
+      "Akselerasi tahfidz 10 - 15 Juz mutqin",
+      "Boarding school terpisah putra & putri",
+      "Laboratorium komputer & klub olimpiade"
+    ],
+    accent: "bg-rose-50 text-rose-900 border-rose-200",
+    badgeBg: "bg-rose-100 text-rose-800",
+    link: "/pendidikan/skiis",
+    linkText: "Detail SMP - SMA - SMK"
+  },
+  {
+    step: "04",
+    phase: "Fase Spesialisasi & Sanad",
+    age: "Usia 15 - 18+ Tahun",
+    title: "Riset Sains, Vokasi & Sanad 30 Juz",
+    institution: "Ponpes Tahfidz Al Qur'an Sunan Kudus",
+    desc: "Penjurusan keilmuan tingkat lanjut (IPA Riset, Keagamaan Turats, atau Vokasi Terapan) serta pendampingan beasiswa PTN, Al-Azhar, dan kampus luar negeri.",
+    highlights: [
+      "Khatam Tahfidz 30 Juz bersanad muttashil",
+      "Persiapan UTBK, TOEFL, TOAFL & Riset Ilmiah",
+      "Pilihan kejuruan terapan (SMK) siap kerja"
+    ],
+    accent: "bg-emerald-50 text-emerald-900 border-emerald-200",
+    badgeBg: "bg-emerald-100 text-emerald-800",
+    link: "/pendidikan/ponpes-tahfidz",
+    linkText: "Detail MA, SMK & Pesantren"
+  }
+];
+---
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20" id="jenjang">
+  <!-- Section Title & Intro -->
+  <div class="text-center max-w-3xl mx-auto mb-14 font-sans" data-aos="fade-up">
+    <span class="badge-pill bg-brand-mint text-brand-emerald mb-3 border border-emerald-200 font-sans">
+      Jenjang Pendidikan
+    </span>
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 font-sans tracking-tight">
+      Tahapan Pembinaan Berkelanjutan
+    </h2>
+    <p class="text-xs sm:text-sm text-slate-500 mt-3 leading-relaxed font-sans">
+      Kurikulum berjenjang terstruktur dari pendidikan usia emas, fondasi dasar, hingga peminatan keilmuan riset sains dan sanad Al-Qur'an.
+    </p>
+  </div>
+
+  <!-- 4 Sequential Stages Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-sans">
+    {stages.map((stage, index) => (
+      <div
+        class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+        data-aos="fade-up"
+        data-aos-delay={(index + 1) * 100}
+      >
+        <div>
+          <!-- Top Step & Age Badge -->
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-2xl bg-slate-100 text-slate-800 font-bold text-sm flex items-center justify-center font-sans group-hover:bg-brand-emerald group-hover:text-white transition-colors">
+              {stage.step}
+            </span>
+            <span class={`text-[10px] font-bold px-3 py-1 rounded-full ${stage.badgeBg}`}>
+              {stage.age}
+            </span>
+          </div>
+
+          <!-- Phase Name -->
+          <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+            {stage.phase}
+          </span>
+          
+          <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug font-sans">
+            {stage.title}
+          </h3>
+
+          <p class="text-xs font-semibold text-brand-emerald mb-3">
+            {stage.institution}
+          </p>
+
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            {stage.desc}
+          </p>
+
+          <!-- Key Highlights Bullet List -->
+          <ul class="space-y-2 border-t border-slate-100 pt-4 mb-4">
+            {stage.highlights.map((item) => (
+              <li class="flex items-start gap-2 text-[11px] text-slate-600">
+                <span class="text-brand-emerald font-bold mt-0.5">✓</span>
+                <span class="leading-tight">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Card Footer Link -->
+        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+          <a
+            href={stage.link}
+            class="text-xs font-bold text-brand-emerald hover:text-brand-emeraldDark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+          >
+            <span>{stage.linkText}</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Bottom Interactive Inclusivity & Consultation Bar -->
+  <div class="mt-12 bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-6 font-sans">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl shrink-0">
+        🧩
+      </div>
+      <div>
+        <h4 class="font-bold text-slate-900 text-sm sm:text-base">
+          Layanan Inklusif Terapi &amp; Anak Berkebutuhan Khusus (ABK)
+        </h4>
+        <p class="text-xs text-slate-500 mt-0.5 leading-relaxed">
+          YP2SK menyediakan pendampingan individual di <strong>Graha Autis</strong> (Wicara, Sensori Integrasi, Perilaku) yang terintegrasi ramah dengan jenjang sekolah.
+        </p>
+      </div>
+    </div>
+
+    <div class="shrink-0 flex flex-wrap items-center gap-3">
+      <a
+        href="/pendidikan/graha-autis"
+        class="px-4 py-2 rounded-full text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 transition"
+      >
+        Pelajari Graha Autis
+      </a>
+      <a
+        href="/kontak"
+        class="px-5 py-2 rounded-full text-xs font-bold text-white bg-brand-emerald hover:bg-brand-emeraldDark transition shadow-xs"
+      >
+        Konsultasi Jenjang Santri →
+      </a>
+    </div>
+  </div>
+</section>

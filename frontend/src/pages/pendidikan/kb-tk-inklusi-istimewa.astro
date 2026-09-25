@@ -1,0 +1,275 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const kbTkInklusiSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yp2sk.or.id/pendidikan/kb-tk-inklusi-istimewa#webpage",
+      "url": "https://yp2sk.or.id/pendidikan/kb-tk-inklusi-istimewa",
+      "name": "KB - TK Inklusi Istimewa | PAUD Ramah ABK YP2SK",
+      "description": "Layanan pendidikan anak usia dini inklusif ramah ABK: Kelompok Bermain (KB) dan Taman Kanak-Kanak (TK) Inklusi Istimewa YP2SK dengan pendekatan individual IEP, guru pendamping khusus, dan nilai keislaman.",
+      "breadcrumb": {
+        "@id": "https://yp2sk.or.id/pendidikan/kb-tk-inklusi-istimewa#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yp2sk.or.id/pendidikan/kb-tk-inklusi-istimewa#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pendidikan",
+          "item": "https://yp2sk.or.id/pendidikan/kb-tk-inklusi-istimewa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "KB - TK Inklusi Istimewa",
+          "item": "https://yp2sk.or.id/pendidikan/kb-tk-inklusi-istimewa"
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://yp2sk.or.id/pendidikan/kb-tk-inklusi-istimewa#school",
+      "name": "KB - TK Inklusi Istimewa YP2SK",
+      "description": "Lembaga PAUD Inklusi Istimewa di bawah naungan Yayasan Pendidikan Pesantren Sunan Kudus.",
+      "image": "/images/kb_naneymi_autis.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jln. Madurekso No. 22, Langgar Dalem",
+        "addressLocality": "Kota Kudus",
+        "addressRegion": "Jawa Tengah",
+        "postalCode": "59317",
+        "addressCountry": "ID"
+      }
+    }
+  ]
+};
+---
+
+<Layout 
+  title="KB - TK Inklusi Istimewa | PAUD Ramah ABK & Tumbuh Kembang Optimal - YP2SK" 
+  description="KB - TK Inklusi Istimewa YP2SK mendampingi setiap anak istimewa dengan kurikulum adaptif IEP, rasio pendamping intensif, stimulasi sensori motorik, dan pembiasaan adab Qur'ani."
+  schema={kbTkInklusiSchema}
+>
+  <!-- Ambient Soft Pastel Background Elements -->
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-45">
+    <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-sky-200/50 blur-3xl"></div>
+    <div class="absolute top-1/4 -right-20 w-96 h-96 rounded-full bg-teal-200/50 blur-3xl"></div>
+    <div class="absolute top-2/3 -left-24 w-96 h-96 rounded-full bg-amber-200/50 blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-purple-200/50 blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 font-sans">
+    <!-- Hero Section -->
+    <section class="relative font-sans pb-8 sm:pb-14">
+      <!-- Panoramic Banner -->
+      <div class="relative w-full h-[340px] sm:h-[400px] lg:h-[440px] overflow-hidden bg-sky-950 rounded-b-[2.5rem] sm:rounded-b-[3.5rem] shadow-md">
+        <img 
+          src="/images/kb_naneymi_autis.png" 
+          alt="Suasana ramah dan bersahabat di kelas KB - TK Inklusi Istimewa YP2SK" 
+          class="w-full h-full object-cover object-center opacity-85"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/35 to-sky-600/20"></div>
+
+        <div class="absolute top-6 left-6 sm:top-8 sm:left-12 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg border border-sky-200">
+          <span class="text-xl">🌟</span>
+          <span class="text-xs font-bold text-sky-800">Setiap Anak Berharga &amp; Istimewa</span>
+        </div>
+
+        <div class="absolute top-6 right-6 sm:top-8 sm:right-12 hidden sm:flex items-center gap-2 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg border border-teal-200">
+          <span class="text-xl">🤝</span>
+          <span class="text-xs font-bold text-teal-800">Inklusi Penuh Kasih</span>
+        </div>
+      </div>
+      
+      <!-- Overlapping Cute Profile Header Card -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-20 sm:-mt-24 lg:-mt-28 relative z-20" data-aos="zoom-in" data-aos-duration="700">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-7 sm:p-11 shadow-soft border border-slate-200/90 text-center relative overflow-hidden">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-bold text-xs mb-3 shadow-2xs">
+            <span class="material-symbols-outlined text-sm">diversity_1</span>
+            PAUD Inklusif &amp; Ramah Kebutuhan Khusus
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            KB - TK Inklusi Istimewa
+          </h1>
+
+          <p class="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal">
+            Layanan pendidikan anak usia dini berbasis cinta dan kesabaran, menghadirkan kelas inklusi terpadu dengan kurikulum individual (IEP) untuk mendampingi buah hati istimewa tumbuh berdaya dan mandiri.
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <a 
+              href="/kontak" 
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-emerald text-white text-xs sm:text-sm font-bold hover:bg-brand-emeraldDark transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              <span>Konsultasi &amp; Pendaftaran</span>
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+            <a 
+              href="#program-layanan" 
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm font-bold hover:bg-slate-200 transition-all border border-slate-200"
+            >
+              <span>Layanan Kami</span>
+              <span class="material-symbols-outlined text-base">expand_more</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Pillars Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12" id="program-layanan">
+      <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
+        <span class="text-xs font-bold text-sky-600 uppercase tracking-widest block mb-1">Pendekatan Edukasi Holistik</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Mengapa Memilih KB - TK Inklusi Istimewa?</h2>
+        <div class="w-12 h-1 bg-sky-500 mx-auto rounded-full mt-3"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-2xl">assignment_turned_in</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Program IEP Adaptif</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Setiap anak memiliki target belajar individual yang disesuaikan dengan asesmen psikolog, terapis, dan pendidik, dievaluasi secara berkala.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-2xl">supervisor_account</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Guru Pendamping Khusus (GPK)</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Rasio guru dan anak yang sangat intensif (1:2 hingga 1:3) memastikan setiap anak mendapatkan perhatian optimal dan perlindungan emosional.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-2xl">mosque</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Internalisasi Adab &amp; Al-Qur'an</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Pembiasaan mendengarkan lantunan Al-Qur'an, doa-doa ringkas harian, serta melatih interaksi sosial santun dengan nilai rahmatan lil 'alamin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jenjang Layanan: KB & TK -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <!-- Box KB -->
+        <div class="bg-gradient-to-br from-sky-50 to-white rounded-3xl p-8 border border-sky-100 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-3 py-1 rounded-full bg-sky-200 text-sky-800 text-xs font-bold inline-block mb-3">Usia 2 - 4 Tahun</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Kelompok Bermain (KB) Inklusi</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+              Fokus pada masa transisi awal: stimulasi regulasi sensori, latihan toilet training, pembiasaan instruksi sederhana, dan adaptasi sosial di lingkungan yang kondusif.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-sky-600 text-base">check_circle</span>
+                <span>Sensory Play &amp; Motorik Kasar-Halus</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-sky-600 text-base">check_circle</span>
+                <span>Komunikasi visual (PECS) &amp; Imitasi bunyi</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-sky-600 text-base">check_circle</span>
+                <span>Pendampingan transisi kecemasan perpisahan</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-sky-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Senin - Jumat</span>
+            <a href="/kontak" class="text-xs font-bold text-sky-700 hover:text-sky-900 flex items-center gap-1">
+              Daftar KB <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Box TK -->
+        <div class="bg-gradient-to-br from-teal-50 to-white rounded-3xl p-8 border border-teal-100 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-3 py-1 rounded-full bg-teal-200 text-teal-800 text-xs font-bold inline-block mb-3">Usia 4 - 6 Tahun</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Taman Kanak-Kanak (TK) Inklusi</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+              Fokus pada persiapan sekolah: kemandirian berpakaian, makan, memahami aturan bersama, pengenalan pra-akademik, serta interaksi inklusi bersama teman sebaya.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-teal-600 text-base">check_circle</span>
+                <span>Pra-Literasi &amp; Pra-Numerasi Menyenangkan</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-teal-600 text-base">check_circle</span>
+                <span>Kelas Inklusi Terjadwal Bersama Santri Reguler</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-teal-600 text-base">check_circle</span>
+                <span>Sinergi Terapi Bersama Graha Autis YP2SK</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-6 border-t border-teal-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-medium">Senin - Jumat</span>
+            <a href="/kontak" class="text-xs font-bold text-teal-700 hover:text-teal-900 flex items-center gap-1">
+              Daftar TK <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
+      <div class="bg-gradient-to-r from-slate-900 via-sky-900 to-teal-900 rounded-3xl p-8 sm:p-12 text-white text-center shadow-xl relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <span class="badge-pill bg-white/10 text-sky-200 border border-white/20 mb-3 font-sans">
+            Pintu Masa Depan Terbuka Lebar
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-4">Mari Berdiskusi &amp; Asesmen Perkembangan Ananda</h2>
+          <p class="text-xs sm:text-sm text-slate-200 mb-8 leading-relaxed">
+            Tim psikolog dan pendidik KB - TK Inklusi Istimewa siap menyambut orang tua untuk konsultasi tumbuh kembang dan penyesuaian kelas yang paling tepat bagi ananda.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a 
+              href="/kontak" 
+              class="px-7 py-3.5 bg-brand-emerald hover:bg-brand-emeraldDark text-white text-xs sm:text-sm font-bold rounded-full transition shadow-md"
+            >
+              Hubungi Sekretariat YP2SK
+            </a>
+            <a 
+              href="https://wa.me/6281234567890" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold rounded-full transition border border-white/20"
+            >
+              WhatsApp Konsultasi
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,425 +1,542 @@
-<!DOCTYPE html><html class="light" lang="id"><head>
+<!DOCTYPE html><html class="scroll-smooth" lang="id" style=""><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Yayasan Dinado - Membangun Generasi Unggul Berkarakter</title>
+<title>YP2SK | Yayasan Pendidikan Pesantren Sunan Kudus - Mencetak Generasi Qur'ani &amp; Unggul</title>
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container": "#eceef0",
-                        "secondary": "#006c4a",
-                        "error": "#ba1a1a",
-                        "inverse-surface": "#2d3133",
-                        "on-tertiary-fixed": "#2f1500",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-low": "#f2f4f6",
-                        "primary-container": "#1a365d",
-                        "on-secondary-fixed-variant": "#005137",
-                        "tertiary-fixed-dim": "#ffb77d",
-                        "outline-variant": "#c4c6cf",
-                        "on-secondary-fixed": "#002114",
-                        "on-primary-container": "#86a0cd",
-                        "background": "#f7f9fb",
-                        "error-container": "#ffdad6",
-                        "on-secondary": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "surface-tint": "#455f88",
-                        "secondary-container": "#82f5c1",
-                        "surface-dim": "#d8dadc",
-                        "on-secondary-container": "#00714e",
-                        "on-surface-variant": "#43474e",
-                        "surface-container-lowest": "#ffffff",
-                        "primary": "#002045",
-                        "tertiary-fixed": "#ffdcc3",
-                        "primary-fixed": "#d6e3ff",
-                        "on-tertiary-fixed-variant": "#6e3900",
-                        "on-primary-fixed": "#001b3c",
-                        "primary-fixed-dim": "#adc7f7",
-                        "surface-container-highest": "#e0e3e5",
-                        "tertiary": "#361900",
-                        "tertiary-container": "#552b00",
-                        "surface": "#f7f9fb",
-                        "outline": "#74777f",
-                        "surface-bright": "#f7f9fb",
-                        "on-background": "#191c1e",
-                        "inverse-primary": "#adc7f7",
-                        "inverse-on-surface": "#eff1f3",
-                        "on-error": "#ffffff",
-                        "secondary-fixed": "#85f8c4",
-                        "on-primary": "#ffffff",
-                        "on-tertiary-container": "#eb851c",
-                        "on-primary-fixed-variant": "#2d476f",
-                        "surface-variant": "#e0e3e5",
-                        "secondary-fixed-dim": "#68dba9",
-                        "surface-container-high": "#e6e8ea",
-                        "on-surface": "#191c1e"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "xs": "0.5rem",
-                        "xl": "4rem",
-                        "margin-mobile": "16px",
-                        "lg": "2.5rem",
-                        "margin-desktop": "64px",
-                        "md": "1.5rem",
-                        "gutter": "24px",
-                        "unit": "4px",
-                        "sm": "1rem"
-                    },
-                    "fontFamily": {
-                        "label-lg": ["Inter"],
-                        "headline-xl": ["Playfair Display"],
-                        "body-sm": ["Inter"],
-                        "label-md": ["Inter"],
-                        "body-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "headline-md": ["Playfair Display"],
-                        "headline-lg": ["Playfair Display"]
-                    }
-                }
+<!-- Google Fonts: Plus Jakarta Sans & Playfair Display for Scholarly Touch -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              emerald: '#0c5c4c',
+              emeraldDark: '#084035',
+              emeraldLight: '#147d68',
+              navy: '#132238',
+              cream: '#fbf9f4',
+              gold: '#c89a3f',
+              mint: '#eaf6f2',
+              iceBlue: '#eef5fc',
+              warmYellow: '#fef7e6',
+              softLavender: '#f3effc'
             }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif']
+          }
         }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .nav-dropdown:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+      }
+    }
+  </script>
+<!-- Custom CSS for flowing connector curve line inspired by the reference layout -->
+<style data-purpose="curved-line-decorations">
+    .curved-line-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.875rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+    .shadow-soft {
+      box-shadow: 0 10px 30px -5px rgba(12, 92, 76, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    }
+  </style>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop shadow-sm transition-all duration-200 ease-in-out h-16 bg-white/95 backdrop-blur-md">
-<div class="flex items-center gap-4">
-<img alt="Logo Yayasan Dinado" class="h-12 w-12 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJgETTAVj05shytEmoGHc7cg9gus6ZIq8sN7zyGnBpdiN_XF72wwtR_JeMuRv6TrHEYKxW9fhGM_SRFkm9ExIvkr7thZfm_7ONTHvfNxRlY3LCrDWL0Fy4FKj5Rem5UIZlcb26krT8QPv1iYPGWVbsABIKbmtDZLfAFO_3wJdOE-QMHKtXkiQqzFTXk1nkL3l2ku_RF8kwpomk_fJwuWr1DZ76c4jn-lij8io6aoySSqKCtvOVePqgfA">
-<span class="text-headline-md font-headline-md font-bold text-primary">YP2SK</span>
+<body class="bg-white text-slate-700 font-sans antialiased relative overflow-x-hidden selection:bg-emerald-600 selection:text-white">
+<!-- Floating Vector Ribbon Line (Mirrors the curved guiding line across sections) -->
+<div aria-hidden="true" class="curved-line-bg">
+<svg class="w-full h-full opacity-35" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 4800">
+<path d="M720,200 C1100,500 1200,900 850,1300 C500,1700 200,2000 550,2500 C900,3000 1250,3300 950,3800 C700,4200 400,4500 720,4800" stroke="#a7d5cb" stroke-dasharray="8 8" stroke-width="2.5"></path>
+</svg>
 </div>
-<!-- Desktop Navigation -->
-<div class="hidden md:flex items-center gap-gutter">
-<a class="font-label-lg text-label-lg text-secondary border-b-2 border-secondary pb-1" href="#">Beranda</a>
-<div class="relative nav-dropdown group">
-<button class="flex items-center gap-1 font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors">
-                    Profil <span class="material-symbols-outlined text-[18px]">expand_more</span>
-</button>
-<div class="dropdown-menu hidden absolute top-full left-0 mt-2 w-48 bg-surface-container-lowest shadow-lg rounded-lg overflow-hidden py-2 border border-surface-variant">
-<a class="block px-4 py-2 font-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">Profil Yayasan</a>
-<a class="block px-4 py-2 font-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">Visi dan Misi</a>
-<a class="block px-4 py-2 font-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">Sejarah Yayasan</a>
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-emerald to-brand-navy flex items-center justify-center text-white font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+<span class="">ق</span>
 </div>
+<div>
+<span class="block font-bold text-lg leading-tight text-slate-900 tracking-tight flex items-center gap-1.5">
+            YP2SK
+</span>
+<span class="block text-[11px] text-slate-500 tracking-wide uppercase font-medium">Yayasan Pesantren Sunan Kudus</span>
 </div>
-<div class="relative nav-dropdown group">
-<button class="flex items-center gap-1 font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors">
-                    Pendidikan <span class="material-symbols-outlined text-[18px]">expand_more</span>
-</button>
-<div class="dropdown-menu hidden absolute top-full left-0 mt-2 w-48 bg-surface-container-lowest shadow-lg rounded-lg overflow-hidden py-2 border border-surface-variant">
-<a class="block px-4 py-2 font-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">KB Dinado</a>
-<a class="block px-4 py-2 font-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">TK Dinado</a>
-<a class="block px-4 py-2 font-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">TK Naneymi</a>
-</div>
-</div>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Agenda</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Berita</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Galeri</a>
-<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Kontak</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="px-6 py-2 bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg hover:brightness-110 transition-all shadow-md">PMB</button>
-<button class="md:hidden material-symbols-outlined text-primary text-[32px]">menu</button>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative pt-20 h-[90vh] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center scale-105 transform transition-transform duration-[10s] hover:scale-100" data-alt="A cinematic, sun-drenched wide shot of a modern Indonesian kindergarten building with large glass windows and lush tropical landscaping. The lighting is warm and golden, reflecting a nurturing and professional educational environment. The overall aesthetic is clean and high-end, utilizing the foundation's navy blue and emerald green palette through subtle architectural accents and vibrant greenery." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCavFC-99FADJK6mO15qdRLjoreFX-FK3DeOp-_BK11xqeikKtizE4CjRMes2HaSlT6lx-2Yl_6SF53rsp0awfSaGCJ_Yw1xg-jEwYgrEiUN4d29JRAEZ8jF2iBGfZceSjU6rQrSR-0aoc9vP060egOHlfluZTT0I1VU-IECfDv87L0YYmQ_Cv0qKeVfJSoQJYcJfve44NMj6h3ldF3T9lG1XF1vg4KBpuLs-10nqCanmN97hm9jfmyjg')"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
-</div>
-<div class="relative z-10 px-margin-desktop max-w-4xl text-on-primary">
-<h1 class="font-headline-xl text-headline-xl mb-md leading-tight">
-                Membangun Generasi <br> <span class="text-secondary-fixed">Unggul Berkarakter</span>
-</h1>
-<p class="font-body-lg text-body-lg mb-lg max-w-2xl text-on-primary/90">YP2SK berkomitmen menghadirkan pendidikan anak usia dini yang berkualitas, amanah, dan menumbuhkan potensi terbaik anak dalam lingkungan yang islami dan menyenangkan.</p>
-<div class="flex gap-4">
-<button class="px-8 py-3 bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg hover:translate-y-[-2px] transition-all shadow-lg">Daftar Sekarang</button>
-<button class="px-8 py-3 border border-on-primary text-on-primary font-label-lg text-label-lg rounded-lg hover:bg-on-primary/10 transition-all">Jelajahi Program</button>
-</div>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden lg:flex items-center space-x-7 text-[13px] font-medium text-slate-700"><a class="text-brand-emerald font-semibold transition-colors" href="#">Beranda</a><div class="relative group py-2"><button class="flex items-center gap-1 hover:text-brand-emerald transition-colors text-slate-700 font-medium focus:outline-none"><span class="">Profil</span><svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-emerald transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-1"><a class="block px-4 py-2 text-xs text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors" href="#tentang">Profil Yayasan</a><a class="block px-4 py-2 text-xs text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors" href="#tentang">Visi &amp; Misi</a></div></div><div class="relative group py-2"><button class="flex items-center gap-1 hover:text-brand-emerald transition-colors text-slate-700 font-medium focus:outline-none"><span class="">Pendidikan</span><svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-emerald transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50"><a class="block px-4 py-2 text-xs text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors" href="#jenjang">PAUD / RA</a><a class="block px-4 py-2 text-xs text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors" href="#jenjang">MI Terpadu</a><a class="block px-4 py-2 text-xs text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors" href="#jenjang">MTs Sunan Kudus</a><a class="block px-4 py-2 text-xs text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors" href="#jenjang">MA Sains &amp; Keagamaan</a><a class="block px-4 py-2 text-xs text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald transition-colors" href="#jenjang">Ma'had Aly / Tahfidz</a></div></div><a class="hover:text-brand-emerald transition-colors" href="#prestasi">Berita</a><a class="hover:text-brand-emerald transition-colors" href="#kampus">Galeri</a><a class="hover:text-brand-emerald transition-colors" href="#agenda">Kontak</a></nav>
+<!-- Action Buttons -->
+<div class="flex items-center gap-3"><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-brand-emerald hover:bg-brand-emeraldDark transition shadow-sm hover:shadow gap-1.5" href="#agenda"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="">Daftar PSB</span></a></div>
 </div>
 </header>
-<!-- Sambutan Ketua Section -->
-<section class="py-xl px-margin-desktop bg-surface-container-lowest">
-<div class="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
-<div class="relative">
-<div class="absolute -top-4 -left-4 w-32 h-32 bg-secondary-container/30 rounded-full blur-3xl"></div>
-<div class="relative z-10 rounded-xl overflow-hidden shadow-xl aspect-[4/5]">
-<img class="w-full h-full object-cover" data-alt="A professional portrait of a distinguished Indonesian educational leader in a modern office setting. She is wearing a warm-toned hijab and a formal batik uniform, smiling warmly at the camera. The background features bookshelves and soft natural light from a window, conveying an atmosphere of wisdom, accessibility, and institutional leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7ScFX4177WP84KTJhXP4wyq_LjSORby7oQex9qyRkv8yKNSj-zoqiB84EHuPSjUzs28GsYc-G3G3ELw0cEVAA7vIa7X_x7ceLdr-nkB6XuH7eDaJm5AXMYNyBCGZ9ZUita5z8JhfuHU4zZXAW9T3vOR_YjiaE-syWooMfzpDI2bIKuRXJQS8KlxR3ZIHYja3y0M9Aue_-9RR8Xd4e15Aj8KfX4PK0ZG-ipulpP9-jL_lG8iz5ClCyTw">
-</div>
-<div class="absolute -bottom-6 -right-6 p-6 bg-primary text-on-primary rounded-xl shadow-lg">
-<p class="font-headline-md italic">"Mendidik dengan Hati, Mencetak Generasi Qur'ani."</p>
-</div>
-</div>
+<!-- END: MainHeader -->
+<main class="relative z-10">
+<!-- BEGIN: HeroSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16">
+<!-- Dark Hero Card matching reference banner aesthetics -->
+<div class="relative rounded-3xl overflow-hidden bg-slate-950 text-white min-h-[540px] flex items-center p-8 sm:p-12 lg:p-16 shadow-2xl border border-white/10"><div class="absolute inset-0 z-0"><img alt="Students studying in modern Indonesian Islamic academy high school library and classroom" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdlygJIiaF0SSUwV_KYwh2iUqCZmzvlvRGxSNCdUsJo5ZVhzocBCaOCTbym6CNhOQp2pzh2vTriVmJlErH3ov5gVa5HxdanF8EvUjLo__-ZRULnnyhdYJYNsVNDUCMX1uh5OVi68GMche_MFoVHhhxmUNlY5IdwpUFsv5g_qY-MufO5KA_iwnTieZbEudtmKSJesesVLQu5JggH4jev_RKyPw9Eu3O4O6DXs3Y1KoK0ts7OSU-HiH8vg"><div class="absolute inset-0" style="background: linear-gradient(to right, rgba(5,15,12,0.95) 0%, rgba(5,15,12,0.85) 45%, rgba(5,15,12,0.45) 75%, rgba(5,15,12,0.2) 100%);"></div></div><div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-emerald/30 rounded-full blur-3xl pointer-events-none z-10"></div><div class="relative z-20 max-w-2xl space-y-6"><h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight font-sans">Pilihan Utama Pendidikan <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200">Pesantren &amp; Karakter</span> Generasi Unggul</h1><p class="text-sm sm:text-base text-slate-200 leading-relaxed font-light">Memadukan sanad keilmuan Islam, Tahfidzul Qur’an muttashil, serta kurikulum sains modern guna mencetak generasi beradab, berwawasan global, dan berjiwa kepemimpinan.</p><div class="pt-2 flex flex-wrap items-center gap-3"><div class="flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/15 rounded-lg px-3 py-1.5 text-xs text-slate-200"><span class="font-bold text-amber-400">★ Akreditasi A</span> Unggul</div><div class="flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/15 rounded-lg px-3 py-1.5 text-xs text-slate-200"><span class="">📖 Tahfidz 30 Juz Bersanad</span></div><div class="flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/15 rounded-lg px-3 py-1.5 text-xs text-slate-200"><span class="">🔬 Sains &amp; Billingual (AR-EN)</span></div></div><div class="pt-4 flex flex-wrap gap-4"><a class="px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-xs tracking-wide uppercase transition transform hover:-translate-y-0.5 shadow-lg" href="#daftar">Daftar Santri Baru</a><a class="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-xs tracking-wide transition backdrop-blur-sm" href="#tentang">Pelajari Kurikulum</a></div></div></div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutIntroduction -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center" id="tentang">
+<!-- Section badge -->
+<span class="badge-pill bg-brand-iceBlue text-brand-emerald mb-4 border border-brand-mint">
+        Tentang YP2SK Kudus
+      </span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug">
+        Membina Potensi &amp; Fitrah Keunikan Setiap Santri
+      </h2>
+<p class="mt-6 text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
+        Yayasan Pendidikan Pesantren Sunan Kudus (YP2SK) berdiri sejak lebih dari 3 dekade dengan dedikasi teguh melahirkan generasi berintegritas tinggi. Kami percaya bahwa setiap anak memiliki bakat istimewa yang akan tumbuh optimal bila ditempa dengan ketulusan akhlak tasawuf Sunan Kudus, kekuatan tahfidz Al-Qur'an, dan ketajaman nalar riset sains modern.
+      </p>
+<p class="mt-3 text-xs sm:text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
+        Dengan lebih dari 4.500 alumni yang kini menempuh studi dan berkhidmah di perguruan tinggi terkemuka dalam negeri (UI, ITB, UGM, UIN) hingga universitas terkemuka di Timur Tengah, Turki, dan Eropa.
+      </p>
+</section>
+<!-- END: AboutIntroduction -->
+<!-- BEGIN: ThreePillarCards -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" id="keunggulan">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1: Soft Ice Blue (Character & Adab) -->
+<div class="bg-brand-iceBlue rounded-3xl p-8 border border-blue-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft">
 <div>
-<span class="text-secondary font-label-lg tracking-widest uppercase mb-4 block">Sambutan Ketua Yayasan</span>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Visi Kami untuk Masa Depan Bangsa</h2>
-<div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed">
-<p class="">Selamat datang di YP2SK. Kami percaya bahwa setiap anak memiliki potensi emas yang harus diasah dengan penuh kasih sayang dan tuntunan yang benar. Melalui KB Dinado, TK Dinado, dan TK Naneymi, kami berupaya menciptakan ekosistem belajar yang merangsang kreativitas, kemandirian, dan karakter mulia.</p>
-<p class="">Fokus kami tidak hanya pada keunggulan akademis, namun juga penanaman nilai-nilai karakter 'Amanah, Tumbuh, dan Unggul' yang menjadi pondasi kuat bagi perjalanan panjang mereka di masa depan.</p>
-<div class="pt-4 border-t border-surface-variant">
-<p class="font-bold text-primary">Hj. Siti Aminah, S.Pd., M.M.</p>
-<p class="text-sm">Ketua Umum YP2SK</p>
+<div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-700 flex items-center justify-center text-2xl mb-6">
+              🌱
+            </div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Pendidikan Karakter &amp; Adab</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Pembiasaan ibadah yaumiyyah, adab santri 24 jam di asrama ramah anak, serta keteladanan para asatidz bersanad untuk membentuk kepribadian jujur, mandiri, dan berbakti.
+            </p>
 </div>
+<div class="mt-8 pt-4 border-t border-blue-200/50 flex items-center justify-between text-xs font-semibold text-blue-800">
+<span class="">Bimbingan Asrama 24 Jam</span>
+<span class="">→</span>
+</div>
+</div>
+<!-- Card 2: Soft Mint/Sage (Tahfidz & Turats) -->
+<div class="bg-brand-mint rounded-3xl p-8 border border-emerald-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-800 flex items-center justify-center text-2xl mb-6">
+              📖
+            </div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Tahfidz &amp; Kajian Turats</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Program intensif Tahfidzul Qur’an dengan bimbingan hafizh-hafizhah muqrin bersanad, dilengkapi telaah kitab kuning klasik khas pesantren salaf warisan para ulama nusantara.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-emerald-200/50 flex items-center justify-between text-xs font-semibold text-emerald-800">
+<span class="">Sanad Muttashil Rasulullah ﷺ</span>
+<span class="">→</span>
+</div>
+</div>
+<!-- Card 3: Soft Yellow/Cream (Science & Global Competence) -->
+<div class="bg-brand-warmYellow rounded-3xl p-8 border border-amber-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-900 flex items-center justify-center text-2xl mb-6">
+              🔬
+            </div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Sains &amp; Wawasan Global</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Kurikulum nasional terpadu pengayaan STEM (Science, Technology, Engineering, Math), laboratorium riset, serta penguasaan aktif dwi-bahasa (Arab &amp; Inggris).
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-amber-200/50 flex items-center justify-between text-xs font-semibold text-amber-900">
+<span class="">Kemitraan Olimpiade &amp; Riset</span>
+<span class="">→</span>
 </div>
 </div>
 </div>
 </section>
-<!-- Program Pendidikan Grid -->
-<section class="py-xl px-margin-desktop bg-background">
-<div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Lembaga Pendidikan Kami</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto font-body-md">Membina tumbuh kembang anak secara holistik melalui kurikulum yang terintegrasi dan fasilitas pendukung yang memadai.</p>
+<!-- END: ThreePillarCards -->
+<!-- BEGIN: KeyStagesDualCards -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="jenjang">
+<div class="text-center mb-12">
+<span class="badge-pill bg-brand-mint text-brand-emerald mb-3 border border-emerald-200">
+          Jenjang Pendidikan
+        </span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
+          Tahapan Pembinaan Berkelanjutan
+        </h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto mt-2">
+          Kurikulum berjenjang terstruktur dari pendidikan dasar menengah hingga peminatan keilmuan lanjut.
+        </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-[1140px] mx-auto">
-<!-- KB Dinado -->
-<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A joyful scene at KB Dinado (Kelompok Bermain) where toddlers are engaged in a colorful sensory play activity. The environment is vibrant and safe, with soft play mats and modern wooden toys. The children are laughing and exploring under the gentle supervision of a smiling teacher in an emerald green uniform. High-key natural lighting and a clean, airy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe0E3TYsYVpnX7IFU3IfExVzE4xHXdhNdvptwd0R8hObwuRDZQvAMUGtEUgdxAJ0Ukz0dtXRSubtQ_jC0OyOs5goPXPudRTBSbhFm0JxpirJAdoNSRmoc7HzJoDZjfOBjgSvovfDbfIP-b9CIoOe61Dw3xWtvzef511O1xo1iY4EtsjSyRolGu-oUSKrJPvk3e0FlxKrN3Bn70KpH8ggmfR464jLgfrWDihqzTpzbVamV-o8P72UWjdg">
+<!-- Split Dual Cards with Center Pill -->
+<div class="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<!-- Center Intersecting Badge for Desktop -->
+<div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-24 h-24 rounded-full bg-white shadow-xl border-4 border-slate-50 items-center justify-center text-center p-2">
+<span class="text-[11px] font-extrabold uppercase tracking-wider text-brand-emerald leading-tight">
+            Program<br>Pilihan
+          </span>
 </div>
-<div class="p-md text-center">
-<h3 class="font-headline-md text-primary mb-2">KB Dinado</h3>
-<p class="text-on-surface-variant text-sm mb-md">Fase bermain sambil belajar untuk menstimulasi motorik dan kognitif awal anak usia 2-3 tahun.</p>
-<button class="font-label-lg text-secondary flex items-center gap-1 mx-auto group-hover:gap-3 transition-all">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></button>
+<!-- Left Stage Card (MTs / SMP Unggulan) -->
+<div class="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-amber-500 to-amber-600 text-white min-h-[360px] p-8 sm:p-10 flex flex-col justify-end shadow-xl">
+<!-- Background Image Representation -->
+<div class="absolute inset-0 z-0 opacity-25 group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+<img alt="Santri MTs YP2SK" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg50oxmYdKb__HXJeiaRLpD7vS-rYp2vQJ6RB2LF2QmhKF0aOhEeL6wo_o3d4YbNx-oc5KYNTk7mnWAC8zPzzeCfiEIYhnZo99Jt464ScCL6Lultx2ZnGMRIGavTJOGGws7Qbf7PPoJenv9nQd_Z_EjD87y7_NIOzD4msgL_OU4QEQwrs1yVdmIaqFeB-cv0SWxYsIoV3JiBnRs5JO-bJSKtFSQCE7xRIjs_L4WWoFau-smM3RNrp7eg">
+</div>
+<div class="relative z-10 space-y-3">
+<span class="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-white/20 backdrop-blur-sm">
+              Fase Pondasi • Usia 12 - 15 Tahun
+            </span>
+<h3 class="text-2xl sm:text-3xl font-bold">Madrasah Tsanawiyah (MTs) &amp; SMP Terpadu</h3>
+<p class="text-xs sm:text-sm text-amber-50 line-clamp-3">
+              Fokus pada pembentukan aqidah yang kokoh, percepatan hafalan 10-15 Juz, dasar nahwu shorof, serta pemahaman matematika &amp; sains dasar berbasis inquiry.
+            </p>
+<div class="pt-2 flex items-center gap-2 text-xs font-medium">
+<span class="">Kurikulum Merdeka + Diniyyah</span>
+<span class="">•</span>
+<span class="">Boarding School Putra/Putri Terpisah</span>
 </div>
 </div>
-<!-- TK Dinado -->
-<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform md:-translate-y-4">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Students at TK Dinado (Taman Kanak-Kanak) participating in a creative group project in a modern, well-lit classroom. They are wearing their batik uniforms and working with building blocks and art supplies. The room is decorated with educational posters and large windows overlooking a garden. The atmosphere is academic yet vibrant and collaborative, emphasizing the foundation's 'Growth' pillar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjjqCDj50W9Nm_j9mZ3dbwO7p0tiCxXGN2LDix6lm4nyWW-Kyhj2q-aUpK1TyC5zHGiQbCU5iq66hGG6KGshnaJNEHiqpM3QQ0w_99085gHMyzES5vDwnoqeYuSMMdt8PBGYkA22h1G-N_j-MpHqGBlYvBcNmv5Ci5nsoezgUlD3ATXjCmf8IGMV4B_15pgNV0Uv15_4JtR78CrK9gWraee8vNF9u4k6OBvkIEVpOfLxMloRwDn1zA0g">
 </div>
-<div class="p-md text-center border-t-4 border-secondary">
-<h3 class="font-headline-md text-primary mb-2">TK Dinado</h3>
-<p class="text-on-surface-variant text-sm mb-md">Program pendidikan terstruktur untuk mempersiapkan kesiapan anak memasuki jenjang sekolah dasar.</p>
-<button class="font-label-lg text-secondary flex items-center gap-1 mx-auto group-hover:gap-3 transition-all">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></button>
+<!-- Right Stage Card (MA / SMA Sains & Keagamaan) -->
+<div class="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-rose-500 to-rose-600 text-white min-h-[360px] p-8 sm:p-10 flex flex-col justify-end shadow-xl">
+<!-- Background Image Representation -->
+<div class="absolute inset-0 z-0 opacity-25 group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+<img alt="Santri Aliyah YP2SK" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSC5PjobRbm6q0Y331fLEnoI-48qLUTtyefcATjMLLx9BZfs-KtMnnSJDJoDXfTtaZ2xSdc0xo77bB9Q0SjY5fQ5joq_hOxxZPZVETdvlWpD5VHt9nJhZXTzzBrEG9466IjvVmRb7tujDyLwdPJxJkdWNWMjUl469huwzUzycPU71Zvqn0As8dqdFw3zWxzX7-bA7t-7icXF1lRj-oGDBgbo3yCyOHiTZXuOPV1BiMsly2izFROty3-A">
+</div>
+<div class="relative z-10 space-y-3">
+<span class="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-white/20 backdrop-blur-sm">
+              Fase Spesialisasi • Usia 15 - 18 Tahun
+            </span>
+<h3 class="text-2xl sm:text-3xl font-bold">Madrasah Aliyah (MA) Sains &amp; Keagamaan</h3>
+<p class="text-xs sm:text-sm text-rose-50 line-clamp-3">
+              Peminatan Sains Terpadu (IPA-Riset) dan Dirasah Islamiyyah Lanjut (Kajian Kutubul Mu’tabarah). Persiapan beasiswa PTN Unggulan, Al-Azhar Kairo, &amp; Kampus Luar Negeri.
+            </p>
+<div class="pt-2 flex items-center gap-2 text-xs font-medium">
+<span class="">Target Tahfidz 30 Juz</span>
+<span class="">•</span>
+<span class="">TOEFL &amp; TOAFL Preparation</span>
 </div>
 </div>
-<!-- TK Naneymi -->
-<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A classroom at TK Naneymi focused on character building and Islamic values. Children are sitting in a circle on a plush rug, listening to a teacher read a storybook. The room is decorated in soft navy and cream tones with traditional Indonesian artistic elements. The lighting is soft and inviting, reflecting a peaceful and nurturing spiritual learning environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDovWRtuCp7DdGZnwXOeITKhBqhnaEKXESNfzh1W5uBBVVMwo152wgyFHmKKtzBvzhvf8sTrBXUOaqslDeaLL_i03eWfrR2-0fyNtfQdbSJeZq5fAPVmmTvQBLIENn3N1N7DNCmDBbTHPe2rPJ9FezGWloSBfdFRb6-adcHKvrY3VgEvHJ6eUdDkUqs21Pr_ynCs6QzFm9z2h1J0BLH3rHAgAgWBm2xvKyfQA_BXBRtOkFTrYYoXWEKkg">
 </div>
-<div class="p-md text-center">
-<h3 class="font-headline-md text-primary mb-2">TK Naneymi</h3>
-<p class="text-on-surface-variant text-sm mb-md">Fokus pada pembentukan akhlakul karimah dan kemandirian anak melalui pendekatan yang inovatif.</p>
-<button class="font-label-lg text-secondary flex items-center gap-1 mx-auto group-hover:gap-3 transition-all">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<!-- Stage Detail Link -->
+<div class="mt-8 text-center">
+<a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold text-brand-emerald bg-brand-mint hover:bg-emerald-100 transition" href="#konsultasi">
+<span class="">Lihat Rincian Program Pesantren Mahasiswa &amp; Santri Khusus</span>
+<span class="">→</span>
+</a>
+</div>
+</section>
+<!-- END: KeyStagesDualCards -->
+<!-- BEGIN: AwardsAndRecognitions -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="prestasi">
+<div class="bg-slate-50 rounded-3xl p-8 sm:p-12 lg:p-16 border border-slate-200/70 flex flex-col lg:flex-row items-center gap-12">
+<!-- Circular Visual Layout like Severna reference -->
+<div class="relative w-64 h-64 sm:w-80 sm:h-80 flex-shrink-0 flex items-center justify-center">
+<div class="w-full h-full rounded-full overflow-hidden border-8 border-white shadow-xl">
+<img alt="Prestasi Santri Sunan Kudus" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDgdJ6hHiolU1CAs6TSwoBsIGy1bhIGN3AIbHeM54yRD4XWQSCzBiZcjGxqT_vzlbh2CU2BL_RBJDSj5biYfvCGkxNO0nZZpwyjwymL_b4U3utJX5bdtxMygHaitr31uarFpchrTQVX9tabYQeNmmpGBOk0pa9Zx6Bj42QsiE7PySLnjLOyNFuPQDqJrjktA7Rm_u5bt1b6keLLIzBxRl2a0h04MQOLn-SFn2zSB8k1yB1YLNzG1-Fyg">
+</div>
+<!-- Floating Badge -->
+<div class="absolute -bottom-2 right-4 bg-white rounded-2xl p-3 shadow-lg border border-slate-100 flex items-center gap-3">
+<span class="text-2xl">🏆</span>
+<div>
+<p class="text-xs font-bold text-slate-800">Juara Umum</p>
+<p class="text-[10px] text-slate-500">MHQ &amp; OSN Nasional</p>
+</div>
+</div>
+</div>
+<!-- Awards Text Content -->
+<div class="space-y-5">
+<span class="badge-pill bg-white text-slate-700 border border-slate-200 shadow-sm">
+            Prestasi Santri
+          </span>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+            Pesantren &amp; Madrasah Berprestasi Nasional &amp; Internasional
+          </h2>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Dedikasi para santri terbukti melalui berbagai capaian membanggakan, mulai dari kejuaraan Musabaqah Hifdzil Qur’an (MHQ) tingkat nasional, Olimpiade Sains Madrasah, hingga lomba karya ilmiah remaja tingkat internasional.
+          </p>
+<!-- Badges list matching layout -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+<div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+<span class="text-emerald-600 text-lg">🥇</span>
+<span class="text-xs font-semibold text-slate-800">Juara 1 MHQ 30 Juz Nasional</span>
+</div>
+<div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+<span class="text-blue-600 text-lg">🏅</span>
+<span class="text-xs font-semibold text-slate-800">Medali Perak OSN Fisika &amp; Kimia</span>
+</div>
+<div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
+<span class="text-amber-600 text-lg">⭐</span>
+<span class="text-xs font-semibold text-slate-800">Pesantren Ramah Santri Terakreditasi</span>
+</div>
+</div>
+<div class="pt-2">
+<button class="text-xs font-bold text-brand-emerald hover:text-brand-emeraldDark inline-flex items-center gap-1" type="button">
+              Lihat Seluruh Daftar Penghargaan &amp; Sertifikasi Sanad ↗
+            </button>
 </div>
 </div>
 </div>
 </section>
-<!-- Visi & Misi Section -->
-<section class="py-xl px-margin-desktop bg-primary-container text-on-primary">
-<div class="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl">
-<div>
-<h2 class="font-headline-lg text-headline-lg mb-md">Nilai Inti Kami</h2>
-<p class="font-body-md mb-lg text-on-primary-container">Prinsip dasar yang menggerakkan setiap langkah kami dalam memberikan layanan pendidikan terbaik bagi masyarakat.</p>
-<div class="space-y-gutter">
-<div class="flex gap-md items-start">
-<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-on-primary">verified_user</span>
+<!-- END: AwardsAndRecognitions -->
+<!-- BEGIN: CampusLocations -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center" id="kampus">
+<span class="badge-pill bg-slate-100 text-slate-600 mb-3">
+        Lokasi Kampus
+      </span>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">
+        3 Kampus Terpadu di Kota Kudus
+      </h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto mt-2 mb-10">
+        Lingkungan belajar yang kondusif, tenang, dan terpisah antara santri putra dan putri untuk menjaga adab dan ketentraman ibadah.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+<!-- Campus 1 -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition">
+<div class="w-8 h-8 rounded-lg bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold text-xs mb-4">
+            01
+          </div>
+<h4 class="font-bold text-slate-900 text-sm">Kampus Pusat (Putra)</h4>
+<p class="text-xs text-slate-500 mt-1">Kompleks Kauman, Dekat Menara Kudus</p>
+<p class="text-[11px] text-emerald-700 mt-3 font-semibold">Madrasah Tsanawiyah &amp; Tahfidz Dasar</p>
 </div>
-<div>
-<h4 class="font-bold text-lg mb-1">Amanah</h4>
-<p class="text-sm text-on-primary-container">Dapat dipercaya dalam mengemban tanggung jawab mendidik dan menjaga putra-putri Anda.</p>
+<!-- Campus 2 -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition">
+<div class="w-8 h-8 rounded-lg bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold text-xs mb-4">
+            02
+          </div>
+<h4 class="font-bold text-slate-900 text-sm">Kampus Banat (Putri)</h4>
+<p class="text-xs text-slate-500 mt-1">Kawasan Asri Bae Kudus</p>
+<p class="text-[11px] text-emerald-700 mt-3 font-semibold">MTs - MA Unggulan Putri &amp; Tahfidz</p>
 </div>
-</div>
-<div class="flex gap-md items-start">
-<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-on-primary">trending_up</span>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-1">Tumbuh</h4>
-<p class="text-sm text-on-primary-container">Berkomitmen untuk terus berkembang dan memfasilitasi tumbuh kembang anak secara optimal.</p>
-</div>
-</div>
-<div class="flex gap-md items-start">
-<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-on-primary">star</span>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-1">Unggul</h4>
-<p class="text-sm text-on-primary-container">Menghadirkan standar kualitas terbaik dalam pengajaran, fasilitas, dan pelayanan.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative bg-white/5 rounded-2xl p-lg border border-white/10 backdrop-blur-sm overflow-hidden">
-<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-[80px]"></div>
-<div class="relative z-10">
-<h3 class="font-headline-md mb-md text-secondary-fixed">Statistik Dampak</h3>
-<div class="grid grid-cols-2 gap-gutter">
-<div class="p-4 bg-white/5 rounded-lg">
-<p class="text-[40px] font-bold text-on-primary">15+</p>
-<p class="text-sm uppercase tracking-widest text-on-primary-container">Tahun Pengabdian</p>
-</div>
-<div class="p-4 bg-white/5 rounded-lg">
-<p class="text-[40px] font-bold text-on-primary">2.5k</p>
-<p class="text-sm uppercase tracking-widest text-on-primary-container">Alumni Sukses</p>
-</div>
-<div class="p-4 bg-white/5 rounded-lg">
-<p class="text-[40px] font-bold text-on-primary">45</p>
-<p class="text-sm uppercase tracking-widest text-on-primary-container">Tenaga Pendidik</p>
-</div>
-<div class="p-4 bg-white/5 rounded-lg">
-<p class="text-[40px] font-bold text-on-primary">A</p>
-<p class="text-sm uppercase tracking-widest text-on-primary-container">Akreditasi Lembaga</p>
+<!-- Campus 3 -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition">
+<div class="w-8 h-8 rounded-lg bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold text-xs mb-4">
+            03
+          </div>
+<h4 class="font-bold text-slate-900 text-sm">Kampus Riset &amp; Sains MA (Putra)</h4>
+<p class="text-xs text-slate-500 mt-1">Kompleks Terpadu Gebog Kudus</p>
+<p class="text-[11px] text-emerald-700 mt-3 font-semibold">Laboratorium Sains &amp; Pusat Bahasa</p>
 </div>
 </div>
+</section>
+<!-- END: CampusLocations -->
+<!-- BEGIN: PrincipalMessageSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Quote Content -->
+<div class="lg:col-span-6 space-y-4">
+<span class="badge-pill bg-brand-iceBlue text-blue-700 border border-blue-200">
+            Pesan Pengasuh Pesantren
+          </span>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+            Menjaga Kemurnian Sanad, Menggapai Kemajuan Peradaban
+          </h2>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+            "Mendidik anak di era digital bukan sekadar mentransfer pengetahuan umum, melainkan menanamkan 'nur' (cahaya) di dalam qalbunya. Ketika adab telah menjadi pakaian jiwa dan Al-Qur’an menjadi lentera hidupnya, ilmu sains apa pun yang mereka tekuni kelak akan menjadi rahmatan lil 'alamin."
+          </p>
+<div class="pt-2">
+<p class="text-sm font-bold text-slate-900">K.H. Ahmad Fauzi Arifin, Lc., M.A.</p>
+<p class="text-xs text-emerald-700 font-medium">Pengasuh Utama &amp; Ketua Dewan Pembina YP2SK</p>
+</div>
+</div>
+<!-- Right Video Thumbnail with Play Button -->
+<div class="lg:col-span-6">
+<div class="relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer aspect-video bg-slate-900">
+<img alt="Video Sambutan Pengasuh YP2SK" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWHLtTMJ8vgjNwmmy2-r7EfRKH0DTW4NMbiqcP15ODLpQ-PdcBqpWVo8rlg_-2AFmB510ERa7du_rSR3xAZ42-pWLRiVwyP5YYECXOK0SBO-HIbYNyGkAep8_s6vy3g6DYWFeK59Kw2HkN_TiiA_Ci8RSsk5QFLA-pfdtEnDqhPP49s5BXecPp6XM5oicJbreYHcqNb_5MTZZ5LG6LgabBU6xIUUOMHIHgquEuv1Vghqe6Wrtk9ZdTw">
+<!-- Play icon trigger -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-white/90 text-brand-emerald flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+<svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</div>
+</div>
+<!-- Video badge -->
+<div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-[11px]">
+              Tonton Video Profil &amp; Wawancara (04:15)
+            </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Berita Terkini Section -->
-<section class="py-xl px-margin-desktop bg-background">
-<div class="flex justify-between items-end mb-xl max-w-[1140px] mx-auto">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-primary">Berita &amp; Artikel</h2>
-<p class="text-on-surface-variant">Update terkini mengenai kegiatan dan informasi pendidikan di YP2SK.</p>
-</div>
-<button class="font-label-lg text-primary flex items-center gap-2 hover:underline">Lihat Semua Berita <span class="material-symbols-outlined">chevron_right</span></button>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-[1140px] mx-auto">
-<!-- News Card 1 -->
-<article class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant/50 overflow-hidden group">
-<div class="h-52 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A vibrant outdoor school event at Yayasan Dinado with students and parents. There are colorful banners, a small stage with student performances, and kids participating in traditional games. The setting is a sunny courtyard with trees. The lighting is bright and cheerful, capturing a community-focused atmosphere in line with the foundation's Indonesian heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1NWcyngZ-hraEdF89EHOl7juHhXUGaawCKxzjZtafQFUzFffG65EXR6J9_yEykoJ9KdI8zOZkQgVAtLMzXhHUHbPbrlGc9WHYBiKRRjw_Ncai9wHe4tk3Ex5FLRem8HyPx-aGiR51GmVhDhXBGJVQqrqr6FMXs1w9mNBlxJg0O7829XG__RNtuE4qezTajXfWLiMIuwQSANZtbR2erxvZnWS1XBmf2VdL4pZ0MrdVLcaymTRTLnZ-AQ">
-</div>
-<div class="p-md">
-<span class="text-xs font-label-md text-secondary-fixed bg-secondary/10 px-2 py-1 rounded mb-3 inline-block">Agenda</span>
-<h3 class="font-bold text-primary text-lg mb-2 line-clamp-2">Keseruan Family Gathering Dinado 2024: Pererat Tali Silaturahmi</h3>
-<p class="text-sm text-on-surface-variant line-clamp-3 mb-md">Kegiatan tahunan yang melibatkan orang tua dan siswa untuk membangun kerjasama yang harmonis antara sekolah dan rumah.</p>
-<div class="flex items-center justify-between pt-md border-t border-surface-variant">
-<span class="text-xs text-outline italic">12 Oktober 2024</span>
-<span class="material-symbols-outlined text-secondary">read_more</span>
-</div>
-</div>
-</article>
-<!-- News Card 2 -->
-<article class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant/50 overflow-hidden group">
-<div class="h-52 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Teachers at Yayasan Dinado participating in a professional development workshop. They are seated in a modern seminar room, taking notes and discussing curriculum innovations with a guest speaker. The room is bright and professional, featuring the navy blue and emerald green brand colors in the décor. The mood is serious and focused on educational excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIuT28-ROCPX77wWWjq4s8O_mqhGY5hgIEnzBwBenQ-WuivhBzLWNjQ7sZvvbZct3vsK_TMtUupYcwfim0tZOmgkejvWSl7vL515wJq4XMGJzHIRgpOw5dRM4DF6V0wCM3bEYGbQ3GYUmQ4872bMy3siHIdLNRtD0YLXBN3wG3lzP7CRx3J0_bLvuONv0zzIFzoTKVJSzLm7IglHVh93h5yh7jbXfwIA_VroUlLr-yYvrKmgEOHe3aaw">
-</div>
-<div class="p-md">
-<span class="text-xs font-label-md text-secondary-fixed bg-secondary/10 px-2 py-1 rounded mb-3 inline-block">Pendidikan</span>
-<h3 class="font-bold text-primary text-lg mb-2 line-clamp-2">Peningkatan Kompetensi Guru melalui Workshop Inovasi Pembelajaran</h3>
-<p class="text-sm text-on-surface-variant line-clamp-3 mb-md">YP2SK berkomitmen untuk selalu memperbarui metode pengajaran agar relevan dengan perkembangan zaman.</p>
-<div class="flex items-center justify-between pt-md border-t border-surface-variant">
-<span class="text-xs text-outline italic">05 Oktober 2024</span>
-<span class="material-symbols-outlined text-secondary">read_more</span>
-</div>
-</div>
-</article>
-<!-- News Card 3 -->
-<article class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant/50 overflow-hidden group">
-<div class="h-52 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean, minimalist layout showing educational resources for children at Yayasan Dinado. It includes Islamic storybooks, wooden building blocks, and artistic drawings laid out on a light wood table. The background is soft and out of focus, highlighting the high-quality materials used in the schools. The lighting is soft morning light, creating a calm and inviting educational still-life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjMDiyRWf1szuKJnkjoSKfOtji6kw5h2ZxoR_j52i3oLn54szFD3Jk0j6uEcGeYRmC1IIv9m_4TeKI9z_RUWlWIxFGdukzJAEIt12SOIcn7zXlkFueMydBfbsUJwuslg1RAbFmdjUzFkry0CTrX3QYQwlYHIePOkUhiWAE7anBxBskpOJOBwrSaq0569G5HRaQfiBQ9zPJhC4Vgx_m-GcvkfZJMwniqFMActSyaFdI5tEJU4zaAWOZcA">
-</div>
-<div class="p-md">
-<span class="text-xs font-label-md text-secondary-fixed bg-secondary/10 px-2 py-1 rounded mb-3 inline-block">Artikel</span>
-<h3 class="font-bold text-primary text-lg mb-2 line-clamp-2">Tips Menyiapkan Mental Anak Masuk Sekolah untuk Pertama Kali</h3>
-<p class="text-sm text-on-surface-variant line-clamp-3 mb-md">Langkah-langkah praktis bagi orang tua dalam menghadapi transisi buah hati dari rumah ke lingkungan sekolah.</p>
-<div class="flex items-center justify-between pt-md border-t border-surface-variant">
-<span class="text-xs text-outline italic">28 September 2024</span>
-<span class="material-symbols-outlined text-secondary">read_more</span>
-</div>
-</div>
-</article>
+<!-- END: PrincipalMessageSection -->
+<!-- BEGIN: AcademicScheduleAndPSB -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center" id="agenda">
+<span class="badge-pill bg-brand-mint text-brand-emerald border border-emerald-200 mb-3">
+        Kalender PSB
+      </span>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-900">
+        Jadwal Penerimaan Santri Baru Tahun Ajaran 2025/2026
+      </h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto mt-2">
+        Kuota terbatas untuk setiap jenjang guna menjaga rasio ideal pembimbingan (1 Asatidz : 12 Santri) untuk hasil pembinaan maksimal.
+      </p>
+<!-- Status banner button like Severna design -->
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<div class="px-5 py-2.5 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold">
+          Gelombang 1: 1 Januari - 31 Maret 2025 (Kuota 65%)
+        </div>
+<a class="px-6 py-2.5 rounded-full bg-brand-emerald hover:bg-brand-emeraldDark text-white text-xs font-bold transition shadow-md" href="#konsultasi">
+          Daftar Sekarang
+        </a>
 </div>
 </section>
-<!-- Footer -->
-<footer class="bg-primary text-on-primary py-xl px-margin-desktop">
-<div class="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-xl">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-3 mb-md">
-<img alt="Logo Yayasan Dinado" class="h-10 w-10 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJgETTAVj05shytEmoGHc7cg9gus6ZIq8sN7zyGnBpdiN_XF72wwtR_JeMuRv6TrHEYKxW9fhGM_SRFkm9ExIvkr7thZfm_7ONTHvfNxRlY3LCrDWL0Fy4FKj5Rem5UIZlcb26krT8QPv1iYPGWVbsABIKbmtDZLfAFO_3wJdOE-QMHKtXkiQqzFTXk1nkL3l2ku_RF8kwpomk_fJwuWr1DZ76c4jn-lij8io6aoySSqKCtvOVePqgfA">
-<span class="text-headline-md font-headline-md font-bold">YP2SK</span>
-</div>
-<p class="text-sm text-on-primary-container leading-relaxed mb-md">
-                    Mewujudkan pendidikan yang amanah, melahirkan generasi yang terus tumbuh, dan mencetak lulusan yang unggul.
-                </p>
-<div class="flex gap-4">
-<a class="w-8 h-8 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
-<a class="w-8 h-8 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
-<a class="w-8 h-8 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">call</span></a>
-</div>
-</div>
+<!-- END: AcademicScheduleAndPSB -->
+<!-- BEGIN: AlumniAndFamilyStory -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex items-center justify-between mb-8">
 <div>
-<h4 class="font-bold mb-md text-secondary-fixed">Navigasi Cepat</h4>
-<ul class="space-y-2 text-sm text-on-primary-container">
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">Profil Yayasan</a></li>
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">Visi dan Misi</a></li>
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">Program Beasiswa</a></li>
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">Pendaftaran Siswa Baru</a></li>
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">Hubungi Kami</a></li>
+<h3 class="text-xl font-bold text-slate-900">Kisah Santri &amp; Wali Murid</h3>
+<p class="text-xs text-slate-500">Refleksi nyata barakah pendidikan di YP2SK</p>
+</div>
+<button class="text-xs font-bold text-brand-emerald border border-emerald-200 px-3 py-1.5 rounded-full hover:bg-emerald-50">
+          Semua Kisah Alumni
+        </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- Left photo card -->
+<div class="lg:col-span-7 relative rounded-3xl overflow-hidden min-h-[300px] shadow-md bg-slate-900">
+<img alt="Santri Wisuda Tahfidz YP2SK" class="w-full h-full object-cover opacity-85" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkLRmNZhA4YiHrZmxeek2gZZlgUme-9Nms_q0ewOWdfbgqmGsjeaNaX4pkuu8bKDaQuEDwGO7eMRJBon39SHdj1uVuyApJ04_EC0MmR2PbzhSOBc_AyO0P7f_3h3Yivu-lJvJAWMdM6OKq18Sy-KesKvlGnGjwbYhYDUjRwUPy5y5ekpbeVmX8oakMqXOjm3RbpzQa_31b6Hf70YpvjRGTziBvd1brppZzWYUto5-1HWAFOE15C-ms2A">
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<span class="inline-block px-2.5 py-1 bg-emerald-500/90 backdrop-blur-md rounded text-[10px] font-bold uppercase mb-2">
+              Khidmat Alumni
+            </span>
+<p class="text-sm sm:text-base font-semibold">
+              Khadijah Nurul Ain (Alumni MA 2022) — Penerima Beasiswa Penuh Kedokteran &amp; Hafidzah 30 Juz
+            </p>
+</div>
+</div>
+<!-- Right testimonial card -->
+<div class="lg:col-span-5 bg-slate-50 rounded-3xl p-8 border border-slate-200 flex flex-col justify-between">
+<div class="space-y-4">
+<span class="text-3xl text-emerald-600 font-serif">“</span>
+<p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+              "Melihat putra kami tidak hanya hafal Al-Qur’an tapi juga santun menyalami orang tua, disiplin bangun sepertiga malam tanpa disuruh, dan mandiri mengerjakan proyek risetnya, adalah anugerah terbesar yang kami syukuri di YP2SK."
+            </p>
+</div>
+<div class="pt-6 border-t border-slate-200 flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-slate-900">H. Hendro Wibowo &amp; Ibu Tri Hastuti</p>
+<p class="text-[11px] text-slate-500">Wali Santri asal Semarang (Jenjang MTs &amp; MA)</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold text-xs">
+              ✓
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AlumniAndFamilyStory -->
+<!-- BEGIN: ConsultationAndRegistrationForm -->
+
+<!-- END: ConsultationAndRegistrationForm -->
+<!-- BEGIN: PreFooterBanner -->
+<section class="max-w-4xl mx-auto px-4 py-20 text-center">
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug">
+        Mari Bergabung Bersama Keluarga Besar <br class="hidden sm:inline">
+<span class="text-brand-emerald">YP2SK Pesantren Sunan Kudus</span>
+</h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-md mx-auto mt-3">
+        Wujudkan impian putra-putri Anda menjadi hafizh Al-Qur’an berakhlak mulia dan siap memimpin masa depan.
+      </p>
+<div class="mt-6 flex justify-center gap-4">
+<a class="px-6 py-3 rounded-full bg-brand-emerald text-white text-xs font-bold shadow hover:bg-brand-emeraldDark transition" href="#konsultasi">
+          Jadwalkan Kunjungan Pesantren
+        </a>
+</div>
+</section>
+<!-- END: PreFooterBanner -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-white border-t border-slate-200 pt-16 pb-12 text-slate-600 text-xs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-100">
+<!-- Col 1: Brand Info -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-emerald to-brand-navy flex items-center justify-center text-white font-serif font-bold text-lg shadow-sm">
+              ق
+            </div>
+<div>
+<span class="block font-bold text-base text-slate-900">YP2SK Kudus</span>
+<span class="block text-[10px] text-slate-400">Yayasan Pendidikan Pesantren Sunan Kudus</span>
+</div>
+</div>
+<p class="text-slate-500 text-xs leading-relaxed max-w-sm">
+            Jl. Menara No. 24, Kauman, Kec. Kota Kudus, Kabupaten Kudus, Jawa Tengah 59315, Indonesia.
+          </p>
+<p class="text-slate-500 text-xs">
+            Telp/WA: +62 812-3456-7890 | Email: sekretariat@yp2sk.sch.id
+          </p>
+<!-- Social media pills -->
+<div class="flex items-center gap-3 pt-2">
+<span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs hover:bg-brand-emerald hover:text-white cursor-pointer transition">WA</span>
+<span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs hover:bg-brand-emerald hover:text-white cursor-pointer transition">IG</span>
+<span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs hover:bg-brand-emerald hover:text-white cursor-pointer transition">YT</span>
+<span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs hover:bg-brand-emerald hover:text-white cursor-pointer transition">FB</span>
+</div>
+</div>
+<!-- Col 2: Program -->
+<div>
+<h5 class="font-bold text-slate-900 mb-3 text-xs tracking-wider uppercase">Jenjang</h5>
+<ul class="space-y-2 text-slate-500">
+<li class=""><a class="hover:text-brand-emerald" href="#">MTs Sunan Kudus Putra</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">MTs Sunan Kudus Putri</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">MA Sains Unggulan</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">MA Keagamaan Turats</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Ma'had Aly / Mahasiswa</a></li>
 </ul>
 </div>
+<!-- Col 3: Lembaga -->
 <div>
-<h4 class="font-bold mb-md text-secondary-fixed">Lembaga Kami</h4>
-<ul class="space-y-2 text-sm text-on-primary-container">
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">KB Dinado</a></li>
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">TK Dinado</a></li>
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">TK Naneymi</a></li>
-<li class=""><a class="hover:text-on-primary transition-colors" href="#">Pusat Pelatihan Guru</a></li>
+<h5 class="font-bold text-slate-900 mb-3 text-xs tracking-wider uppercase">Tentang Kami</h5>
+<ul class="space-y-2 text-slate-500">
+<li class=""><a class="hover:text-brand-emerald" href="#">Profil Masyayikh &amp; Pembina</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Visi, Misi &amp; Sanad Keilmuan</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Ikatan Alumni Santri (IKASAN)</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Laporan Keberlanjutan &amp; Wakaf</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Karir &amp; Pengabdian Asatidz</a></li>
 </ul>
 </div>
+<!-- Col 4: Informasi & Legal -->
 <div>
-<h4 class="font-bold mb-md text-secondary-fixed">Kontak</h4>
-<address class="not-italic text-sm text-on-primary-container space-y-3">
-<div class="flex gap-2">
-<span class="material-symbols-outlined text-sm shrink-0">location_on</span>
-<span class="">Jl. Pendidikan No. 123, <br>Kota Dinado, Indonesia</span>
-</div>
-<div class="flex gap-2">
-<span class="material-symbols-outlined text-sm shrink-0">call</span>
-<span class="">(021) 1234-5678</span>
-</div>
-<div class="flex gap-2">
-<span class="material-symbols-outlined text-sm shrink-0">mail</span>
-<span class="">info@yayasandinado.or.id</span>
-</div>
-</address>
+<h5 class="font-bold text-slate-900 mb-3 text-xs tracking-wider uppercase">Informasi &amp; Bantuan</h5>
+<ul class="space-y-2 text-slate-500">
+<li class=""><a class="hover:text-brand-emerald" href="#konsultasi">Panduan PSB 2025/2026</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Brosur &amp; Rincian Biaya</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Beasiswa Tahfidz &amp; Dhu'afa</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Kebijakan Privasi</a></li>
+<li class=""><a class="hover:text-brand-emerald" href="#">Kontak Call Center</a></li>
+</ul>
 </div>
 </div>
-<div class="max-w-[1140px] mx-auto mt-xl pt-md border-t border-white/10 text-center">
-<p class="text-xs text-on-primary-container/70 font-label-md">© 2024 YP2SK. Amanah, Tumbuh, Unggul. Hak Cipta Dilindungi.</p>
+<!-- Bottom Bar -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-4">
+<p class="">© 2025 Yayasan Pendidikan Pesantren Sunan Kudus (YP2SK). Hak Cipta Dilindungi Undang-Undang.</p>
+<p class="flex items-center gap-2">
+<span class="">Terakreditasi BAN-PDM &amp; Kemenag RI</span>
+<span class="">•</span>
+<span class="">Kota Kudus, Jawa Tengah</span>
+</p>
+</div>
 </div>
 </footer>
-<!-- Floating Action Button for Registration -->
-<button class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-secondary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group overflow-hidden">
-<span class="material-symbols-outlined text-[32px] group-hover:hidden">school</span>
-<span class="hidden group-hover:block font-label-lg text-[12px] leading-tight px-2">PMB 2024</span>
-</button>
-<script>
-        // Header transparency scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('h-16', 'bg-white/95', 'backdrop-blur-md');
-                nav.classList.remove('h-20', 'bg-surface-container-lowest');
-            } else {
-                nav.classList.remove('h-16', 'bg-white/95', 'backdrop-blur-md');
-                nav.classList.add('h-20', 'bg-surface-container-lowest');
-            }
-        });
-    </script>
+<!-- END: MainFooter -->
 
 
 </body></html>

@@ -1,0 +1,312 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { allNewsArticles, type NewsArticle } from '../../data/berita';
+
+export async function getStaticPaths() {
+  return allNewsArticles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+interface Props {
+  article: NewsArticle;
+}
+
+const { article } = Astro.props;
+
+// Related articles (exclude current)
+const relatedArticles = allNewsArticles
+  .filter(a => a.id !== article.id)
+  .slice(0, 3);
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "@id": `https://yp2sk.or.id/berita/${article.slug}#article`,
+      "headline": article.title,
+      "description": article.description,
+      "datePublished": "2024-10-15T08:00:00+07:00",
+      "dateModified": "2024-10-15T08:00:00+07:00",
+      "image": [article.imageSrc],
+      "author": {
+        "@type": "Person",
+        "name": article.author,
+        "jobTitle": article.authorRole
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Yayasan Pendidikan Pesantren Sunan Kudus",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yp2sk.or.id/favicon.svg"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://yp2sk.or.id/berita/${article.slug}`
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `https://yp2sk.or.id/berita/${article.slug}#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Berita",
+          "item": "https://yp2sk.or.id/berita"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": article.title,
+          "item": `https://yp2sk.or.id/berita/${article.slug}`
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout 
+  title={`${article.title} | Berita YP2SK`}
+  description={article.description}
+  image={article.imageSrc}
+  schema={articleSchema}
+>
+  <div class="pt-20 bg-surface-container-lowest">
+    
+    <!-- Breadcrumb Bar -->
+    <div class="bg-surface-container-low border-b border-surface-variant/40 py-3.5">
+      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-margin-desktop">
+        <nav class="flex items-center gap-2 text-xs text-on-surface-variant flex-wrap" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">home</span> Beranda
+          </a>
+          <span class="text-outline-variant">/</span>
+          <a href="/berita" class="hover:text-primary transition-colors">Berita &amp; Artikel</a>
+          <span class="text-outline-variant">/</span>
+          <span class="text-secondary font-semibold">{article.category}</span>
+          <span class="text-outline-variant">/</span>
+          <span class="text-on-surface truncate max-w-[200px] sm:max-w-xs">{article.title}</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Article Header -->
+    <header class="py-10 md:py-14 bg-white border-b border-surface-variant/40">
+      <div class="max-w-[860px] mx-auto px-margin-mobile">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="px-3.5 py-1 rounded-full bg-secondary/15 text-secondary text-xs font-bold uppercase tracking-wider">
+            {article.category}
+          </span>
+        </div>
+
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-headline-xl font-bold text-primary mb-6 leading-tight">
+          {article.title}
+        </h1>
+
+        <!-- Author Meta & Social Share -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-surface-variant/40">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold text-base border border-secondary/20 shrink-0">
+              <span class="material-symbols-outlined text-[22px]">person</span>
+            </div>
+            <div>
+              <p class="font-bold text-sm text-primary leading-tight">{article.author}</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">{article.authorRole} • <span class="italic">{article.date}</span></p>
+            </div>
+          </div>
+
+          <!-- Share Actions -->
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold text-on-surface-variant mr-1">Bagikan:</span>
+            <a 
+              href={`https://api.whatsapp.com/send?text=${encodeURIComponent(article.title + ' - https://yp2sk.or.id/berita/' + article.slug)}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-secondary hover:text-white text-on-surface flex items-center justify-center transition-all cursor-pointer"
+              aria-label="Bagikan ke WhatsApp"
+            >
+              <span class="material-symbols-outlined text-[17px]">chat</span>
+            </a>
+            <button 
+              id="copy-link-btn"
+              class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-primary hover:text-white text-on-surface flex items-center justify-center transition-all cursor-pointer relative"
+              aria-label="Salin Tautan Berita"
+            >
+              <span class="material-symbols-outlined text-[17px]">link</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Body & Sidebar Grid -->
+    <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Column: Article Content (8 cols) -->
+        <main class="lg:col-span-8">
+          
+          <!-- Featured Image -->
+          <div class="rounded-2xl overflow-hidden mb-8 shadow-md border border-surface-variant/50 bg-surface-container">
+            <img 
+              src={article.imageSrc} 
+              alt={article.imageAlt} 
+              class="w-full max-h-[480px] object-cover"
+            />
+            <div class="p-3 bg-surface-container-low text-xs text-on-surface-variant italic text-center">
+              Foto: {article.imageAlt}
+            </div>
+          </div>
+
+          <!-- Article Text -->
+          <div class="prose max-w-none text-on-surface space-y-6 leading-relaxed font-body-lg text-[16px]">
+            {article.content.map((paragraph, idx) => (
+              <p class={idx === 0 ? "text-lg md:text-xl text-primary font-medium leading-relaxed" : "text-base text-on-surface-variant leading-relaxed"}>
+                {paragraph}
+              </p>
+            ))}
+
+            {article.quote && (
+              <blockquote class="my-8 p-6 rounded-2xl bg-secondary/5 border-l-4 border-secondary text-primary">
+                <p class="font-headline-md italic text-lg mb-2 text-primary font-bold">
+                  "{article.quote.text}"
+                </p>
+                <cite class="text-xs text-secondary font-semibold uppercase tracking-wider not-italic">
+                  — {article.quote.speaker}
+                </cite>
+              </blockquote>
+            )}
+          </div>
+
+          <!-- Tags -->
+          <div class="mt-10 pt-6 border-t border-surface-variant/40">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-xs font-bold text-on-surface-variant flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm text-secondary">label</span> Topik Terkait:
+              </span>
+              {article.tags.map((tag) => (
+                <a 
+                  href={`/berita?tag=${encodeURIComponent(tag.toLowerCase())}`} 
+                  class="px-3 py-1 rounded-lg bg-surface-container-low hover:bg-secondary/15 hover:text-secondary text-on-surface-variant text-xs font-medium transition-colors"
+                >
+                  #{tag}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Author Bio Box -->
+          <div class="mt-8 p-6 rounded-2xl bg-surface-container-low border border-surface-variant/50 flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center shrink-0 shadow-sm">
+              <span class="material-symbols-outlined text-3xl">school</span>
+            </div>
+            <div>
+              <p class="text-xs text-secondary font-bold uppercase tracking-wider">Penulis Artikel</p>
+              <h4 class="font-bold text-base text-primary">{article.author}</h4>
+              <p class="text-xs text-on-surface-variant mt-0.5">{article.authorRole} — Yayasan Pendidikan Pesantren Sunan Kudus.</p>
+            </div>
+          </div>
+
+          <!-- Back Button -->
+          <div class="mt-10">
+            <a 
+              href="/berita" 
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-surface-container hover:bg-primary hover:text-white text-primary text-sm font-bold transition-all shadow-sm cursor-pointer"
+            >
+              <span class="material-symbols-outlined text-base">arrow_back</span>
+              <span>Kembali ke Indeks Berita</span>
+            </a>
+          </div>
+
+        </main>
+
+        <!-- Right Column: Sidebar (4 cols) -->
+        <aside class="lg:col-span-4 space-y-8">
+          
+          <!-- Related Articles -->
+          <div class="bg-surface-container-low rounded-2xl p-6 border border-surface-variant/50">
+            <h3 class="font-headline-md text-lg text-primary font-bold mb-4 pb-3 border-b border-surface-variant/40 flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-xl">auto_stories</span>
+              Berita Pilihan Lainnya
+            </h3>
+            
+            <div class="space-y-4">
+              {relatedArticles.map((rel) => (
+                <a href={`/berita/${rel.slug}`} class="group block pb-4 border-b border-surface-variant/30 last:border-0 last:pb-0">
+                  <div class="flex gap-3">
+                    <img 
+                      src={rel.imageSrc} 
+                      alt={rel.imageAlt} 
+                      class="w-20 h-16 rounded-lg object-cover shrink-0 group-hover:scale-105 transition-transform" 
+                      loading="lazy"
+                    />
+                    <div class="flex-1 min-w-0">
+                      <span class="text-[10px] font-bold text-secondary uppercase block mb-1">{rel.category}</span>
+                      <h4 class="text-xs font-bold text-primary group-hover:text-secondary transition-colors line-clamp-2 leading-snug">
+                        {rel.title}
+                      </h4>
+                      <p class="text-[11px] text-on-surface-variant mt-1">{rel.date}</p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Lembaga Pendidikan Kami Widget -->
+          <div class="bg-primary text-white rounded-2xl p-6 shadow-md relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 opacity-10 text-white pointer-events-none">
+              <span class="material-symbols-outlined text-9xl">mosque</span>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-secondary/30 text-secondary-container text-[11px] font-bold uppercase tracking-wider mb-3 inline-block">
+              Pendaftaran Siswa Baru
+            </span>
+            <h3 class="font-headline-md text-xl font-bold mb-2">Ingin Ananda Belajar di YP2SK?</h3>
+            <p class="text-on-primary-container text-xs leading-relaxed mb-6">
+              Pendaftaran santri baru untuk SKIIS, Ponpes Tahfidz, PAUD Naneymi, Dinado, dan Graha Autis telah dibuka.
+            </p>
+            <a 
+              href="https://wa.me/6281234567890?text=Halo%20Admin%20YP2SK%2C%20saya%20ingin%20informasi%20pendaftaran" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-2.5 px-4 rounded-xl bg-secondary hover:brightness-110 text-white font-label-md font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-md"
+            >
+              <span>Hubungi Panitia PMB</span>
+              <span class="material-symbols-outlined text-[16px]">send</span>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  function setupArticleShare() {
+    const copyBtn = document.getElementById('copy-link-btn');
+    copyBtn?.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Tautan berita berhasil disalin ke clipboard!');
+      }).catch(() => {
+        prompt('Salin tautan berita ini:', window.location.href);
+      });
+    });
+  }
+
+  setupArticleShare();
+  document.addEventListener('astro:after-swap', setupArticleShare);
+</script>

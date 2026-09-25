@@ -1,105 +1,174 @@
+---
+// Programs.astro - Lembaga Pendidikan Naungan YP2SK Versi Islami
+const programs = [
+  {
+    id: "naneymi",
+    badge: "PAUD Terpadu",
+    title: "TPA - KB - TK NANEYMI",
+    tagline: "Tunas Beradab & Generasi Qur'ani Cilik",
+    desc: "Pembiasaan adab harian, hafalan doa-doa mustajab, pengenalan huruf hijaiyah interaktif, dan stimulasi motorik usia dini dengan penuh cinta dan kelembutan.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDovWRtuCp7DdGZnwXOeITKhBqhnaEKXESNfzh1W5uBBVVMwo152wgyFHmKKtzBvzhvf8sTrBXUOaqslDeaLL_i03eWfrR2-0fyNtfQdbSJeZq5fAPVmmTvQBLIENn3N1N7DNCmDBbTHPe2rPJ9FezGWloSBfdFRb6-adcHKvrY3VgEvHJ6eUdDkUqs21Pr_ynCs6QzFm9z2h1J0BLH3rHAgAgWBm2xvKyfQA_BXBRtOkFTrYYoXWEKkg",
+    link: "/pendidikan/tpa-kb-tk-naneymi",
+    tags: ["Usia 1 - 6 Tahun", "Adab & Doa", "Hijaiyah Ceria"]
+  },
+  {
+    id: "dinado",
+    badge: "PAUD Terpadu",
+    title: "TPA - KB - TK DINADO",
+    tagline: "Cerdas, Kreatif & Berakhlakul Karimah",
+    desc: "Wadah tumbuh kembang usia emas (golden age) yang memadukan kurikulum stimulasi aktif, kemandirian anak, dan keteladanan sirah nabawiyah sejak dini.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAe0E3TYsYVpnX7IFU3IfExVzE4xHXdhNdvptwd0R8hObwuRDZQvAMUGtEUgdxAJ0Ukz0dtXRSubtQ_jC0OyOs5goPXPudRTBSbhFm0JxpirJAdoNSRmoc7HzJoDZjfOBjgSvovfDbfIP-b9CIoOe61Dw3xWtvzef511O1xo1iY4EtsjSyRolGu-oUSKrJPvk3e0FlxKrN3Bn70KpH8ggmfR464jLgfrWDihqzTpzbVamV-o8P72UWjdg",
+    link: "/pendidikan/tpa-kb-tk-dinado",
+    tags: ["Daycare & TK", "Motorik & Kognitif", "Sirah Sahabat"]
+  },
+  {
+    id: "inklusi-istimewa",
+    badge: "PAUD Inklusif",
+    title: "KB - TK Inklusi Istimewa",
+    tagline: "Setiap Anak Berharga & Istimewa",
+    desc: "Pendidikan anak usia dini ramah ABK dengan kelas adaptif berkuota kecil, kurikulum individual (IEP), guru pendamping khusus, serta stimulasi sensori terpadu.",
+    image: "/images/kb_naneymi_autis.png",
+    link: "/pendidikan/kb-tk-inklusi-istimewa",
+    tags: ["Kelas Inklusi", "Program IEP", "Rasio 1:2"]
+  },
+  {
+    id: "graha-autis",
+    badge: "Layanan ABK & Terapi",
+    title: "Graha Autis (Layanan ABK)",
+    tagline: "Memuliakan Amanah dengan Kasih & Rahmat",
+    desc: "Pusat klinik terapi tumbuh kembang komprehensif (Wicara, Okupasi, Sensori Integrasi, Perilaku ABA) dan pendampingan kemandirian ramah ABK bernilai Islami.",
+    image: "/images/graha_autis.png",
+    link: "/pendidikan/graha-autis",
+    tags: ["Terapi Terpadu", "Klinik Tumbuh Kembang", "Inklusi Ramah Anak"]
+  },
+  {
+    id: "skiis",
+    badge: "SD - SMP - SMA - SMK",
+    title: "SD - SMP - SMA - SMK (SKISS)",
+    tagline: "Mencetak Generasi Ulul Albab & Berwawasan Global",
+    desc: "Pendidikan formal terintegrasi dari jenjang SD hingga SMK. Memadukan Kurikulum Nasional, Cambridge Bilingual, sains riset modern, dan karakter kepesantrenan Sunan Kudus.",
+    image: "/images/skiis_school.jpg",
+    link: "/pendidikan/skiis",
+    tags: ["Bilingual School", "Tahfidz Terprogram", "Vokasi & Sains"],
+    featured: true
+  },
+  {
+    id: "ponpes-tahfidz",
+    badge: "Pesantren Qur'an",
+    title: "Ponpes Tahfidz Al Qur'an Sunan Kudus",
+    tagline: "Hafizh Berilmu, Beradab Luhur & Berjiwa Dakwah",
+    desc: "Program tahfidz 30 juz mutqin dengan bimbingan sanad, kajian kitab kuning (turats), riyadhah ibadah, dan pembinaan kepemimpinan santri berasrama.",
+    image: "/images/ponpes_santri.jpg",
+    link: "/pendidikan/ponpes-tahfidz",
+    tags: ["Tahfidz 30 Juz", "Sanad Qur'an", "Kitab Kuning"],
+    featured: true
+  }
+];
+---
+
 <!-- Program Pendidikan Grid -->
-<section class="py-xl px-margin-mobile md:px-margin-desktop bg-background">
-  <div class="text-center mb-xl">
-    <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Lembaga Pendidikan Kami</h2>
-    <p class="text-on-surface-variant max-w-2xl mx-auto font-body-md">Membina tumbuh kembang anak secara holistik dan inklusif melalui kurikulum yang terintegrasi dan sarana pendukung yang memadai.</p>
-  </div>
-  
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter max-w-[1140px] mx-auto items-stretch">
-    <!-- TPA - KB DINADO -->
-    <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-      <div class="flex flex-col">
-        <div class="h-64 overflow-hidden">
-          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="TPA - KB DINADO" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe0E3TYsYVpnX7IFU3IfExVzE4xHXdhNdvptwd0R8hObwuRDZQvAMUGtEUgdxAJ0Ukz0dtXRSubtQ_jC0OyOs5goPXPudRTBSbhFm0JxpirJAdoNSRmoc7HzJoDZjfOBjgSvovfDbfIP-b9CIoOe61Dw3xWtvzef511O1xo1iY4EtsjSyRolGu-oUSKrJPvk3e0FlxKrN3Bn70KpH8ggmfR464jLgfrWDihqzTpzbVamV-o8P72UWjdg">
-        </div>
-        <div class="p-md text-center">
-          <h3 class="font-headline-md text-primary mb-2">TPA - KB DINADO</h3>
-          <p class="text-on-surface-variant text-sm mb-md">Tempat penitipan harian yang aman & kelompok bermain untuk stimulasi motorik serta karakter Islami anak usia 1-3 tahun.</p>
-        </div>
-      </div>
-      <div class="p-md pt-0 text-center">
-        <a href="/pendidikan/tpa-kb-dinado" class="font-label-lg text-secondary flex items-center justify-center gap-1 mx-auto group-hover:gap-3 transition-all cursor-pointer">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></a>
-      </div>
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-background" id="lembaga">
+  <div class="max-w-[1140px] mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-xl">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-md text-xs font-semibold mb-3">
+        <span class="material-symbols-outlined text-[16px]">mosque</span> Naungan Pendidikan YP2SK
+      </span>
+      <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Lembaga Pendidikan Kami</h2>
+      <p class="text-on-surface-variant max-w-2xl mx-auto font-body-md">
+        Membina generasi beriman, berilmu, dan berakhlakul karimah dari usia dini hingga pendidikan menengah kejuruan dan pondok pesantren tahfidz Al-Qur'an.
+      </p>
     </div>
     
-    <!-- TK DINADO -->
-    <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-      <div class="flex flex-col">
-        <div class="h-64 overflow-hidden">
-          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="TK DINADO" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjjqCDj50W9Nm_j9mZ3dbwO7p0tiCxXGN2LDix6lm4nyWW-Kyhj2q-aUpK1TyC5zHGiQbCU5iq66hGG6KGshnaJNEHiqpM3QQ0w_99085gHMyzES5vDwnoqeYuSMMdt8PBGYkA22h1G-N_j-MpHqGBlYvBcNmv5Ci5nsoezgUlD3ATXjCmf8IGMV4B_15pgNV0Uv15_4JtR78CrK9gWraee8vNF9u4k6OBvkIEVpOfLxMloRwDn1zA0g">
+    <!-- Top 2 Featured: SKISS & Ponpes Tahfidz -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-gutter">
+      {programs.filter(p => p.featured).map((prog) => (
+        <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between border border-surface-variant/40 hover:border-secondary/40 relative">
+          <div class="flex flex-col">
+            <div class="h-64 sm:h-72 overflow-hidden relative">
+              <img 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                alt={prog.title} 
+                src={prog.image} 
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-md text-xs font-bold shadow-sm">
+                  {prog.badge}
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <p class="text-xs text-secondary-container font-semibold tracking-wide uppercase mb-1">{prog.tagline}</p>
+                <h3 class="font-headline-md text-xl md:text-2xl font-bold text-white leading-tight drop-shadow-sm">{prog.title}</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-4">{prog.desc}</p>
+              <div class="flex flex-wrap gap-1.5">
+                {prog.tags.map((tag) => (
+                  <span class="px-2.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-xs font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-surface-container/60 mt-2">
+            <a 
+              href={prog.link} 
+              class="w-full py-2.5 px-4 rounded-xl bg-secondary/10 hover:bg-secondary text-secondary hover:text-white font-label-md font-semibold text-sm flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer"
+            >
+              <span>Pelajari Profil Lembaga</span>
+              <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
         </div>
-        <div class="p-md text-center border-t-4 border-secondary">
-          <h3 class="font-headline-md text-primary mb-2">TK DINADO</h3>
-          <p class="text-on-surface-variant text-sm mb-md">Persiapan kognitif awal dan kemandirian bersosialisasi yang terarah bagi anak usia 4-6 tahun memasuki jenjang SD.</p>
-        </div>
-      </div>
-      <div class="p-md pt-0 text-center">
-        <a href="/pendidikan/tk-dinado" class="font-label-lg text-secondary flex items-center justify-center gap-1 mx-auto group-hover:gap-3 transition-all cursor-pointer">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></a>
-      </div>
-    </div>
-    
-    <!-- TPA KB Naneymi -->
-    <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-      <div class="flex flex-col">
-        <div class="h-64 overflow-hidden">
-          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="TPA KB Naneymi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDovWRtuCp7DdGZnwXOeITKhBqhnaEKXESNfzh1W5uBBVVMwo152wgyFHmKKtzBvzhvf8sTrBXUOaqslDeaLL_i03eWfrR2-0fyNtfQdbSJeZq5fAPVmmTvQBLIENn3N1N7DNCmDBbTHPe2rPJ9FezGWloSBfdFRb6-adcHKvrY3VgEvHJ6eUdDkUqs21Pr_ynCs6QzFm9z2h1J0BLH3rHAgAgWBm2xvKyfQA_BXBRtOkFTrYYoXWEKkg">
-        </div>
-        <div class="p-md text-center">
-          <h3 class="font-headline-md text-primary mb-2">TPA KB Naneymi</h3>
-          <p class="text-on-surface-variant text-sm mb-md">Pengembangan adab Islami harian, hafalan doa-doa pendek, dan stimulasi motorik anak usia dini dengan penuh kasih.</p>
-        </div>
-      </div>
-      <div class="p-md pt-0 text-center">
-        <a href="/pendidikan/tpa-kb-naneymi" class="font-label-lg text-secondary flex items-center justify-center gap-1 mx-auto group-hover:gap-3 transition-all cursor-pointer">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></a>
-      </div>
-    </div>
-
-    <!-- Graha Autis -->
-    <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-      <div class="flex flex-col">
-        <div class="h-64 overflow-hidden">
-          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Graha Autis" src="/images/graha_autis.png">
-        </div>
-        <div class="p-md text-center">
-          <h3 class="font-headline-md text-primary mb-2">Graha Autis</h3>
-          <p class="text-on-surface-variant text-sm mb-md">Pusat terapi komprehensif bagi anak berkebutuhan khusus (wicara, okupasi, perilaku ABA, sensori integrasi).</p>
-        </div>
-      </div>
-      <div class="p-md pt-0 text-center">
-        <a href="/pendidikan/graha-autis" class="font-label-lg text-secondary flex items-center justify-center gap-1 mx-auto group-hover:gap-3 transition-all cursor-pointer">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></a>
-      </div>
-    </div>
-
-    <!-- KB Naneymi AUTIS -->
-    <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-      <div class="flex flex-col">
-        <div class="h-64 overflow-hidden">
-          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="KB Naneymi AUTIS" src="/images/kb_naneymi_autis.png">
-        </div>
-        <div class="p-md text-center">
-          <h3 class="font-headline-md text-primary mb-2">KB Naneymi AUTIS</h3>
-          <p class="text-on-surface-variant text-sm mb-md">Kelompok Bermain khusus anak autisme dengan program IEP adaptif, stimulasi sensorik kelompok, dan toilet training.</p>
-        </div>
-      </div>
-      <div class="p-md pt-0 text-center">
-        <a href="/pendidikan/kb-naneymi-autis" class="font-label-lg text-secondary flex items-center justify-center gap-1 mx-auto group-hover:gap-3 transition-all cursor-pointer">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></a>
-      </div>
+      ))}
     </div>
 
-    <!-- Ponpes Tahfidz Al Qur'an AUTIS -->
-    <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-      <div class="flex flex-col">
-        <div class="h-64 overflow-hidden">
-          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Ponpes Tahfidz Al Qur'an AUTIS" src="/images/ponpes_tahfidz_autis.png">
+    <!-- Bottom 4: TPA-KB-TK Naneymi, TPA-KB-TK Dinado, KB-TK Inklusi Istimewa, Graha Autis -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter items-stretch">
+      {programs.filter(p => !p.featured).map((prog) => (
+        <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-surface-variant/40 hover:border-secondary/30">
+          <div class="flex flex-col">
+            <div class="h-44 overflow-hidden relative">
+              <img 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                alt={prog.title} 
+                src={prog.image} 
+                loading="lazy"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-md text-xs font-bold">
+                  {prog.badge}
+                </span>
+              </div>
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-secondary font-semibold mb-1">{prog.tagline}</p>
+              <h3 class="font-headline-md text-base text-primary font-bold mb-2 leading-snug">{prog.title}</h3>
+              <p class="text-on-surface-variant text-xs leading-relaxed mb-4">{prog.desc}</p>
+              <div class="flex flex-wrap gap-1">
+                {prog.tags.map((tag) => (
+                  <span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <a 
+              href={prog.link} 
+              class="font-label-md text-secondary text-xs font-bold flex items-center justify-between py-2 border-t border-surface-container hover:text-primary transition-colors cursor-pointer"
+            >
+              <span>Pelajari Detail</span>
+              <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
         </div>
-        <div class="p-md text-center">
-          <h3 class="font-headline-md text-primary mb-2">Ponpes Tahfidz AUTIS</h3>
-          <p class="text-on-surface-variant text-sm mb-md">Pondok pesantren tahfidz khusus anak putra dengan autisme. Fokus pada kemandirian asrama dan hafalan Al-Qur'an.</p>
-        </div>
-      </div>
-      <div class="p-md pt-0 text-center">
-        <a href="/pendidikan/ponpes-tahfidz-autis" class="font-label-lg text-secondary flex items-center justify-center gap-1 mx-auto group-hover:gap-3 transition-all cursor-pointer">Pelajari Detail <span class="material-symbols-outlined">arrow_forward</span></a>
-      </div>
+      ))}
     </div>
   </div>
 </section>

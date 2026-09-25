@@ -1,0 +1,457 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const skiisSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yp2sk.or.id/pendidikan/skiis#webpage",
+      "url": "https://yp2sk.or.id/pendidikan/skiis",
+      "name": "Sunan Kudus International Islamic School (SKIIS) | SD - SMP - SMA - SMK",
+      "description": "Lembaga pendidikan Islam modern terpadu jenjang SD, SMP, SMA, dan SMK di bawah naungan YP2SK dengan kurikulum internasional, nasional, dan tahfidz Al-Qur'an.",
+      "breadcrumb": {
+        "@id": "https://yp2sk.or.id/pendidikan/skiis#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yp2sk.or.id/pendidikan/skiis#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pendidikan",
+          "item": "https://yp2sk.or.id/pendidikan/skiis"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SKIIS (SD - SMP - SMA - SMK)",
+          "item": "https://yp2sk.or.id/pendidikan/skiis"
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://yp2sk.or.id/pendidikan/skiis#school",
+      "name": "Sunan Kudus International Islamic School (SKIIS)",
+      "description": "Pendidikan terpadu SD, SMP, SMA, dan SMK dengan integrasi kurikulum Cambridge, kurikulum nasional, dan kepesantrenan Sunan Kudus.",
+      "image": "https://yp2sk.or.id/images/skiis_school.jpg"
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Sunan Kudus International Islamic School (SKIIS) | SD - SMP - SMA - SMK YP2SK" 
+  description="Pendidikan Islam unggulan terpadu jenjang SD, SMP, SMA, SMK berstandar internasional, bilingual (Inggris-Arab), dan berkarakter Qur'ani di bawah naungan YP2SK."
+  schema={skiisSchema}
+>
+  <!-- Floating Vector Ribbon Line matching yayasan.astro & index.astro -->
+  <div aria-hidden="true" class="curved-line-bg">
+    <svg class="w-full h-full opacity-35" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 4800">
+      <path d="M720,200 C1100,500 1200,900 850,1300 C500,1700 200,2000 550,2500 C900,3000 1250,3300 950,3800 C700,4200 400,4500 720,4800" stroke="#8BBB92" stroke-dasharray="8 8" stroke-width="2.5"></path>
+    </svg>
+  </div>
+
+  <div class="relative z-10 font-sans">
+    <!-- Hero Section (Cinematic Panoramic Banner with Overlapping Profile Card matching yayasan.astro) -->
+    <section class="relative font-sans pb-6 sm:pb-10">
+      <!-- Panoramic Banner -->
+      <div class="relative w-full h-[320px] sm:h-[380px] lg:h-[420px] overflow-hidden bg-slate-950">
+        <img 
+          src="/images/skiis_school.jpg" 
+          alt="Kampus Sunan Kudus International Islamic School" 
+          class="w-full h-full object-cover object-center opacity-80"
+          loading="eager"
+        />
+        <!-- Atmospheric Vignette & Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/35 to-brand-emeraldDark/25"></div>
+      </div>
+      
+      <!-- Overlapping Profile Header Card -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-20 sm:-mt-24 lg:-mt-28 relative z-20" data-aos="fade-up">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-12 shadow-soft border border-slate-200/90 text-center">
+          <span class="badge-pill bg-brand-iceBlue text-brand-emerald border border-brand-mint font-sans mb-4 inline-flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">school</span>
+            Jenjang Lengkap: SD • SMP • SMA • SMK
+          </span>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-sans">
+            Sunan Kudus International Islamic School (SKIIS)
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed font-sans font-normal">
+            Mencetak Generasi <em>Ulul Albab</em> yang berakhlak Qur'ani, berwawasan global, menguasai sains &amp; teknologi, serta memegang teguh adab dan kearifan dakwah Sunan Kudus.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a 
+              href="#jenjang" 
+              class="px-6 py-3 rounded-full bg-brand-emerald text-white hover:bg-brand-emeraldDark font-bold text-xs sm:text-sm shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2"
+            >
+              <span>Lihat Jenjang Pendidikan</span>
+              <span class="material-symbols-outlined text-sm">arrow_downward</span>
+            </a>
+            <a 
+              href="https://wa.me/6281234567890?text=Halo%20Admin%20YP2SK%2C%20saya%20ingin%20informasi%20pendaftaran%20SKIIS" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="px-6 py-3 rounded-full bg-white text-slate-800 hover:bg-slate-50 border border-slate-200 font-semibold text-xs sm:text-sm shadow-xs transition flex items-center gap-2"
+            >
+              <span>Konsultasi PMB WhatsApp</span>
+              <span class="material-symbols-outlined text-sm">chat</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Pilar Kurikulum (Matching 3 Pillars Style in yayasan.astro & Pillars.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="max-w-3xl mx-auto text-center font-sans mb-12 sm:mb-16" data-aos="fade-up">
+        <span class="badge-pill bg-brand-iceBlue text-brand-emerald mb-3 border border-brand-mint font-sans">
+          Fondasi Keunggulan
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug font-sans">
+          Integrasi 3 Kurikulum Unggulan
+        </h2>
+        <div class="w-16 h-1 bg-brand-emerald mx-auto rounded-full mt-3"></div>
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+          Keseimbangan paripurna antara kesalehan spiritual, keunggulan akademis, dan kesiapan karir era kecerdasan buatan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 1. Kepesantrenan & Qur'ani (Ice Blue Card) -->
+        <div 
+          class="bg-brand-iceBlue rounded-3xl p-8 border border-blue-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">menu_book</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              1. Kepesantrenan &amp; Qur'ani
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+              Tahfidz Al-Qur'an bersanad, kajian dasar kitab kuning (akhlak, fiqih, sirah), pembiasaan shalat berjamaah, doa harian, dan keteladanan budi pekerti luhur.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Kurikulum Internasional (Mint Card) -->
+        <div 
+          class="bg-brand-mint rounded-3xl p-8 border border-emerald-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-800 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-emerald group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">translate</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              2. Kurikulum Internasional
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+              Pembelajaran dwibahasa (Arab &amp; Inggris aktif), standar sains dan matematika terapan (STEM), serta penanaman kemampuan nalar kritis dan komunikasi global.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Kurikulum Nasional Merdeka (Warm Yellow Card) -->
+        <div 
+          class="bg-brand-warmYellow rounded-3xl p-8 border border-amber-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-900 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">verified</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              3. Kurikulum Nasional Merdeka
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+              Penguatan literasi, numerasi, profil pelajar Pancasila yang berkeadaban, riset ilmiah mandiri, serta persiapan kompetisi sains dan olimpiade nasional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Jenjang Pendidikan (Matching Structured 2x2 Grid in yayasan.astro) -->
+    <section id="jenjang" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="max-w-3xl mx-auto text-center font-sans mb-12 sm:mb-16" data-aos="fade-up">
+        <span class="badge-pill bg-brand-iceBlue text-brand-emerald mb-3 border border-brand-mint font-sans">
+          Jenjang Pendidikan
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug font-sans">
+          4 Pilar Jenjang Pendidikan SKIIS
+        </h2>
+        <div class="w-16 h-1 bg-brand-emerald mx-auto rounded-full mt-3"></div>
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+          Didesain berkelanjutan dari usia dasar hingga siap memasuki universitas terkemuka atau dunia profesional syar'i.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- SD -->
+        <div 
+          class="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-soft hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between group"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-emerald-50 text-brand-emerald border border-emerald-200/80 font-semibold text-xs font-sans">
+                Jenjang Dasar
+              </span>
+              <span class="text-xs text-slate-500 font-medium font-sans">Usia 6 - 12 Tahun</span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 font-sans group-hover:text-brand-emerald transition-colors">
+              SD Sunan Kudus Islamic School
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-sans">
+              Membangun pondasi keimanan yang kokoh, gemar membaca Al-Qur'an, adab kepada orang tua dan guru, serta kemahiran numerasi dan sains melalui pengalaman belajar aktif yang menggembirakan.
+            </p>
+            <div class="space-y-2.5 mb-6 text-xs sm:text-sm text-slate-700 font-sans">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Target Hafalan: Juz 30 dan Juz 29 Mutqin</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Bilingual Daily Conversation (English &amp; Arabic)</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Pembiasaan Sholat Dhuha, Dzuhur Berjamaah &amp; Zikir Pagi-Petang</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 font-sans">
+            <span class="text-xs font-semibold text-brand-emerald">Fokus Utama: Pondasi Akidah, Adab &amp; Cinta Al-Qur'an</span>
+          </div>
+        </div>
+
+        <!-- SMP -->
+        <div 
+          class="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-soft hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between group"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-blue-50 text-blue-700 border border-blue-200/80 font-semibold text-xs font-sans">
+                Jenjang Menengah Pertama
+              </span>
+              <span class="text-xs text-slate-500 font-medium font-sans">Usia 12 - 15 Tahun</span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 font-sans group-hover:text-brand-emerald transition-colors">
+              SMP Sunan Kudus Islamic School
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-sans">
+              Masa pembentukan jati diri pemuda Muslim (syabab). Mengasah kepemimpinan Islami, kemandirian berpikir kritis, hafalan Al-Qur'an berkelanjutan, serta penguasaan sains dan teknologi coding.
+            </p>
+            <div class="space-y-2.5 mb-6 text-xs sm:text-sm text-slate-700 font-sans">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Target Hafalan Al-Qur'an 5 - 10 Juz</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Program Kepemimpinan Santri (Islamic Leadership &amp; Public Speaking)</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Coding, Robotika &amp; Science Olympiad Training</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 font-sans">
+            <span class="text-xs font-semibold text-blue-800">Fokus Utama: Karakter Syabab, Nalar Kritis &amp; Kepemimpinan</span>
+          </div>
+        </div>
+
+        <!-- SMA -->
+        <div 
+          class="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-soft hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between group"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-purple-50 text-purple-700 border border-purple-200/80 font-semibold text-xs font-sans">
+                Jenjang Menengah Atas
+              </span>
+              <span class="text-xs text-slate-500 font-medium font-sans">Usia 15 - 18 Tahun</span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 font-sans group-hover:text-brand-emerald transition-colors">
+              SMA Sunan Kudus Islamic School
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-sans">
+              Mempersiapkan cendekiawan muda Muslim untuk menembus perguruan tinggi terkemuka dalam negeri (PTN Favorit) maupun universitas terkemuka dunia (Timur Tengah, Eropa, &amp; Asia) dengan integritas syar'i.
+            </p>
+            <div class="space-y-2.5 mb-6 text-xs sm:text-sm text-slate-700 font-sans">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Bimbingan Intensif Masuk PTN &amp; Beasiswa Internasional</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Kajian Dirasah Islamiyah &amp; Karya Ilmiah Remaja (KIR) Berbasis Syariat</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Sertifikasi TOEFL / IELTS &amp; TOAFL (Arab)</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 font-sans">
+            <span class="text-xs font-semibold text-brand-emerald">Fokus Utama: Riset Ilmiah, Akses Kampus Global &amp; Ulul Albab</span>
+          </div>
+        </div>
+
+        <!-- SMK -->
+        <div 
+          class="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-soft hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between group"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill bg-amber-50 text-amber-800 border border-amber-200/80 font-semibold text-xs font-sans">
+                Jenjang Kejuruan
+              </span>
+              <span class="text-xs text-slate-500 font-medium font-sans">Usia 15 - 18 Tahun</span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 font-sans group-hover:text-brand-emerald transition-colors">
+              SMK Sunan Kudus Islamic School
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-sans">
+              Melahirkan praktisi profesional dan teknopreneur Muslim yang terampil, amanah, dan siap kerja. Memadukan keahlian teknologi digital terkini dengan etika bisnis syariah dan kemandirian finansial.
+            </p>
+            <div class="space-y-2.5 mb-6 text-xs sm:text-sm text-slate-700 font-sans">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Konsentrasi Keahlian Teknologi Informasi &amp; Multimedia Kreatif</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Islamic Entrepreneurship &amp; Praktek Bisnis Ritel Syariah</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+                <span>Sertifikasi Kompetensi BNSP &amp; Kerjasama Industri Nasional</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 font-sans">
+            <span class="text-xs font-semibold text-amber-800">Fokus Utama: Vokasi Digital, Etos Kerja Syar'i &amp; Wirausaha</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fasilitas & Keunggulan Lingkungan (Matching 2-Column Section in yayasan.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 font-sans">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Text Left -->
+        <div class="lg:col-span-6 space-y-5" data-aos="fade-right">
+          <span class="badge-pill bg-brand-iceBlue text-brand-emerald border border-brand-mint font-sans">
+            Lingkungan Islami &amp; Modern
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug font-sans">
+            Kampus Ramah Pembelajar &amp; Berkelanjutan
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
+            Didesain untuk mendukung kegiatan belajar mengajar yang kondusif, berudara segar, didukung fasilitas teknologi pintar (*smart classroom*), serta pusat ibadah yang nyaman.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft">
+              <span class="font-bold text-slate-900 block mb-1 text-sm font-sans">Masjid Jami' Kampus</span>
+              <span class="text-xs text-slate-600 leading-relaxed font-sans">Pusat ibadah dan kajian halaqah santri.</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft">
+              <span class="font-bold text-slate-900 block mb-1 text-sm font-sans">Laboratorium Sains &amp; Komputer</span>
+              <span class="text-xs text-slate-600 leading-relaxed font-sans">Praktek biologi, kimia, fisika, dan coding.</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft">
+              <span class="font-bold text-slate-900 block mb-1 text-sm font-sans">Perpustakaan &amp; Media Center</span>
+              <span class="text-xs text-slate-600 leading-relaxed font-sans">Ribuan koleksi kitab kuning, literatur &amp; e-book.</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft">
+              <span class="font-bold text-slate-900 block mb-1 text-sm font-sans">Sarana Olahraga Sunnah</span>
+              <span class="text-xs text-slate-600 leading-relaxed font-sans">Lapangan panahan, futsal, dan basket.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Right -->
+        <div class="lg:col-span-6 relative group" data-aos="fade-left" data-aos-delay="150">
+          <div class="relative rounded-3xl overflow-hidden shadow-soft border border-slate-200/90 aspect-[4/3] bg-slate-100">
+            <img 
+              src="/images/skiis_school.jpg" 
+              alt="Kampus Sunan Kudus International Islamic School" 
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA PMB (Matching PreFooter & yayasan.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 font-sans" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-950 via-brand-emeraldDark to-brand-emerald text-white p-8 sm:p-12 shadow-xl border border-white/10 text-center">
+        <!-- Decorative Watermark & Ambient Glow -->
+        <div class="absolute -right-8 -bottom-10 text-white/5 select-none pointer-events-none font-serif text-[140px] leading-none">
+          ق
+        </div>
+        <div class="absolute -top-16 -left-16 w-64 h-64 bg-brand-emerald/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 text-emerald-200 backdrop-blur-sm border border-white/10 font-sans">
+            Penerimaan Murid Baru (PMB)
+          </span>
+
+          <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-snug font-sans">
+            Bergabunglah Bersama Keluarga Besar SKIIS
+          </h2>
+
+          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-light">
+            Investasikan pendidikan ananda bersama lembaga yang menjaga aqidah, menanamkan adab, dan melatih kompetensi masa depan. Kuota per kelas dibatasi untuk menjaga efektivitas belajar.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a 
+              href="https://wa.me/6281234567890?text=Bismillah%2C%20saya%20ingin%20mendaftar%20ke%20Sunan%20Kudus%20International%20Islamic%20School%20(SKIIS)" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full sm:w-auto px-7 py-3 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs sm:text-sm shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap"
+            >
+              <span>Daftar Sekarang via WhatsApp</span>
+              <span class="material-symbols-outlined text-base text-emerald-700">send</span>
+            </a>
+            <a 
+              href="/kontak" 
+              class="w-full sm:w-auto px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-xs sm:text-sm transition backdrop-blur-sm text-center whitespace-nowrap"
+            >
+              Hubungi Sekretariat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

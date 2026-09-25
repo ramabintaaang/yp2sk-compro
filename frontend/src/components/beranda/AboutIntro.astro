@@ -1,0 +1,151 @@
+---
+// About introduction section tailored to authentic YP2SK profile
+const ecosystemCards = [
+  {
+    icon: "🌱",
+    title: "PAUD Terpadu",
+    subtitle: "TPA • KB • TK Naneymi & Dinado",
+    desc: "Stimulasi sensorik-motorik dan penanaman adab sejak usia emas.",
+    actionText: "Fase Usia Emas",
+    href: "/pendidikan/tpa-kb-tk-naneymi",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDovWRtuCp7DdGZnwXOeITKhBqhnaEKXESNfzh1W5uBBVVMwo152wgyFHmKKtzBvzhvf8sTrBXUOaqslDeaLL_i03eWfrR2-0fyNtfQdbSJeZq5fAPVmmTvQBLIENn3N1N7DNCmDBbTHPe2rPJ9FezGWloSBfdFRb6-adcHKvrY3VgEvHJ6eUdDkUqs21Pr_ynCs6QzFm9z2h1J0BLH3rHAgAgWBm2xvKyfQA_BXBRtOkFTrYYoXWEKkg",
+    delay: 100
+  },
+  {
+    icon: "🧩",
+    title: "Graha Autis & ABK",
+    subtitle: "Pusat Terapi & Kelas Khusus",
+    desc: "Layanan terapi tumbuh kembang dan kelas inklusif terstandar IEP.",
+    actionText: "Layanan Inklusif",
+    href: "/pendidikan/graha-autis",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAe0E3TYsYVpnX7IFU3IfExVzE4xHXdhNdvptwd0R8hObwuRDZQvAMUGtEUgdxAJ0Ukz0dtXRSubtQ_jC0OyOs5goPXPudRTBSbhFm0JxpirJAdoNSRmoc7HzJoDZjfOBjgSvovfDbfIP-b9CIoOe61Dw3xWtvzef511O1xo1iY4EtsjSyRolGu-oUSKrJPvk3e0FlxKrN3Bn70KpH8ggmfR464jLgfrWDihqzTpzbVamV-o8P72UWjdg",
+    delay: 200
+  },
+  {
+    icon: "🔬",
+    title: "Sekolah Terpadu SKIIS",
+    subtitle: "SD • SMP • SMA • SMK",
+    desc: "Pendidikan formal riset sains, bilingual, dan karakter unggul.",
+    actionText: "Formal & Riset",
+    href: "/pendidikan/skiis",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBdlygJIiaF0SSUwV_KYwh2iUqCZmzvlvRGxSNCdUsJo5ZVhzocBCaOCTbym6CNhOQp2pzh2vTriVmJlErH3ov5gVa5HxdanF8EvUjLo__-ZRULnnyhdYJYNsVNDUCMX1uh5OVi68GMche_MFoVHhhxmUNlY5IdwpUFsv5g_qY-MufO5KA_iwnTieZbEudtmKSJesesVLQu5JggH4jev_RKyPw9Eu3O4O6DXs3Y1KoK0ts7OSU-HiH8vg",
+    delay: 300
+  },
+  {
+    icon: "📖",
+    title: "Ponpes Tahfidz Sunan Kudus",
+    subtitle: "Tahfidzul Qur'an & Turats",
+    desc: "Tahfidz 30 juz bersanad muttashil dan telaah kitab turats.",
+    actionText: "Sanad Muttashil",
+    href: "/pendidikan/ponpes-tahfidz",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuADxdlSdcfLIou-9D78BYDeD88uxsQ9Df27LClBOHKIAoi5qV_4sVRDlZTJsWvY7VPsr1orKxPumxPhnpsUQs-bSIKCB5i0KHYCexI4UlOFdpYT__C9AZm6__YF5WX-leT-KIl5t17srwCdPDEPpW9_VReiQ8euar40HWpGZu0AfOdELVrkvbWpACcVtWPFfpHrPaIosSu3ZwWBos21uWAN9ktqtu9uORZzo0rxNzg2fMD2NQxBuAnTWQ",
+    delay: 400
+  }
+];
+---
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20" id="tentang">
+  <!-- Top Intro Header -->
+  <div class="max-w-4xl mx-auto text-center font-sans" data-aos="fade-up">
+    <span class="badge-pill bg-brand-iceBlue text-brand-emerald mb-4 border border-brand-mint">
+      Tentang YP2SK Kudus
+    </span>
+    
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug font-sans">
+      Membina Potensi, Menjaga Sanad, Menumbuhkan Generasi Unggul
+    </h2>
+    
+    <p class="mt-5 text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+      Yayasan Pendidikan Pesantren Sunan Kudus (YP2SK) lahir dari dawuh dan restu para ulama kharismatik Nusantara guna menghadirkan ekosistem pendidikan Islam yang utuh, inklusif, dan berkarakter. Kami meyakini bahwa setiap anak memiliki potensi emas yang akan mekar paripurna bila ditempa dengan ketulusan akhlak tasawuf Sunan Kudus, keluhuran Al-Qur'an, dan ketajaman nalar sains modern.
+    </p>
+  </div>
+
+  <!-- 4 Core Ecosystem Pillars of YP2SK (Clean Light Cards with Background Image & Concise Text) -->
+  <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 font-sans">
+    {ecosystemCards.map((card) => (
+      <a 
+        href={card.href}
+        class="relative rounded-2xl p-6 overflow-hidden bg-white text-slate-900 border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 block min-h-[250px]"
+        data-aos="fade-up"
+        data-aos-delay={card.delay}
+      >
+        <!-- Full-card Background Image with Reduced Opacity -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+          <img 
+            src={card.image} 
+            alt={card.title} 
+            class="w-full h-full object-cover opacity-25 group-hover:opacity-5 group-hover:scale-105 transition-all duration-500" 
+            loading="lazy"
+          />
+          <!-- Light Gradient Overlay for Crystal Clear Text Readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-white via-white/45 to-emerald-50/40"></div>
+        </div>
+
+        <!-- Content (z-10) -->
+        <div class="relative z-10">
+          <!-- Icon -->
+          <div class="w-10 h-10 rounded-xl bg-white shadow-2xs border border-slate-200/80 text-brand-emerald flex items-center justify-center text-lg mb-3.5 group-hover:scale-110 group-hover:bg-brand-emerald group-hover:text-white transition-all">
+            {card.icon}
+          </div>
+          
+          <!-- Unified Subtitle -->
+          <p class="text-[11px] font-semibold text-brand-emerald tracking-wide mb-1">
+            {card.subtitle}
+          </p>
+          
+          <!-- Unified Title -->
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg mb-2 leading-snug font-sans group-hover:text-brand-emerald transition-colors">
+            {card.title}
+          </h3>
+          
+          <!-- Unified Concise Description -->
+          <p class="text-xs text-slate-600 leading-relaxed font-normal">
+            {card.desc}
+          </p>
+        </div>
+
+        <!-- Unified Bottom Action Link -->
+        <div class="relative z-10 mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-brand-emerald group-hover:text-brand-emeraldDark transition-colors">
+          <span>{card.actionText}</span>
+          <span class="group-hover:translate-x-1.5 transition-transform duration-200">→</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Core Values & Profile Action Buttons -->
+  <div 
+    class="mt-10 bg-gradient-to-r from-slate-50 via-brand-mint/20 to-brand-iceBlue/20 rounded-3xl p-6 sm:p-8 border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-6 font-sans"
+    data-aos="fade-up"
+    data-aos-delay="150"
+  >
+    <div class="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-700">
+      <span class="text-slate-400 font-semibold uppercase tracking-wider text-[11px]">Nilai Inti:</span>
+      <span class="inline-flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-2xs font-semibold text-slate-800">
+        <span class="w-2 h-2 rounded-full bg-brand-emerald"></span> Amanah
+      </span>
+      <span class="inline-flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-2xs font-semibold text-slate-800">
+        <span class="w-2 h-2 rounded-full bg-blue-600"></span> Tumbuh
+      </span>
+      <span class="inline-flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-2xs font-semibold text-slate-800">
+        <span class="w-2 h-2 rounded-full bg-amber-500"></span> Unggul
+      </span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a
+        href="/profil/yayasan"
+        class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-brand-emerald hover:bg-brand-emeraldDark transition shadow-xs"
+      >
+        <span>Profil &amp; Sejarah Yayasan</span>
+        <span>→</span>
+      </a>
+      <a
+        href="/profil/visi-misi"
+        class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 transition"
+      >
+        Visi &amp; Misi
+      </a>
+    </div>
+  </div>
+</section>

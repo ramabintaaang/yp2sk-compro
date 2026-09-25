@@ -3,94 +3,120 @@ const { pathname } = Astro.url;
 // Normalize pathname by removing trailing slash if present, unless it is root
 const activePath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
 ---
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop shadow-sm transition-all duration-200 ease-in-out h-20 bg-surface-container-lowest">
-  <div class="flex items-center gap-4">
-    <img alt="Logo Yayasan Dinado" class="h-12 w-12 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJgETTAVj05shytEmoGHc7cg9gus6ZIq8sN7zyGnBpdiN_XF72wwtR_JeMuRv6TrHEYKxW9fhGM_SRFkm9ExIvkr7thZfm_7ONTHvfNxRlY3LCrDWL0Fy4FKj5Rem5UIZlcb26krT8QPv1iYPGWVbsABIKbmtDZLfAFO_3wJdOE-QMHKtXkiQqzFTXk1nkL3l2ku_RF8kwpomk_fJwuWr1DZ76c4jn-lij8io6aoySSqKCtvOVePqgfA">
-    <span class="text-headline-md font-headline-md font-bold text-primary">YP2SK</span>
-  </div>
-  
-  <!-- Desktop Navigation -->
-  <div class="hidden md:flex items-center gap-gutter">
-    <a class={`font-label-lg text-label-lg ${activePath === '/' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/">Beranda</a>
-    
-    <div class="relative nav-dropdown">
-      <button class={`dropdown-trigger flex items-center gap-1 font-label-lg text-label-lg ${activePath.startsWith('/profil') ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary'} transition-colors cursor-pointer`} aria-expanded="false">
-        Profil <span class="material-symbols-outlined dropdown-icon text-[18px] transition-transform duration-200">expand_more</span>
-      </button>
-      <div class="dropdown-menu absolute top-full left-0 mt-2 w-52 bg-surface-container-lowest/95 backdrop-blur-md shadow-xl rounded-xl py-2 border border-surface-variant/50 z-50 opacity-0 pointer-events-none scale-95 -translate-y-2 transition-all duration-200 ease-out origin-top-left">
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/profil/yayasan' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/profil/yayasan">Profil Yayasan</a>
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/profil/visi-misi' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/profil/visi-misi">Visi dan Misi</a>
+<nav class="sticky top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 lg:px-8 shadow-xs border-b border-slate-100 transition-all duration-200 ease-in-out h-20 bg-white/95 backdrop-blur-md font-sans">
+  <div class="max-w-7xl w-full mx-auto flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a class="flex items-center gap-3 group" href="/">
+      <div class="w-12 h-12 rounded-xl bg-white p-1 flex items-center justify-center border border-slate-200/80 shadow-xs group-hover:scale-105 transition-transform shrink-0">
+        <img src="/images/logo-yp2sk.png" alt="Logo Yayasan Pendidikan Pesantren Sunan Kudus" class="w-full h-full object-contain" />
       </div>
+      <div>
+        <span class="block font-bold text-lg leading-tight text-slate-900 tracking-tight flex items-center gap-1.5 font-sans">
+          YP2SK
+        </span>
+        <span class="block text-[11px] text-slate-500 tracking-wide uppercase font-medium font-sans">Yayasan Pesantren Sunan Kudus</span>
+      </div>
+    </a>
+    
+    <!-- Desktop Navigation -->
+    <div class="hidden lg:flex items-center space-x-7 text-[13px] font-medium text-slate-700">
+      <a class={`transition-colors font-medium ${activePath === '/' ? 'text-brand-emerald font-bold' : 'hover:text-brand-emerald'}`} href="/">Beranda</a>
+      
+      <!-- Profil Dropdown -->
+      <div class="relative nav-dropdown py-2">
+        <button class={`dropdown-trigger flex items-center gap-1 transition-colors cursor-pointer ${activePath.startsWith('/profil') ? 'text-brand-emerald font-bold' : 'hover:text-brand-emerald'}`} aria-expanded="false">
+          <span>Profil</span>
+          <svg class="dropdown-icon w-3.5 h-3.5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+        <div class="dropdown-menu absolute left-0 top-full mt-1 w-52 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 opacity-0 pointer-events-none scale-95 -translate-y-2 transition-all duration-200 ease-out origin-top-left">
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath === '/profil/yayasan' ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/profil/yayasan">Profil Yayasan</a>
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath === '/profil/visi-misi' ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/profil/visi-misi">Visi dan Misi</a>
+        </div>
+      </div>
+      
+      <!-- Pendidikan Dropdown -->
+      <div class="relative nav-dropdown py-2">
+        <button class={`dropdown-trigger flex items-center gap-1 transition-colors cursor-pointer ${activePath.startsWith('/pendidikan') ? 'text-brand-emerald font-bold' : 'hover:text-brand-emerald'}`} aria-expanded="false">
+          <span>Pendidikan</span>
+          <svg class="dropdown-icon w-3.5 h-3.5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+        <div class="dropdown-menu absolute left-0 top-full mt-1 w-64 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 opacity-0 pointer-events-none scale-95 -translate-y-2 transition-all duration-200 ease-out origin-top-left">
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath.startsWith('/pendidikan/tpa-kb-tk-naneymi') ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/pendidikan/tpa-kb-tk-naneymi">TPA - KB - TK NANEYMI</a>
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath.startsWith('/pendidikan/tpa-kb-tk-dinado') ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/pendidikan/tpa-kb-tk-dinado">TPA - KB - TK DINADO</a>
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath.startsWith('/pendidikan/kb-tk-inklusi-istimewa') ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/pendidikan/kb-tk-inklusi-istimewa">KB - TK Inklusi Istimewa</a>
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath.startsWith('/pendidikan/skiis') ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/pendidikan/skiis">SD - SMP - SMA - SMK (SKISS)</a>
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath.startsWith('/pendidikan/graha-autis') ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/pendidikan/graha-autis">Graha Autis (Layanan ABK)</a>
+          <a class={`block px-4 py-2 text-xs transition-colors ${activePath.startsWith('/pendidikan/ponpes-tahfidz') ? 'text-brand-emerald bg-emerald-50 font-bold' : 'text-slate-700 hover:bg-emerald-50 hover:text-brand-emerald'}`} href="/pendidikan/ponpes-tahfidz">Ponpes Tahfidz Al Qur'an Sunan Kudus</a>
+        </div>
+      </div>
+      
+      <a class={`transition-colors font-medium ${activePath === '/agenda' ? 'text-brand-emerald font-bold' : 'hover:text-brand-emerald'}`} href="/agenda">Agenda</a>
+      <a class={`transition-colors font-medium ${activePath === '/berita' ? 'text-brand-emerald font-bold' : 'hover:text-brand-emerald'}`} href="/berita">Berita</a>
+      <a class={`transition-colors font-medium ${activePath === '/galeri' ? 'text-brand-emerald font-bold' : 'hover:text-brand-emerald'}`} href="/galeri">Galeri</a>
+      <a class={`transition-colors font-medium ${activePath === '/kontak' ? 'text-brand-emerald font-bold' : 'hover:text-brand-emerald'}`} href="/kontak">Kontak</a>
     </div>
     
-    <div class="relative nav-dropdown">
-      <button class={`dropdown-trigger flex items-center gap-1 font-label-lg text-label-lg ${activePath.startsWith('/pendidikan') ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary'} transition-colors cursor-pointer`} aria-expanded="false">
-        Pendidikan <span class="material-symbols-outlined dropdown-icon text-[18px] transition-transform duration-200">expand_more</span>
-      </button>
-      <div class="dropdown-menu absolute top-full left-0 mt-2 w-80 bg-surface-container-lowest/95 backdrop-blur-md shadow-xl rounded-xl py-2 border border-surface-variant/50 z-50 opacity-0 pointer-events-none scale-95 -translate-y-2 transition-all duration-200 ease-out origin-top-left">
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/tpa-kb-dinado' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/tpa-kb-dinado">TPA - KB DINADO</a>
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/tk-dinado' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/tk-dinado">TK DINADO</a>
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/tpa-kb-naneymi' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/tpa-kb-naneymi">TPA KB Naneymi</a>
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/graha-autis' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/graha-autis">Graha Autis (Therapy ABK)</a>
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/kb-naneymi-autis' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/kb-naneymi-autis">KB Naneymi AUTIS</a>
-        <a class={`block px-4 py-2.5 mx-1.5 rounded-lg font-label-md transition-all duration-150 ${activePath === '/pendidikan/ponpes-tahfidz-autis' ? 'text-secondary bg-secondary/10 font-bold' : 'text-on-surface hover:bg-secondary/5 hover:text-secondary'}`} href="/pendidikan/ponpes-tahfidz-autis">Ponpes Tahfidz Al Qur'an AUTIS</a>
-      </div>
+    <!-- Action Buttons -->
+    <div class="flex items-center gap-3">
+      <a
+        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-brand-emerald hover:bg-brand-emeraldDark transition shadow-sm hover:shadow gap-1.5"
+        href="/kontak"
+      >
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span>Daftar PSB</span>
+      </a>
+      <button id="open-mobile-menu" class="lg:!hidden material-symbols-outlined text-slate-800 text-[30px] cursor-pointer" aria-label="Open Mobile Menu">menu</button>
     </div>
-    
-    <a class={`font-label-lg text-label-lg ${activePath === '/agenda' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/agenda">Agenda</a>
-    <a class={`font-label-lg text-label-lg ${activePath === '/berita' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/berita">Berita</a>
-    <a class={`font-label-lg text-label-lg ${activePath === '/galeri' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/galeri">Galeri</a>
-    <a class={`font-label-lg text-label-lg ${activePath === '/kontak' ? 'text-secondary border-b-2 border-secondary pb-1 font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/kontak">Kontak</a>
-  </div>
-  
-  <div class="flex items-center gap-4">
-    <button class="px-6 py-2 bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg hover:brightness-110 transition-all shadow-md cursor-pointer">PMB</button>
-    <button id="open-mobile-menu" class="md:!hidden material-symbols-outlined text-primary text-[32px] cursor-pointer" aria-label="Open Mobile Menu">menu</button>
   </div>
 </nav>
 
 <!-- Mobile Drawer Overlay -->
-<div id="mobile-menu-drawer" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+<div id="mobile-menu-drawer" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
   <!-- Backdrop -->
-  <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+  <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
   <!-- Content -->
-  <div class="absolute right-0 top-0 h-full w-64 bg-surface-container-lowest p-6 shadow-2xl flex flex-col justify-between border-l border-surface-variant z-50">
+  <div class="absolute right-0 top-0 h-full w-80 bg-white p-6 shadow-2xl flex flex-col justify-between border-l border-slate-100 z-50 overflow-y-auto">
     <div>
-      <div class="flex items-center justify-between mb-8">
-        <span class="text-headline-md font-headline-md font-bold text-primary">YP2SK</span>
-        <button id="close-mobile-menu" class="material-symbols-outlined text-primary text-[28px] cursor-pointer" aria-label="Close Mobile Menu">close</button>
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-white p-1 flex items-center justify-center border border-slate-200/80 shadow-xs shrink-0">
+            <img src="/images/logo-yp2sk.png" alt="Logo YP2SK" class="w-full h-full object-contain" />
+          </div>
+          <span class="font-bold text-base text-slate-900">YP2SK</span>
+        </div>
+        <button id="close-mobile-menu" class="material-symbols-outlined text-slate-700 text-[24px] cursor-pointer" aria-label="Close Mobile Menu">close</button>
       </div>
-      <nav class="flex flex-col gap-4">
-        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/">Beranda</a>
+      <nav class="flex flex-col gap-3 font-sans text-sm">
+        <a class={`py-2 transition-colors ${activePath === '/' ? 'text-brand-emerald font-bold' : 'text-slate-700 hover:text-brand-emerald'}`} href="/">Beranda</a>
         
-        <div class="flex flex-col">
-          <span class="font-label-lg text-on-surface-variant text-[14px] uppercase tracking-wider mb-2 font-bold">Profil</span>
-          <div class="flex flex-col pl-4 gap-2 border-l border-surface-variant">
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/profil/yayasan' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/profil/yayasan">Profil Yayasan</a>
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/profil/visi-misi' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/profil/visi-misi">Visi dan Misi</a>
+        <div class="flex flex-col py-1">
+          <span class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Profil</span>
+          <div class="flex flex-col pl-3 gap-2 border-l-2 border-slate-100">
+            <a class={`py-1 text-xs transition-colors ${activePath === '/profil/yayasan' ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/profil/yayasan">Profil Yayasan</a>
+            <a class={`py-1 text-xs transition-colors ${activePath === '/profil/visi-misi' ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/profil/visi-misi">Visi dan Misi</a>
           </div>
         </div>
 
-        <div class="flex flex-col">
-          <span class="font-label-lg text-on-surface-variant text-[14px] uppercase tracking-wider mb-2 font-bold">Pendidikan</span>
-          <div class="flex flex-col pl-4 gap-2 border-l border-surface-variant">
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/tpa-kb-dinado' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/tpa-kb-dinado">TPA - KB DINADO</a>
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/tk-dinado' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/tk-dinado">TK DINADO</a>
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/tpa-kb-naneymi' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/tpa-kb-naneymi">TPA KB Naneymi</a>
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/graha-autis' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/graha-autis">Graha Autis</a>
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/kb-naneymi-autis' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/kb-naneymi-autis">KB Naneymi AUTIS</a>
-            <a class={`font-label-md py-1 transition-colors ${activePath === '/pendidikan/ponpes-tahfidz-autis' ? 'text-secondary font-bold' : 'text-on-surface hover:text-primary'}`} href="/pendidikan/ponpes-tahfidz-autis">Ponpes Tahfidz Al Qur'an AUTIS</a>
+        <div class="flex flex-col py-1">
+          <span class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Pendidikan</span>
+          <div class="flex flex-col pl-3 gap-2 border-l-2 border-slate-100">
+            <a class={`py-1 text-xs transition-colors ${activePath.startsWith('/pendidikan/tpa-kb-tk-naneymi') ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/pendidikan/tpa-kb-tk-naneymi">TPA - KB - TK NANEYMI</a>
+            <a class={`py-1 text-xs transition-colors ${activePath.startsWith('/pendidikan/tpa-kb-tk-dinado') ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/pendidikan/tpa-kb-tk-dinado">TPA - KB - TK DINADO</a>
+            <a class={`py-1 text-xs transition-colors ${activePath.startsWith('/pendidikan/kb-tk-inklusi-istimewa') ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/pendidikan/kb-tk-inklusi-istimewa">KB - TK Inklusi Istimewa</a>
+            <a class={`py-1 text-xs transition-colors ${activePath.startsWith('/pendidikan/skiis') ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/pendidikan/skiis">SD - SMP - SMA - SMK (SKISS)</a>
+            <a class={`py-1 text-xs transition-colors ${activePath.startsWith('/pendidikan/graha-autis') ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/pendidikan/graha-autis">Graha Autis (Layanan ABK)</a>
+            <a class={`py-1 text-xs transition-colors ${activePath.startsWith('/pendidikan/ponpes-tahfidz') ? 'text-brand-emerald font-bold' : 'text-slate-600 hover:text-brand-emerald'}`} href="/pendidikan/ponpes-tahfidz">Ponpes Tahfidz Al Qur'an Sunan Kudus</a>
           </div>
         </div>
         
-        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/agenda' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/agenda">Agenda</a>
-        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/berita' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/berita">Berita</a>
-        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/galeri' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/galeri">Galeri</a>
-        <a class={`font-label-lg text-label-lg py-2 ${activePath === '/kontak' ? 'text-secondary font-bold' : 'text-on-surface-variant hover:text-primary transition-colors'}`} href="/kontak">Kontak</a>
+        <a class={`py-2 transition-colors ${activePath === '/agenda' ? 'text-brand-emerald font-bold' : 'text-slate-700 hover:text-brand-emerald'}`} href="/agenda">Agenda</a>
+        <a class={`py-2 transition-colors ${activePath === '/berita' ? 'text-brand-emerald font-bold' : 'text-slate-700 hover:text-brand-emerald'}`} href="/berita">Berita</a>
+        <a class={`py-2 transition-colors ${activePath === '/galeri' ? 'text-brand-emerald font-bold' : 'text-slate-700 hover:text-brand-emerald'}`} href="/galeri">Galeri</a>
+        <a class={`py-2 transition-colors ${activePath === '/kontak' ? 'text-brand-emerald font-bold' : 'text-slate-700 hover:text-brand-emerald'}`} href="/kontak">Kontak</a>
       </nav>
     </div>
-    <div>
-      <button class="w-full py-3 bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg hover:brightness-110 transition-all shadow-md cursor-pointer">PMB</button>
+    <div class="pt-6 border-t border-slate-100">
+      <a href="/kontak" class="w-full py-3 bg-brand-emerald hover:bg-brand-emeraldDark text-white text-xs font-bold rounded-full transition shadow-sm text-center block">Daftar PSB 2025/2026</a>
     </div>
   </div>
 </div>
@@ -129,25 +155,6 @@ const activePath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
     closeBtn?.addEventListener('click', closeMenu);
     backdrop?.addEventListener('click', closeMenu);
 
-    // Scroll transparency effect & close dropdowns on scroll
-    const handleScroll = () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 50) {
-        nav?.classList.add('h-16', 'bg-white/95', 'backdrop-blur-md');
-        nav?.classList.remove('h-20', 'bg-surface-container-lowest');
-      } else {
-        nav?.classList.remove('h-16', 'bg-white/95', 'backdrop-blur-md');
-        nav?.classList.add('h-20', 'bg-surface-container-lowest');
-      }
-      closeAllDropdowns();
-    };
-
-    if (window.__navbarScrollHandler) {
-      window.removeEventListener('scroll', window.__navbarScrollHandler);
-    }
-    window.__navbarScrollHandler = handleScroll;
-    window.addEventListener('scroll', handleScroll);
-
     // Dropdown toggle functionality
     dropdowns.forEach(dropdown => {
       const trigger = dropdown.querySelector('.dropdown-trigger');
@@ -160,28 +167,9 @@ const activePath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
         const isOpen = dropdown.classList.contains('is-open');
 
         // Close all other dropdowns first
-        dropdowns.forEach(otherDropdown => {
-          if (otherDropdown !== dropdown) {
-            otherDropdown.classList.remove('is-open');
-            const otherTrigger = otherDropdown.querySelector('.dropdown-trigger');
-            const otherMenu = otherDropdown.querySelector('.dropdown-menu');
-            const otherIcon = otherDropdown.querySelector('.dropdown-icon');
-            
-            otherMenu?.classList.remove('opacity-100', 'scale-100', 'translate-y-0', 'pointer-events-auto');
-            otherMenu?.classList.add('opacity-0', 'scale-95', '-translate-y-2', 'pointer-events-none');
-            otherIcon?.classList.remove('rotate-180');
-            otherTrigger?.setAttribute('aria-expanded', 'false');
-          }
-        });
+        closeAllDropdowns();
 
-        // Toggle current dropdown
-        if (isOpen) {
-          dropdown.classList.remove('is-open');
-          menu?.classList.remove('opacity-100', 'scale-100', 'translate-y-0', 'pointer-events-auto');
-          menu?.classList.add('opacity-0', 'scale-95', '-translate-y-2', 'pointer-events-none');
-          icon?.classList.remove('rotate-180');
-          trigger?.setAttribute('aria-expanded', 'false');
-        } else {
+        if (!isOpen) {
           dropdown.classList.add('is-open');
           menu?.classList.remove('opacity-0', 'scale-95', '-translate-y-2', 'pointer-events-none');
           menu?.classList.add('opacity-100', 'scale-100', 'translate-y-0', 'pointer-events-auto');
@@ -191,17 +179,23 @@ const activePath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
       });
     });
 
-    if (window.__navbarClickOutsideHandler) {
-      document.removeEventListener('click', window.__navbarClickOutsideHandler);
-    }
-    window.__navbarClickOutsideHandler = closeAllDropdowns;
-    document.addEventListener('click', closeAllDropdowns);
-    
-    // run once on startup in case page is already scrolled
-    handleScroll();
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!(e.target as Element)?.closest('.nav-dropdown')) {
+        closeAllDropdowns();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeAllDropdowns();
+        closeMenu();
+      }
+    });
   }
 
-  // Support view transitions and normal loads
+  // Support both standard page loads and Astro View Transitions
   setupNavbar();
-  document.addEventListener('astro:after-swap', setupNavbar);
+  document.addEventListener('astro:page-load', setupNavbar);
 </script>

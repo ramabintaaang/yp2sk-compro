@@ -1,0 +1,375 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const ponpesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz#webpage",
+      "url": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz",
+      "name": "Pondok Pesantren Tahfidz Al-Qur'an Sunan Kudus | YP2SK",
+      "description": "Pondok Pesantren Tahfidz Al-Qur'an Sunan Kudus di bawah naungan YP2SK. Fokus mencetak para penjaga Al-Qur'an dengan hafalan mutqin bersanad, kajian kitab kuning, dan pembinaan adab luhur.",
+      "breadcrumb": {
+        "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://yp2sk.or.id"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pendidikan",
+          "item": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ponpes Tahfidz Al-Qur'an Sunan Kudus",
+          "item": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz"
+        }
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://yp2sk.or.id/pendidikan/ponpes-tahfidz#school",
+      "name": "Pondok Pesantren Tahfidz Al-Qur'an Sunan Kudus",
+      "description": "Lembaga pesantren Al-Qur'an terpadu dengan asrama intensif, bimbingan para asatidz hafidz bersanad, dan kajian dirasah Islamiyah.",
+      "image": "https://yp2sk.or.id/images/ponpes_santri.jpg"
+    }
+  ]
+};
+---
+
+<Layout 
+  title="Ponpes Tahfidz Al-Qur'an Sunan Kudus | Hafizh Mutqin Beradab - YP2SK" 
+  description="Pondok Pesantren Tahfidz Al-Qur'an Sunan Kudus berfokus mencetak para hafizh Al-Qur'an 30 juz mutqin, bersanad, mendalami kajian kitab kuning, dan memiliki integritas moral yang luhur."
+  schema={ponpesSchema}
+>
+  <!-- Floating Vector Ribbon Line matching yayasan.astro & index.astro -->
+  <div aria-hidden="true" class="curved-line-bg">
+    <svg class="w-full h-full opacity-35" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 4800">
+      <path d="M720,200 C1100,500 1200,900 850,1300 C500,1700 200,2000 550,2500 C900,3000 1250,3300 950,3800 C700,4200 400,4500 720,4800" stroke="#8BBB92" stroke-dasharray="8 8" stroke-width="2.5"></path>
+    </svg>
+  </div>
+
+  <div class="relative z-10 font-sans">
+    <!-- Hero Section (Cinematic Panoramic Banner with Overlapping Profile Card matching yayasan.astro) -->
+    <section class="relative font-sans pb-6 sm:pb-10">
+      <!-- Panoramic Banner -->
+      <div class="relative w-full h-[320px] sm:h-[380px] lg:h-[420px] overflow-hidden bg-slate-950">
+        <img 
+          src="/images/ponpes_santri.jpg" 
+          alt="Pondok Pesantren Tahfidz Al-Qur'an Sunan Kudus" 
+          class="w-full h-full object-cover object-center opacity-80"
+          loading="eager"
+        />
+        <!-- Atmospheric Vignette & Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/35 to-brand-emeraldDark/25"></div>
+      </div>
+      
+      <!-- Overlapping Profile Header Card -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-20 sm:-mt-24 lg:-mt-28 relative z-20" data-aos="fade-up">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-12 shadow-soft border border-slate-200/90 text-center">
+          <span class="badge-pill bg-brand-iceBlue text-brand-emerald border border-brand-mint font-sans mb-4 inline-flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">auto_stories</span>
+            Pesantren Tahfidz 30 Juz &amp; Dirasah Islamiyah
+          </span>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-sans">
+            Pondok Pesantren Tahfidz Al-Qur'an Sunan Kudus
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed font-sans font-normal">
+            Mencetak generasi penjaga kalam Ilahi yang hafal 30 Juz mutqin, memiliki sanad tahsin yang shahih, berakhlak mulia meneladani Kanjeng Sunan Kudus, serta siap mengabdi membimbing umat.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a 
+              href="#program" 
+              class="px-6 py-3 rounded-full bg-brand-emerald text-white hover:bg-brand-emeraldDark font-bold text-xs sm:text-sm shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2"
+            >
+              <span>Program Pendidikan Santri</span>
+              <span class="material-symbols-outlined text-sm">arrow_downward</span>
+            </a>
+            <a 
+              href="https://wa.me/6281234567890?text=Assalamu%27alaikum%2C%20saya%20ingin%20konsultasi%20pendaftaran%20santri%20Ponpes%20Tahfidz%20Sunan%20Kudus" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="px-6 py-3 rounded-full bg-white text-slate-800 hover:bg-slate-50 border border-slate-200 font-semibold text-xs sm:text-sm shadow-xs transition flex items-center gap-2"
+            >
+              <span>Pendaftaran Santri via WhatsApp</span>
+              <span class="material-symbols-outlined text-sm">chat</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filosofi & Keutamaan (3 Pillars Style matching yayasan.astro & Pillars.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 1. Tahfidz Bersanad Mutqin (Ice Blue Card) -->
+        <div 
+          class="bg-brand-iceBlue rounded-3xl p-8 border border-blue-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">verified_user</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              Tahfidz Bersanad Mutqin
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+              Metode talaqqi langsung dengan para ustadz hafizh yang memiliki jalur sanad qira'ah yang tersambung hingga Rasulullah ﷺ.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Kajian Kitab Kuning (Turats) (Mint Card) -->
+        <div 
+          class="bg-brand-mint rounded-3xl p-8 border border-emerald-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-800 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-emerald group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">menu_book</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              Kajian Kitab Kuning (Turats)
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+              Santri tidak hanya menghafal lafadz, tetapi memahami hukum fiqih ibadah, akidah ahlussunnah wal jama'ah, dan adab penuntut ilmu (Ta'limul Muta'allim).
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Riyadhah Ruhiyah 24 Jam (Warm Yellow Card) -->
+        <div 
+          class="bg-brand-warmYellow rounded-3xl p-8 border border-amber-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-900 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">nightlight</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              Riyadhah Ruhiyah 24 Jam
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+              Ekosistem asrama islami yang membiasakan sholat berjamaah lima waktu, qiyamullail sepertiga malam terakhir, shaum sunnah, dan pembinaan mandiri.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Utama Pesantren -->
+    <section id="program" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="max-w-3xl mx-auto text-center font-sans mb-12 sm:mb-16" data-aos="fade-up">
+        <span class="badge-pill bg-brand-iceBlue text-brand-emerald mb-3 border border-brand-mint font-sans">
+          Kurikulum Pesantren
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug font-sans">
+          Program Pembinaan Santri
+        </h2>
+        <div class="w-16 h-1 bg-brand-emerald mx-auto rounded-full mt-3"></div>
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+          Disusun bertahap untuk menjaga kualitas hafalan dan kesehatan mental spiritual santri.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 1. Halaqah Tahsin & Tahfidz -->
+        <div 
+          class="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-soft hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between group"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-emerald group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">record_voice_over</span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 font-sans group-hover:text-brand-emerald transition-colors">
+              Halaqah Tahfidz Intensif
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-sans">
+              Setoran hafalan baru (ziyadah) setiap bakda Subuh dan Ashar dengan target terukur 1 - 2 juz per semester, didampingi 1 pembimbing per 8 santri.
+            </p>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-2.5 pt-6 border-t border-slate-100 font-sans">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+              <span>Ziyadah Hafalan Baru</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+              <span>Muraja'ah Harian &amp; Pekanan</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 2. Tasmi' Akbar & Sertifikasi -->
+        <div 
+          class="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-soft hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between group"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-emerald group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 font-sans group-hover:text-brand-emerald transition-colors">
+              Tasmi' Sekali Duduk &amp; Sanad
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-sans">
+              Ujian kelayakan hafalan dengan melantunkan 5, 10, hingga 30 juz Al-Qur'an sekali duduk di hadapan dewan asatidz dan para wali santri.
+            </p>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-2.5 pt-6 border-t border-slate-100 font-sans">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+              <span>Ujian Tasmi' 5 - 30 Juz</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+              <span>Ijazah Sanad Tahfidz</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. Madrasah Diniyah & Bahasa -->
+        <div 
+          class="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-soft hover:shadow-lg transition transform hover:-translate-y-1 flex flex-col justify-between group"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-emerald group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl">menu_book</span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 font-sans group-hover:text-brand-emerald transition-colors">
+              Madrasah Diniyah &amp; Bahasa
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-sans">
+              Pembelajaran ilmu syar'i dasar: Matan Jazariyyah &amp; Tuhfatul Athfal (tajwid), Safinatun Najah (fiqih), Jurumiyyah (nahwu), dan muhadatsah bahasa Arab.
+            </p>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-2.5 pt-6 border-t border-slate-100 font-sans">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+              <span>Gramatika &amp; Percakapan Arab</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-emerald text-base shrink-0">check_circle</span>
+              <span>Pengkajian Matan Tajwid</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri Suasana Pesantren -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 rounded-3xl overflow-hidden shadow-soft border border-slate-200/80 bg-slate-900 group" data-aos="fade-right">
+          <img 
+            src="/images/ponpes_santri.jpg" 
+            alt="Suasana Santri Ponpes Tahfidz Sunan Kudus Mengaji" 
+            class="w-full h-[380px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700" 
+          />
+        </div>
+        <div class="lg:col-span-6 space-y-6" data-aos="fade-left">
+          <div>
+            <span class="badge-pill bg-brand-iceBlue text-brand-emerald mb-3 border border-brand-mint font-sans">
+              Kehidupan Asrama
+            </span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug font-sans">
+              Keluarga Santri yang Penuh Berkah
+            </h2>
+            <div class="w-16 h-1 bg-brand-emerald rounded-full mt-3"></div>
+            <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+              Asrama pondok pesantren dirancang bersih, tenang, dan teratur. Setiap santri dilatih mandiri mengurus diri sendiri, saling menyayangi antar sesama teman, serta menghormati para asatidz dan pengasuh.
+            </p>
+          </div>
+
+          <div class="space-y-4 text-xs sm:text-sm text-slate-700 font-sans">
+            <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-slate-200/70 shadow-xs">
+              <span class="material-symbols-outlined text-brand-emerald text-xl mt-0.5 shrink-0">check_circle</span>
+              <div>
+                <strong class="text-slate-900 font-bold">Makan Bergizi Sehat:</strong> Disediakan menu 3 kali sehari yang halal, bergizi, dan higienis untuk menjaga stamina hafalan.
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-slate-200/70 shadow-xs">
+              <span class="material-symbols-outlined text-brand-emerald text-xl mt-0.5 shrink-0">check_circle</span>
+              <div>
+                <strong class="text-slate-900 font-bold">Kesehatan Santri Terpantau:</strong> Pos kesehatan pesantren (Poskestren) bekerjasama dengan tenaga medis profesional.
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-slate-200/70 shadow-xs">
+              <span class="material-symbols-outlined text-brand-emerald text-xl mt-0.5 shrink-0">check_circle</span>
+              <div>
+                <strong class="text-slate-900 font-bold">Kajian Sunan Kudus:</strong> Menghidupkan nilai toleransi, budi pekerti luhur, dan keteladanan dakwah Kanjeng Sunan Kudus.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA PMB Santri (Call to Action styled matching yayasan.astro & PreFooter.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 font-sans" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-950 via-brand-emeraldDark to-brand-emerald text-white p-8 sm:p-12 shadow-xl border border-white/10 text-center">
+        <!-- Decorative Watermark & Ambient Glow -->
+        <div class="absolute -right-8 -bottom-10 text-white/5 select-none pointer-events-none font-serif text-[140px] leading-none">
+          ق
+        </div>
+        <div class="absolute -top-16 -left-16 w-64 h-64 bg-brand-emerald/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 text-brand-mint text-xs font-semibold uppercase tracking-wider mb-2 border border-white/15 backdrop-blur-xs font-sans">
+            Pendaftaran Santri Baru
+          </span>
+
+          <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-snug font-sans">
+            Wujudkan Cita-cita Menjadi Keluarga Al-Qur'an
+          </h2>
+
+          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-light max-w-2xl mx-auto">
+            "Sebaik-baik kalian adalah yang mempelajari Al-Qur'an dan mengajarkannya." (HR. Bukhari). Daftarkan putra-putri tercinta untuk menjadi hafizh Al-Qur'an yang membahagiakan orang tua di dunia dan akhirat.
+          </p>
+
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a 
+              href="https://wa.me/6281234567890?text=Bismillah%2C%20saya%20ingin%20mendaftarkan%20putra%20saya%20ke%20Pondok%20Pesantren%20Tahfidz%20Sunan%20Kudus" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full sm:w-auto px-8 py-3 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs sm:text-sm shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap"
+            >
+              <span>Daftar Santri via WhatsApp</span>
+              <span class="material-symbols-outlined text-base">send</span>
+            </a>
+            <a 
+              href="/kontak" 
+              class="w-full sm:w-auto px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-xs sm:text-sm transition backdrop-blur-sm text-center whitespace-nowrap"
+            >
+              Kunjungi Pesantren
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

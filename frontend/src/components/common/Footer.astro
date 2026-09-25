@@ -1,60 +1,105 @@
-<footer class="bg-primary text-on-primary py-xl px-margin-mobile md:px-margin-desktop">
-  <div class="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-xl">
-    <div class="col-span-1">
-      <div class="flex items-center gap-3 mb-md">
-        <img alt="Logo Yayasan Dinado" class="h-10 w-10 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJgETTAVj05shytEmoGHc7cg9gus6ZIq8sN7zyGnBpdiN_XF72wwtR_JeMuRv6TrHEYKxW9fhGM_SRFkm9ExIvkr7thZfm_7ONTHvfNxRlY3LCrDWL0Fy4FKj5Rem5UIZlcb26krT8QPv1iYPGWVbsABIKbmtDZLfAFO_3wJdOE-QMHKtXkiQqzFTXk1nkL3l2ku_RF8kwpomk_fJwuWr1DZ76c4jn-lij8io6aoySSqKCtvOVePqgfA">
-        <span class="text-headline-md font-headline-md font-bold">YP2SK</span>
+---
+// Footer.astro - Clean & Compact Modern Footer
+---
+<footer class="bg-white border-t border-slate-200/80 pt-10 pb-8 text-slate-600 text-xs font-sans">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 pb-8 border-b border-slate-100">
+      <!-- Col 1: Brand Info (2 cols) -->
+      <div class="lg:col-span-2 space-y-3">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center border border-slate-200/80 shadow-xs shrink-0">
+            <img src="/images/logo-yp2sk.png" alt="Logo Yayasan Pendidikan Pesantren Sunan Kudus" class="w-full h-full object-contain" />
+          </div>
+          <div>
+            <span class="block font-bold text-sm sm:text-base text-slate-900 leading-tight">YP2SK Kudus</span>
+            <span class="block text-[10px] text-slate-400">Yayasan Pendidikan Pesantren Sunan Kudus</span>
+          </div>
+        </div>
+
+        <!-- Organized Contact Details -->
+        <div class="space-y-2 text-xs text-slate-500 font-sans pt-1">
+          <div class="flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-brand-emerald text-[16px] shrink-0 mt-0.5">location_on</span>
+            <span class="leading-relaxed text-slate-600">
+              Jln. Madurekso No. 22, Langgar Dalem, <br class="hidden sm:inline" />
+              Kota Kudus, Jawa Tengah
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-brand-emerald text-[16px] shrink-0">call</span>
+            <span class="text-slate-600">
+              WA: 
+              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="text-slate-800 hover:text-brand-emerald font-semibold transition-colors">
+                +62 812-3456-7890
+              </a>
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-brand-emerald text-[16px] shrink-0">mail</span>
+            <span class="text-slate-600">
+              Email: 
+              <a href="mailto:sekretariat@yp2sk.sch.id" class="text-slate-800 hover:text-brand-emerald font-semibold transition-colors">
+                sekretariat@yp2sk.sch.id
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Social media pills -->
+        <div class="flex items-center gap-2 pt-2">
+          <a href="#" class="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px] hover:bg-brand-emerald hover:text-white transition shadow-2xs" aria-label="WhatsApp">WA</a>
+          <a href="#" class="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px] hover:bg-brand-emerald hover:text-white transition shadow-2xs" aria-label="Instagram">IG</a>
+          <a href="#" class="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px] hover:bg-brand-emerald hover:text-white transition shadow-2xs" aria-label="YouTube">YT</a>
+          <a href="#" class="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-[10px] hover:bg-brand-emerald hover:text-white transition shadow-2xs" aria-label="Facebook">FB</a>
+        </div>
       </div>
-      <p class="text-sm text-on-primary-container leading-relaxed mb-md">
-        Mewujudkan pendidikan yang amanah, melahirkan generasi yang terus tumbuh, dan mencetak lulusan yang unggul.
+
+      <!-- Col 2: Program / Jenjang -->
+      <div>
+        <h5 class="font-bold text-slate-900 mb-2.5 text-xs tracking-wider uppercase">Jenjang</h5>
+        <ul class="space-y-1.5 text-slate-500 text-[11px] sm:text-xs">
+          <li><a class="hover:text-brand-emerald transition-colors" href="/pendidikan/tpa-kb-tk-naneymi">TPA - KB - TK NANEYMI</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/pendidikan/tpa-kb-tk-dinado">TPA - KB - TK DINADO</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/pendidikan/kb-tk-inklusi-istimewa">KB - TK Inklusi Istimewa</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/pendidikan/skiis">SD - SMP - SMA - SMK (SKISS)</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/pendidikan/graha-autis">Graha Autis (Layanan ABK)</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/pendidikan/ponpes-tahfidz">Ponpes Tahfidz Al Qur'an Sunan Kudus</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Lembaga / Tentang Kami -->
+      <div>
+        <h5 class="font-bold text-slate-900 mb-2.5 text-xs tracking-wider uppercase">Profil</h5>
+        <ul class="space-y-1.5 text-slate-500 text-[11px] sm:text-xs">
+          <li><a class="hover:text-brand-emerald transition-colors" href="/profil/yayasan">Sejarah &amp; Masyayikh</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/profil/visi-misi">Visi &amp; Misi Kelembagaan</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/berita">Kabar &amp; Prestasi Santri</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/galeri">Galeri Kegiatan</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Informasi & Bantuan -->
+      <div>
+        <h5 class="font-bold text-slate-900 mb-2.5 text-xs tracking-wider uppercase">Informasi</h5>
+        <ul class="space-y-1.5 text-slate-500 text-[11px] sm:text-xs">
+          <li><a class="hover:text-brand-emerald transition-colors" href="/agenda">Panduan PSB 2025/2026</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/kontak">Brosur &amp; Rincian Biaya</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/kontak">Beasiswa Tahfidz &amp; Dhu'afa</a></li>
+          <li><a class="hover:text-brand-emerald transition-colors" href="/kontak">Hubungi Call Center</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-5 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-2 sm:gap-4 font-sans">
+      <p>© 2025 Yayasan Pendidikan Pesantren Sunan Kudus (YP2SK). Hak Cipta Dilindungi.</p>
+      <p class="flex items-center gap-2">
+        <span>Terakreditasi BAN-PDM &amp; Kemenag RI</span>
+        <span>•</span>
+        <span>Kudus, Jawa Tengah</span>
       </p>
-      <div class="flex gap-4">
-        <a class="w-8 h-8 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
-        <a class="w-8 h-8 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
-        <a class="w-8 h-8 rounded-full bg-on-primary/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">call</span></a>
-      </div>
     </div>
-    <div>
-      <h4 class="font-bold mb-md text-secondary-fixed">Navigasi Cepat</h4>
-      <ul class="space-y-2 text-sm text-on-primary-container">
-        <li><a class="hover:text-on-primary transition-colors" href="/profil/yayasan">Profil Yayasan</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="/profil/visi-misi">Visi dan Misi</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="#">Program Beasiswa</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="#">Pendaftaran Siswa Baru</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="/kontak">Hubungi Kami</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold mb-md text-secondary-fixed">Lembaga Kami</h4>
-      <ul class="space-y-2 text-sm text-on-primary-container">
-        <li><a class="hover:text-on-primary transition-colors" href="/pendidikan/tpa-kb-dinado">TPA - KB DINADO</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="/pendidikan/tk-dinado">TK DINADO</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="/pendidikan/tpa-kb-naneymi">TPA KB Naneymi</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="/pendidikan/graha-autis">Graha Autis (Therapy ABK)</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="/pendidikan/kb-naneymi-autis">KB Naneymi AUTIS</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="/pendidikan/ponpes-tahfidz-autis">Ponpes Tahfidz AUTIS</a></li>
-        <li><a class="hover:text-on-primary transition-colors" href="#">Pusat Pelatihan Guru</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-bold mb-md text-secondary-fixed">Kontak</h4>
-      <address class="not-italic text-sm text-on-primary-container space-y-3">
-        <div class="flex gap-2">
-          <span class="material-symbols-outlined text-sm shrink-0">location_on</span>
-          <span>Jl. Pendidikan No. 123, <br>Kota Dinado, Indonesia</span>
-        </div>
-        <div class="flex gap-2">
-          <span class="material-symbols-outlined text-sm shrink-0">call</span>
-          <span>(021) 1234-5678</span>
-        </div>
-        <div class="flex gap-2">
-          <span class="material-symbols-outlined text-sm shrink-0">mail</span>
-          <span>info@yayasandinado.or.id</span>
-        </div>
-      </address>
-    </div>
-  </div>
-  <div class="max-w-[1140px] mx-auto mt-xl pt-md border-t border-white/10 text-center">
-    <p class="text-xs text-on-primary-container/70 font-label-md">© 2024 YP2SK. Amanah, Tumbuh, Unggul. Hak Cipta Dilindungi.</p>
   </div>
 </footer>

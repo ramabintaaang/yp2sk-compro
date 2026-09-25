@@ -1,143 +1,195 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 
 const profileSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [
+  itemListElement: [
     {
       "@type": "ListItem",
-      "position": 1,
-      "name": "Beranda",
-      "item": "https://yp2sk.or.id"
+      position: 1,
+      name: "Beranda",
+      item: "https://yp2sk.or.id",
     },
     {
       "@type": "ListItem",
-      "position": 2,
-      "name": "Profil Visi & Misi",
-      "item": "https://yp2sk.or.id/profil/visi-misi"
-    }
-  ]
+      position: 2,
+      name: "Profil Visi & Misi",
+      item: "https://yp2sk.or.id/profil/visi-misi",
+    },
+  ],
 };
 ---
 
-<Layout 
-  title="Visi & Misi | YP2SK - Yayasan Pendidikan Pesantren Sunan Kudus" 
+<Layout
+  title="Visi & Misi | YP2SK - Yayasan Pendidikan Pesantren Sunan Kudus"
   description="Ketahui visi utama dan misi strategis YP2SK (Yayasan Pendidikan Pesantren Sunan Kudus) dalam membina akhlak mulia, kemandirian, dan prestasi akademik santri didik."
   schema={profileSchema}
 >
-  <div class="pt-20">
-    <!-- Hero Section -->
-    <section class="relative py-xl overflow-hidden">
-      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
-        <div class="flex flex-col md:flex-row items-center gap-lg">
-          <div class="w-full md:w-1/2 space-y-md">
-            <span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-label-lg font-bold uppercase tracking-wider">
+  <!-- Floating Vector Ribbon Line matching yayasan.astro & index.astro -->
+  <div aria-hidden="true" class="curved-line-bg">
+    <svg class="w-full h-full opacity-35" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 4800">
+      <path d="M720,200 C1100,500 1200,900 850,1300 C500,1700 200,2000 550,2500 C900,3000 1250,3300 950,3800 C700,4200 400,4500 720,4800" stroke="#8BBB92" stroke-dasharray="8 8" stroke-width="2.5"></path>
+    </svg>
+  </div>
+
+  <div class="relative z-10 font-sans">
+    <!-- Hero Section (Cinematic Panoramic Banner with Overlapping Profile Card matching yayasan.astro) -->
+    <section class="relative font-sans pb-6 sm:pb-10">
+      <!-- Panoramic Banner -->
+      <div class="relative w-full h-[320px] sm:h-[380px] lg:h-[420px] overflow-hidden bg-slate-950">
+        <img
+          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop"
+          alt="Kepemimpinan YP2SK"
+          class="w-full h-full object-cover object-center opacity-80"
+          loading="eager"
+        />
+        <!-- Atmospheric Vignette & Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/35 to-brand-emeraldDark/25"></div>
+      </div>
+
+      <!-- Overlapping Profile Header Card -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-20 sm:-mt-24 lg:-mt-28 relative z-20" data-aos="fade-up">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-12 shadow-soft border border-slate-200/90 text-center">
+          <div class="flex flex-wrap items-center justify-center gap-2 mb-4">
+            <span class="badge-pill bg-brand-iceBlue text-brand-emerald border border-brand-mint font-sans inline-flex">
               Tentang Kami
             </span>
-            <h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary leading-tight">
-              Membangun Generasi <br />
-              <span class="italic text-secondary font-normal">Berkarakter &amp; Unggul</span>
-            </h1>
-            <p class="text-body-lg text-on-surface-variant max-w-[32rem]">
-              Yayasan Pendidikan Pesantren Sunan Kudus (YP2SK) berkomitmen penuh dalam mencetak insan yang berakhlak mulia, cerdas, dan mandiri melalui pendekatan pendidikan yang holistik dan modern.
-            </p>
-            <div class="flex gap-4 pt-4">
-              <a href="#visi-section" class="inline-block bg-primary text-on-primary px-8 py-3 rounded-lg font-label-lg font-bold shadow-lg hover:shadow-xl transition-all">
-                Lihat Visi &amp; Misi
-              </a>
-              <a href="#" class="inline-block border border-primary text-primary px-8 py-3 rounded-lg font-label-lg font-bold hover:bg-primary/5 transition-all">
-                Hubungi Kami
-              </a>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-brand-emerald text-xs font-semibold">
+              <span class="material-symbols-outlined text-[15px] font-bold">verified</span>
+              <span>25+ Tahun Pengabdian</span>
             </div>
           </div>
-          <div class="w-full md:w-1/2 relative group">
-            <div class="absolute -inset-4 bg-secondary/10 rounded-2xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
-            <div class="relative overflow-hidden rounded-xl shadow-2xl aspect-[4/3]">
-              <img
-                alt="Kepemimpinan YP2SK"
-                class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop"
-              />
-            </div>
-            <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden lg:block">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-secondary flex items-center justify-center rounded-full text-on-primary">
-                  <span class="material-symbols-outlined">verified</span>
-                </div>
-                <div>
-                  <p class="text-headline-md font-headline-md text-primary m-0 leading-none">25+</p>
-                  <p class="text-label-md text-on-surface-variant font-medium">Tahun Pengabdian</p>
-                </div>
-              </div>
-            </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-sans">
+            Membangun Generasi <br class="hidden sm:inline" />
+            <span class="italic text-brand-emerald font-serif font-normal">Berkarakter &amp; Unggul</span>
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed font-sans font-normal">
+            Yayasan Pendidikan Pesantren Sunan Kudus (YP2SK) berkomitmen penuh dalam mencetak insan yang berakhlak mulia, cerdas, dan mandiri melalui pendekatan pendidikan yang holistik dan modern.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="#visi-section"
+              class="px-6 py-3 rounded-full bg-brand-emerald text-white hover:bg-brand-emeraldDark font-bold text-xs sm:text-sm shadow-md transition transform hover:-translate-y-0.5"
+            >
+              Lihat Visi &amp; Misi
+            </a>
+            <a
+              href="#"
+              class="px-6 py-3 rounded-full bg-white text-slate-800 hover:bg-slate-50 border border-slate-200 font-semibold text-xs sm:text-sm shadow-xs transition"
+            >
+              Hubungi Kami
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Visi Section (Bento Inspired) -->
-    <section id="visi-section" class="scroll-mt-24 py-xl bg-surface-container-low">
-      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
-        <div class="text-center mb-lg space-y-2">
-          <h2 class="text-headline-lg font-headline-lg text-primary">Visi Utama Kami</h2>
-          <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+    <!-- Visi Section (Styled matching yayasan.astro Greeting / Leadership Quote Card) -->
+    <section id="visi-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="max-w-3xl mx-auto text-center font-sans mb-12" data-aos="fade-up">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight font-sans">
+          Visi Utama Kami
+        </h2>
+        <div class="w-16 h-1 bg-brand-emerald mx-auto rounded-full mt-3"></div>
+      </div>
+
+      <div
+        class="max-w-4xl mx-auto bg-gradient-to-br from-slate-50 via-brand-iceBlue/30 to-brand-mint/30 rounded-3xl p-8 sm:p-12 lg:p-14 border border-slate-200/80 shadow-soft relative overflow-hidden font-sans text-center"
+        data-aos="fade-up"
+      >
+        <!-- Decorative Quote Background Watermark -->
+        <div class="absolute -right-8 -bottom-10 text-brand-emerald/5 select-none pointer-events-none font-serif text-[180px] leading-none">
+          “
         </div>
-        <div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant relative overflow-hidden">
-          <div class="absolute top-0 right-0 p-8 text-primary/5">
-            <span class="material-symbols-outlined !text-9xl">format_quote</span>
+
+        <div class="relative z-10 space-y-6">
+          <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mx-auto text-2xl mb-2">
+            <span class="material-symbols-outlined text-3xl">format_quote</span>
           </div>
-          <div class="relative z-10 max-w-3xl mx-auto text-center italic">
-            <h3 class="text-headline-md md:text-headline-lg font-headline-md text-primary leading-relaxed">
+
+          <!-- Featured Quote Callout -->
+          <div class="border-l-4 border-brand-emerald bg-white/80 backdrop-blur-sm p-6 sm:p-8 rounded-r-2xl shadow-xs text-left">
+            <h3 class="text-lg sm:text-xl md:text-2xl font-serif italic text-slate-800 leading-relaxed">
               "Menjadi lembaga pendidikan terdepan yang Amanah, Tumbuh, dan Unggul dalam membentuk karakter anak didik yang Islami, Cerdas, dan Berjiwa Mandiri."
             </h3>
-            <p class="mt-8 text-label-lg font-bold text-secondary uppercase tracking-[0.2em]">
-              — Dewan Pembina YP2SK
-            </p>
           </div>
+
+          <p class="text-xs sm:text-sm font-bold text-brand-emerald uppercase tracking-[0.2em] font-sans">
+            — Dewan Pembina YP2SK
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Misi Section (Card Layout) -->
-    <section class="py-xl">
-      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-4">
-          <div class="max-w-[36rem]">
-            <h2 class="text-headline-lg font-headline-lg text-primary">Misi Strategis</h2>
-            <p class="text-body-md text-on-surface-variant mt-2">
-              Langkah nyata yang kami tempuh setiap hari untuk mewujudkan cita-cita luhur yayasan bagi masa depan putra-putri bangsa.
-            </p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-          <!-- Misi 1 -->
-          <div class="mission-card bg-white p-8 rounded-2xl border border-outline-variant flex flex-col items-start h-full">
-            <div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center text-secondary-fixed mb-6">
-              <span class="material-symbols-outlined !text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+    <!-- Misi Section (3 Pillars Cards Layout matching yayasan.astro & Pillars.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="max-w-3xl mx-auto text-center font-sans mb-12 sm:mb-16" data-aos="fade-up">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight font-sans">
+          Misi Strategis
+        </h2>
+        <div class="w-16 h-1 bg-brand-emerald mx-auto rounded-full mt-3"></div>
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+          Langkah nyata yang kami tempuh setiap hari untuk mewujudkan cita-cita luhur yayasan bagi masa depan putra-putri bangsa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Misi 1 (Soft Ice Blue Card) -->
+        <div
+          class="bg-brand-iceBlue rounded-3xl p-8 border border-blue-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">school</span>
             </div>
-            <h4 class="text-headline-md font-headline-md text-primary mb-4">Kualitas Pengajaran</h4>
-            <p class="text-body-md text-on-surface-variant">
+            <h4 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              Kualitas Pengajaran
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
               Menyelenggarakan pendidikan berkualitas dengan kurikulum yang relevan dan metode pembelajaran yang inovatif untuk memacu kecerdasan intelektual.
             </p>
           </div>
-          <!-- Misi 2 -->
-          <div class="mission-card bg-white p-8 rounded-2xl border border-outline-variant flex flex-col items-start h-full">
-            <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center text-on-primary mb-6">
-              <span class="material-symbols-outlined !text-3xl" style="font-variation-settings: 'FILL' 1;">mosque</span>
+        </div>
+
+        <!-- Misi 2 (Soft Mint Card) -->
+        <div
+          class="bg-brand-mint rounded-3xl p-8 border border-emerald-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-800 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-emerald group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">mosque</span>
             </div>
-            <h4 class="text-headline-md font-headline-md text-primary mb-4">Lingkungan Islami</h4>
-            <p class="text-body-md text-on-surface-variant">
+            <h4 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              Lingkungan Islami
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
               Membangun ekosistem pendidikan yang kental dengan nilai-nilai islami guna membentuk akhlakul karimah dan karakter religius sejak dini.
             </p>
           </div>
-          <!-- Misi 3 -->
-          <div class="mission-card bg-white p-8 rounded-2xl border border-outline-variant flex flex-col items-start h-full">
-            <div class="w-14 h-14 bg-tertiary-container rounded-xl flex items-center justify-center text-tertiary-fixed mb-6">
-              <span class="material-symbols-outlined !text-3xl" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+        </div>
+
+        <!-- Misi 3 (Soft Yellow Card) -->
+        <div
+          class="bg-brand-warmYellow rounded-3xl p-8 border border-amber-100 flex flex-col justify-between transition transform hover:-translate-y-1 shadow-soft group"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-900 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">
+              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
             </div>
-            <h4 class="text-headline-md font-headline-md text-primary mb-4">Kemandirian</h4>
-            <p class="text-body-md text-on-surface-variant">
+            <h4 class="text-xl font-bold text-slate-900 mb-2 font-sans">
+              Kemandirian
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
               Menanamkan jiwa kemandirian dan rasa percaya diri kepada anak didik agar mampu menjadi individu yang tangguh dan adaptif di masa depan.
             </p>
           </div>
@@ -145,41 +197,73 @@ const profileSchema = {
       </div>
     </section>
 
-    <!-- Stats Counter Section -->
-    <section class="py-lg bg-primary text-on-primary">
-      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0 grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
-        <div class="space-y-1">
-          <p class="text-headline-xl font-headline-xl text-secondary-fixed">5000+</p>
-          <p class="text-label-lg opacity-80">Siswa Terbantu</p>
+    <!-- Stats Counter Section (Styled matching dark emerald gradient card in yayasan.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 font-sans" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-950 via-brand-emeraldDark to-brand-emerald text-white p-8 sm:p-12 shadow-xl border border-white/10">
+        <!-- Decorative Watermark & Ambient Glow -->
+        <div class="absolute -right-8 -bottom-10 text-white/5 select-none pointer-events-none font-serif text-[140px] leading-none">
+          ق
         </div>
-        <div class="space-y-1">
-          <p class="text-headline-xl font-headline-xl text-secondary-fixed">150+</p>
-          <p class="text-label-lg opacity-80">Tenaga Pendidik</p>
-        </div>
-        <div class="space-y-1">
-          <p class="text-headline-xl font-headline-xl text-secondary-fixed">12</p>
-          <p class="text-label-lg opacity-80">Unit Pendidikan</p>
-        </div>
-        <div class="space-y-1">
-          <p class="text-headline-xl font-headline-xl text-secondary-fixed">24+</p>
-          <p class="text-label-lg opacity-80">Mitra Strategis</p>
+        <div class="absolute -top-16 -left-16 w-64 h-64 bg-brand-emerald/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200 font-sans">
+              5000+
+            </p>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium font-sans">
+              Siswa Terbantu
+            </p>
+          </div>
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200 font-sans">
+              150+
+            </p>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium font-sans">
+              Tenaga Pendidik
+            </p>
+          </div>
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200 font-sans">
+              12
+            </p>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium font-sans">
+              Unit Pendidikan
+            </p>
+          </div>
+          <div class="space-y-1">
+            <p class="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200 font-sans">
+              24+
+            </p>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium font-sans">
+              Mitra Strategis
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-xl">
-      <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0">
-        <div class="bg-secondary-container rounded-3xl p-lg md:p-xl flex flex-col md:flex-row items-center justify-between gap-md relative overflow-hidden">
-          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary opacity-10 rounded-full blur-3xl"></div>
-          <div class="relative z-10 space-y-4">
-            <h2 class="text-headline-lg font-headline-lg text-on-secondary-container">Bergabung Bersama Kami</h2>
-            <p class="text-body-lg text-on-secondary-container/80 max-w-[32rem]">
-              Berikan pendidikan terbaik yang membentuk karakter dan masa depan putra-putri Anda bersama YP2SK.
-            </p>
-          </div>
-          <div class="relative z-10">
-            <a href="#" class="inline-block bg-primary text-on-primary px-10 py-4 rounded-xl font-headline-md shadow-lg hover:scale-105 active:scale-95 transition-all">
+    <!-- Call to Action (Styled matching PreFooter / CTA in yayasan.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 font-sans" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-950 via-brand-emeraldDark to-brand-emerald text-white p-8 sm:p-12 shadow-xl border border-white/10 text-center">
+        <!-- Decorative Watermark & Ambient Glow -->
+        <div class="absolute -right-8 -bottom-10 text-white/5 select-none pointer-events-none font-serif text-[140px] leading-none">
+          ق
+        </div>
+        <div class="absolute -top-16 -left-16 w-64 h-64 bg-brand-emerald/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-snug font-sans">
+            Bergabung Bersama Kami
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-light">
+            Berikan pendidikan terbaik yang membentuk karakter dan masa depan putra-putri Anda bersama YP2SK.
+          </p>
+          <div class="pt-2 flex justify-center">
+            <a
+              href="#"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs sm:text-sm shadow-md transition transform hover:-translate-y-0.5 text-center whitespace-nowrap"
+            >
               Daftar Sekarang
             </a>
           </div>
@@ -188,43 +272,3 @@ const profileSchema = {
     </section>
   </div>
 </Layout>
-
-<style>
-  .mission-card {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .mission-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px -10px rgba(0, 32, 69, 0.15);
-  }
-</style>
-
-<script>
-  function setupScrollAnimation() {
-    const observerOptions = {
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          (entry.target as HTMLElement).style.opacity = "1";
-          (entry.target as HTMLElement).style.transform = "translateY(0)";
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll(".mission-card").forEach((card) => {
-      (card as HTMLElement).style.opacity = "0";
-      (card as HTMLElement).style.transform = "translateY(20px)";
-      (card as HTMLElement).style.transition = "all 0.6s ease-out";
-      observer.observe(card);
-    });
-  }
-
-  // Setup immediately
-  setupScrollAnimation();
-
-  // Re-run animation if user uses client-side routing transitions
-  document.addEventListener('astro:after-swap', setupScrollAnimation);
-</script>

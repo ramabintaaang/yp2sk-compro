@@ -43,92 +43,137 @@ const agendaSchema = {
   description="Ikuti kalender agenda kegiatan pendidikan, sosial keagamaan, dan berita prestasi terbaru dari YP2SK (Yayasan Pendidikan Pesantren Sunan Kudus)."
   schema={agendaSchema}
 >
-  <div class="pt-20">
-    <div class="max-w-[1140px] mx-auto px-margin-mobile md:px-0 py-xl">
-      <!-- Header Section -->
-      <header class="mb-lg space-y-md">
-        <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-label-md font-label-md font-bold uppercase tracking-wider">
-          <span class="material-symbols-outlined text-[18px]">calendar_today</span>
-          <span>Pusat Informasi Terpadu</span>
-        </div>
-        <h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary max-w-[42rem] leading-tight">
-          Agenda Kegiatan &amp; <br class="hidden md:block"/> Kabar Yayasan
-        </h1>
-        <p class="text-body-lg font-body-lg text-on-surface-variant max-w-[36rem]">
-          Ikuti perkembangan terbaru dan jadwalkan partisipasi Anda dalam berbagai kegiatan edukasi dan sosial kami.
-        </p>
-      </header>
+  <!-- Floating Vector Ribbon Line matching yayasan.astro & index.astro -->
+  <div aria-hidden="true" class="curved-line-bg">
+    <svg class="w-full h-full opacity-35" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 4800">
+      <path d="M720,200 C1100,500 1200,900 850,1300 C500,1700 200,2000 550,2500 C900,3000 1250,3300 950,3800 C700,4200 400,4500 720,4800" stroke="#8BBB92" stroke-dasharray="8 8" stroke-width="2.5"></path>
+    </svg>
+  </div>
 
-      <!-- Agenda Highlights (Bento Grid) -->
-      <section class="mb-xl">
-        <div class="flex justify-between items-end mb-md">
-          <h2 class="text-headline-md font-headline-md text-primary">Agenda Mendatang</h2>
-          <button class="text-secondary font-label-lg flex items-center gap-1 hover:underline cursor-pointer">
-            Lihat Kalender Lengkap <span class="material-symbols-outlined">arrow_forward</span>
-          </button>
+  <div class="relative z-10 font-sans">
+    <!-- Hero Section (Cinematic Panoramic Banner with Overlapping Profile Card matching yayasan.astro) -->
+    <section class="relative font-sans pb-6 sm:pb-10">
+      <!-- Panoramic Banner -->
+      <div class="relative w-full h-[320px] sm:h-[380px] lg:h-[420px] overflow-hidden bg-slate-950">
+        <img 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCavFC-99FADJK6mO15qdRLjoreFX-FK3DeOp-_BK11xqeikKtizE4CjRMes2HaSlT6lx-2Yl_6SF53rsp0awfSaGCJ_Yw1xg-jEwYgrEiUN4d29JRAEZ8jF2iBGfZceSjU6rQrSR-0aoc9vP060egOHlfluZTT0I1VU-IECfDv87L0YYmQ_Cv0qKeVfJSoQJYcJfve44NMj6h3ldF3T9lG1XF1vg4KBpuLs-10nqCanmN97hm9jfmyjg"
+          alt="Agenda Kegiatan dan Kabar Yayasan Pendidikan Pesantren Sunan Kudus" 
+          class="w-full h-full object-cover object-center opacity-80"
+          loading="eager"
+        />
+        <!-- Atmospheric Vignette & Gradient Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/35 to-brand-emeraldDark/25"></div>
+      </div>
+      
+      <!-- Overlapping Profile Header Card -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-20 sm:-mt-24 lg:-mt-28 relative z-20" data-aos="fade-up">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-12 shadow-soft border border-slate-200/90 text-center">
+          <span class="badge-pill bg-brand-iceBlue text-brand-emerald border border-brand-mint font-sans mb-4 inline-flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm">calendar_today</span>
+            Pusat Informasi Terpadu
+          </span>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-tight font-sans">
+            Agenda Kegiatan &amp; <br class="hidden md:block"/> Kabar Yayasan
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed font-sans font-normal">
+            Ikuti perkembangan terbaru dan jadwalkan partisipasi Anda dalam berbagai kegiatan edukasi dan sosial kami.
+          </p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Large Event Card -->
-          <div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-primary text-on-primary h-[400px]">
-            <div 
-              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-40" 
-              role="img"
-              aria-label="A warm and inviting interior of a modern school hall during a parenting seminar. Soft natural light streams through large windows, illuminating a professional stage setup with navy blue banners. The audience consists of diverse Indonesian parents engaged in a discussion." 
-              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYfTLePOkcB-8eEDqM5C1fmxLd8oivn775jr4JItpRozPBM92Q-KejUEHjdO4jbv1mgxNR9ou9mSq1i5GSs4VXb0TqxcR9SkH-ON020ZOpk8POUzMzjZV0HBZM37JwvnuIZyPjL9FQaXF3_6Jt6MpfQ1diIEuv-MF0eV7Bt97KVmO2nA4DKt4QVCLfgFEOBrd55jNJca66wtEb_LlxJXZeEDFJc5pBTOrN6Z99mi6yB0168jB_mi948g')"
-            ></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 left-0 p-lg w-full">
-              <div class="flex gap-4 mb-md">
-                <div class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-lg text-center shrink-0">
-                  <span class="block text-headline-md font-bold leading-none mb-1">24</span>
-                  <span class="block text-label-md uppercase font-bold">Okt</span>
-                </div>
-                <div class="space-y-1">
-                  <span class="bg-secondary text-on-secondary px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Seminar Parenting</span>
-                  <h3 class="text-headline-md font-headline-md text-white">Membangun Karakter Anak di Era Digital</h3>
-                </div>
+      </div>
+    </section>
+
+    <!-- Agenda Highlights (Bento Grid) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 scroll-mt-24">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-12" data-aos="fade-up">
+        <div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight font-sans">
+            Agenda Mendatang
+          </h2>
+          <div class="w-16 h-1 bg-brand-emerald rounded-full mt-3"></div>
+        </div>
+        <button class="inline-flex items-center gap-2 text-brand-emerald hover:text-brand-emeraldDark font-bold text-xs sm:text-sm font-sans transition-all group cursor-pointer self-start sm:self-end">
+          <span>Lihat Kalender Lengkap</span>
+          <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        <!-- Large Event Card -->
+        <div class="lg:col-span-8 relative group overflow-hidden rounded-3xl bg-slate-950 text-white min-h-[420px] shadow-soft border border-slate-200/80 flex flex-col justify-end p-6 sm:p-10" data-aos="fade-up">
+          <div 
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-40" 
+            role="img"
+            aria-label="A warm and inviting interior of a modern school hall during a parenting seminar. Soft natural light streams through large windows, illuminating a professional stage setup with navy blue banners. The audience consists of diverse Indonesian parents engaged in a discussion." 
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYfTLePOkcB-8eEDqM5C1fmxLd8oivn775jr4JItpRozPBM92Q-KejUEHjdO4jbv1mgxNR9ou9mSq1i5GSs4VXb0TqxcR9SkH-ON020ZOpk8POUzMzjZV0HBZM37JwvnuIZyPjL9FQaXF3_6Jt6MpfQ1diIEuv-MF0eV7Bt97KVmO2nA4DKt4QVCLfgFEOBrd55jNJca66wtEb_LlxJXZeEDFJc5pBTOrN6Z99mi6yB0168jB_mi948g')"
+          ></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+          
+          <div class="relative z-10 w-full space-y-4">
+            <div class="flex items-center gap-3.5 flex-wrap">
+              <div class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-4 py-2.5 rounded-2xl text-center shrink-0">
+                <span class="block text-2xl sm:text-3xl font-bold leading-none mb-0.5 text-brand-mint font-sans">24</span>
+                <span class="block text-[11px] uppercase font-bold text-slate-300 tracking-wider font-sans">Okt</span>
               </div>
-              <div class="flex flex-wrap gap-md text-body-sm opacity-90">
-                <div class="flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[18px]">location_on</span>
-                  Aula Utama Gedung Pusat YP2SK
-                </div>
-                <div class="flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[18px]">schedule</span>
-                  08:30 - 12:00 WIB
-                </div>
+              <div class="space-y-1.5">
+                <span class="inline-block px-3 py-1 rounded-full bg-brand-emerald text-white text-[11px] font-bold uppercase tracking-wider font-sans">
+                  Seminar Parenting
+                </span>
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white font-sans leading-snug">
+                  Membangun Karakter Anak di Era Digital
+                </h3>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-slate-200 font-sans pt-2">
+              <div class="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-3.5 py-1.5 rounded-full border border-white/10">
+                <span class="material-symbols-outlined text-base text-brand-mint">location_on</span>
+                <span>Aula Utama Gedung Pusat YP2SK</span>
+              </div>
+              <div class="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-3.5 py-1.5 rounded-full border border-white/10">
+                <span class="material-symbols-outlined text-base text-brand-mint">schedule</span>
+                <span>08:30 - 12:00 WIB</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Side Event Cards -->
-          <div class="flex flex-col gap-6 justify-between">
-            {sideEvents.map(event => (
-              <SideEventCard {...event} />
-            ))}
+        <!-- Side Event Cards -->
+        <div class="lg:col-span-4 flex flex-col gap-6 justify-between" data-aos="fade-up" data-aos-delay="100">
+          {sideEvents.map(event => (
+            <SideEventCard {...event} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Counter (Styled matching yayasan.astro & PreFooter.astro) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 font-sans" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-950 via-brand-emeraldDark to-brand-emerald text-white p-8 sm:p-12 shadow-xl border border-white/10">
+        <!-- Decorative Watermark & Ambient Glow matching yayasan.astro -->
+        <div class="absolute -right-8 -bottom-10 text-white/5 select-none pointer-events-none font-serif text-[140px] leading-none">
+          ق
+        </div>
+        <div class="absolute -top-16 -left-16 w-64 h-64 bg-brand-emerald/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 flex flex-col md:flex-row justify-around items-center gap-8 text-center">
+          <div class="space-y-1">
+            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-mint font-sans">5000+</div>
+            <div class="text-xs sm:text-sm text-slate-200 uppercase tracking-widest font-semibold font-sans mt-1">Siswa Terbantu</div>
+          </div>
+          <div class="w-px h-16 bg-white/20 hidden md:block"></div>
+          <div class="space-y-1">
+            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-mint font-sans">12</div>
+            <div class="text-xs sm:text-sm text-slate-200 uppercase tracking-widest font-semibold font-sans mt-1">Program Aktif</div>
+          </div>
+          <div class="w-px h-16 bg-white/20 hidden md:block"></div>
+          <div class="space-y-1">
+            <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-mint font-sans">300+</div>
+            <div class="text-xs sm:text-sm text-slate-200 uppercase tracking-widest font-semibold font-sans mt-1">Kegiatan Tahunan</div>
           </div>
         </div>
-      </section>
-
-      <!-- Stats Counter -->
-      <section class="mb-xl bg-primary-container rounded-2xl p-lg flex flex-col md:flex-row justify-around items-center gap-8 text-center">
-        <div class="space-y-1">
-          <div class="text-headline-xl font-bold text-secondary-fixed">5000+</div>
-          <div class="text-label-lg font-label-lg text-on-primary-container uppercase tracking-widest font-bold">Siswa Terbantu</div>
-        </div>
-        <div class="w-px h-16 bg-on-primary-container/20 hidden md:block"></div>
-        <div class="space-y-1">
-          <div class="text-headline-xl font-bold text-secondary-fixed">12</div>
-          <div class="text-label-lg font-label-lg text-on-primary-container uppercase tracking-widest font-bold">Program Aktif</div>
-        </div>
-        <div class="w-px h-16 bg-on-primary-container/20 hidden md:block"></div>
-        <div class="space-y-1">
-          <div class="text-headline-xl font-bold text-secondary-fixed">300+</div>
-          <div class="text-label-lg font-label-lg text-on-primary-container uppercase tracking-widest font-bold">Kegiatan Tahunan</div>
-        </div>
-      </section>
-
-    </div>
+      </div>
+    </section>
   </div>
 </Layout>

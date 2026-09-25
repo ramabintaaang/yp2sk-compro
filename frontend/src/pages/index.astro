@@ -1,16 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/beranda/Hero.astro';
+import AboutIntro from '../components/beranda/AboutIntro.astro';
+import Pillars from '../components/beranda/Pillars.astro';
+import KeyStages from '../components/beranda/KeyStages.astro';
+import Awards from '../components/beranda/Awards.astro';
+import Campuses from '../components/beranda/Campuses.astro';
 import Greeting from '../components/beranda/Greeting.astro';
-import Programs from '../components/beranda/Programs.astro';
-import ValuesAndStats from '../components/beranda/ValuesAndStats.astro';
+import AcademicSchedule from '../components/beranda/AcademicSchedule.astro';
+import Stories from '../components/beranda/Stories.astro';
 import News from '../components/beranda/News.astro';
+import PreFooter from '../components/beranda/PreFooter.astro';
 
 const homeSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "EducationalOrganization",
       "@id": "https://yp2sk.or.id/#organization",
       "name": "Yayasan Pendidikan Pesantren Sunan Kudus (YP2SK)",
       "alternateName": "YP2SK",
@@ -18,23 +24,21 @@ const homeSchema = {
       "logo": {
         "@type": "ImageObject",
         "@id": "https://yp2sk.or.id/#logo",
-        "url": "https://yp2sk.or.id/favicon.svg",
+        "url": "https://yp2sk.or.id/images/logo-yp2sk.png",
         "caption": "Logo YP2SK"
       },
       "image": {
         "@id": "https://yp2sk.or.id/#logo"
       },
-      "description": "YP2SK berkomitmen menghadirkan pendidikan anak usia dini yang berkualitas, amanah, dan menumbuhkan potensi terbaik anak dalam lingkungan yang islami dan menyenangkan.",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+62-21-5555-1234",
-          "contactType": "customer service",
-          "email": "info@yp2sk.or.id",
-          "areaServed": "ID",
-          "availableLanguage": ["id", "en"]
-        }
-      ]
+      "description": "YP2SK berkomitmen memadukan sanad keilmuan Islam, Tahfidzul Qur’an muttashil, serta kurikulum sains modern guna mencetak generasi beradab, berwawasan global, dan berjiwa kepemimpinan.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jln. Madurekso No. 22, Langgar Dalem",
+        "addressLocality": "Kota Kudus",
+        "addressRegion": "Jawa Tengah",
+        "postalCode": "59317",
+        "addressCountry": "ID"
+      }
     },
     {
       "@type": "WebSite",
@@ -51,13 +55,28 @@ const homeSchema = {
 ---
 
 <Layout 
-  title="YP2SK | Yayasan Pendidikan Pesantren Sunan Kudus"
-  description="YP2SK berkomitmen menghadirkan pendidikan berkualitas, amanah, dan menumbuhkan potensi terbaik anak dalam lingkungan yang islami dan menyenangkan."
+  title="YP2SK | Yayasan Pendidikan Pesantren Sunan Kudus - Mencetak Generasi Qur'ani & Unggul"
+  description="YP2SK memadukan sanad keilmuan Islam, Tahfidzul Qur’an muttashil, serta kurikulum sains modern guna mencetak generasi beradab, berwawasan global, dan berjiwa kepemimpinan."
   schema={homeSchema}
 >
-  <Hero />
-  <Greeting />
-  <Programs />
-  <ValuesAndStats />
-  <News />
+  <!-- Floating Vector Ribbon Line from raw/beranda.html -->
+  <div aria-hidden="true" class="curved-line-bg">
+    <svg class="w-full h-full opacity-35" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 4800">
+      <path d="M720,200 C1100,500 1200,900 850,1300 C500,1700 200,2000 550,2500 C900,3000 1250,3300 950,3800 C700,4200 400,4500 720,4800" stroke="#8BBB92" stroke-dasharray="8 8" stroke-width="2.5"></path>
+    </svg>
+  </div>
+
+  <div class="relative z-10">
+    <Hero />
+    <AboutIntro />
+    <Pillars />
+    <!-- <KeyStages /> -->
+    <Awards />
+    <!-- <Campuses /> -->
+    <Greeting />
+    <AcademicSchedule />
+    <Stories />
+    <News />
+    <PreFooter />
+  </div>
 </Layout>
